@@ -1,0 +1,74 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "685c5f5d571a258fd1f40ce8c23580b5",
+    "packages": [
+        {
+            "name": "eftec/pdoone",
+            "version": "2.15",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/EFTEC/PdoOne.git",
+                "reference": "c1549ab0f4112be3963387ab49d8e4e1f1d36bd2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/EFTEC/PdoOne/zipball/c1549ab0f4112be3963387ab49d8e4e1f1d36bd2",
+                "reference": "c1549ab0f4112be3963387ab49d8e4e1f1d36bd2",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ext-pdo": "*",
+                "ext-readline": "*",
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7 || ^6.5"
+            },
+            "suggest": {
+                "eftec/validationone": "For keeping and storing the messages"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "eftec\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jorge Castro Castillo",
+                    "homepage": "https://github.com/EFTEC/"
+                }
+            ],
+            "description": "Procedural PDO Data access class in a single Class",
+            "homepage": "https://github.com/EFTEC/PdoOne",
+            "keywords": [
+                "dao",
+                "pdo",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/EFTEC/PdoOne/issues",
+                "source": "https://github.com/EFTEC/PdoOne/tree/2.15"
+            },
+            "time": "2021-07-25T02:35:24+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.0.0"
+}

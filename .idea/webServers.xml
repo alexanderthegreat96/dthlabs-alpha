@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="64351f53-2a88-4206-8c88-8b1a0559480d" name="dthlabs-framework" url="http://dthlabs.projects.dthdevops.net">
+        <fileTransfer rootFolder="/var/www/html/projects/" accessType="SFTP" host="dthdevops.net" port="22" sshConfigId="2862a250-6733-468b-95f4-3ec938b7e0bc" sshConfig="alexander@dthdevops.net:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

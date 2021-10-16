@@ -1,0 +1,5 @@
+{
+    "require": {
+        "eftec/pdoone": "^2.15"
+    }
+}

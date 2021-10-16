@@ -1,0 +1,5 @@
+{
+    "require": {
+        "dekyfin/php-array-forms": "^0.3.0"
+    }
+}

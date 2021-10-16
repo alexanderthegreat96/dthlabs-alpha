@@ -1,0 +1,5 @@
+{
+    "require": {
+        "apfelbox/php-file-download": "^2.1"
+    }
+}

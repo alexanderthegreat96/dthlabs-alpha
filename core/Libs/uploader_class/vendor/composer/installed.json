@@ -1,0 +1,51 @@
+[
+    {
+        "name": "rundiz/upload",
+        "version": "v2.0.7",
+        "version_normalized": "2.0.7.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Rundiz/upload.git",
+            "reference": "1ac631902052706d191a4f3569c27ab8a752fc92"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Rundiz/upload/zipball/1ac631902052706d191a4f3569c27ab8a752fc92",
+            "reference": "1ac631902052706d191a4f3569c27ab8a752fc92",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0"
+        },
+        "time": "2020-07-02T11:36:12+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Rundiz\\Upload\\": "Rundiz/Upload"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Vee W.",
+                "email": "kawewong@gmail.com",
+                "homepage": "http://rundiz.com",
+                "role": "Developer"
+            }
+        ],
+        "description": "Upload single or multiple files with validations. (allowed file extensions, matched mime type, max file size, security scan, reserved file name, safe for web file name).",
+        "keywords": [
+            "php upload",
+            "secure upload",
+            "upload",
+            "upload array",
+            "upload multiple files",
+            "upload single file",
+            "web safe file name"
+        ]
+    }
+]
