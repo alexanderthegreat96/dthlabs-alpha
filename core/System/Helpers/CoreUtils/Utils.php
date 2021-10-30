@@ -16,7 +16,7 @@ Class Utils
      * and no forbidden chars are used
      */
 
-    public static function clean($string)
+    public function clean($string)
     {
         $string = str_replace(' ', '', $string); // Replaces all spaces with hyphens.
         return preg_replace('/[^A-Za-z0-9\-\|]/', '', $string); // Removes special chars.
@@ -30,7 +30,7 @@ Class Utils
      * @return array
      */
 
-    public static function Paginate(int $page, int $total, int $range): array
+    public function paginate(int $page, int $total, int $range): array
     {
         if ($total < $range) {
             return range(1, $total);
@@ -76,7 +76,7 @@ Class Utils
      * @return false|string|string[]
      */
 
-    public static function keywordify(string $string)
+    public function keywordify(string $string)
     {
         $words = explode('+',$string);
         if(count($words) > 1)
@@ -96,7 +96,7 @@ Class Utils
     /**
      * Redirect to a specific URI
      */
-    public static function redirect($url)
+    public function redirect($url)
     {
         if (!headers_sent()) {
             header('Location: ' . $url);
@@ -114,7 +114,7 @@ Class Utils
     /**
      * Format bits to bytes,megabytes and so on
      */
-    public static function formatSizeUnits($bytes)
+    public function formatSizeUnits($bytes)
     {
         if ($bytes >= 1073741824) {
             $bytes = number_format($bytes / 1073741824, 2) . ' GB';
@@ -138,7 +138,7 @@ Class Utils
      * Generate form based on array
      */
 
-    public static function render_form(array $form_array)
+    public function render_form(array $form_array)
     {
         if (is_array($form_array) && !empty($form_array)) {
             $form_id = $form_array["form_id"];
@@ -217,7 +217,7 @@ Class Utils
      * merge 2 arrays
      */
 
-    public static function merge_arrays(array $array, array $array2)
+    public function merge_arrays(array $array, array $array2)
     {
         return array_unique(array_merge($array, $array2));
     }
@@ -228,7 +228,7 @@ Class Utils
      * used mainly for pagination purposes with
      * multiple GET params
      */
-    public static function build_url(array $append_params)
+    public function build_url(array $append_params)
     {
         if (isset($_GET)) {
             foreach ($_GET as $key => $val) {
@@ -249,7 +249,7 @@ Class Utils
      * @param string $string
      * @return string|string[]|null
      */
-    public static function readableVals(string $string)
+    public function readableVals(string $string)
     {
         return preg_replace('/(?<!\ )[A-Z]/', ' $0', ucfirst($string));
     }
@@ -322,7 +322,7 @@ Class Utils
      * @return array|mixed[]
      */
 
-    public static function array_flatten(array $array = []) {
+    public function array_flatten(array $array = []) {
         $result = array();
 
         if (!is_array($array)) {
@@ -345,7 +345,7 @@ Class Utils
      * @return string
      */
 
-    public static function formatPrice(string $price)
+    public function formatPrice(string $price)
     {
         return number_format($price,'2','.',',');
     }
@@ -355,7 +355,7 @@ Class Utils
      * @return array
      */
 
-    public static function super_unique(array $array)
+    public function super_unique(array $array)
     {
         $result = array_map("unserialize", array_unique(array_map("serialize", $array)));
 
@@ -374,7 +374,7 @@ Class Utils
      *
      */
 
-    public static function date_diff(string $start_date, string $end_date)
+    public function date_diff(string $start_date, string $end_date)
     {
         $date1 = strtotime($start_date);
         $date2 = strtotime($end_date);
@@ -418,7 +418,7 @@ Class Utils
      * @return string|string
      * Shortens titles and descriptions
      */
-    public static function short_string(string $string,int $limit = 10)
+    public function short_string(string $string,int $limit = 10)
     {
         if (strlen($string) >= $limit) {
             return substr($string, 0, $limit). " ... " . substr($string, -5);
@@ -432,7 +432,7 @@ Class Utils
      * friendly format date
      */
 
-    public static function friendly_date(string $date)
+    public function friendly_date(string $date)
     {
         return date("d-m-Y H:i:s", strtotime($date));
     }
@@ -444,7 +444,7 @@ Class Utils
      * @return string
      * returns current url
      */
-    public static function this_url()
+    public function this_url()
     {
         $http=isset($_SERVER['HTTPS']) ? 'https://' : 'http://';
 
@@ -466,7 +466,7 @@ Class Utils
      * Generate a slug based on a text input
      */
 
-    public static function slug(string $text)
+    public function slug(string $text)
     {
         // replace non letter or digits by -
         $text = preg_replace('~[^\pL\d]+~u', '-', $text);
@@ -492,7 +492,7 @@ Class Utils
      * MySQL Tables Backup
      */
 
-    public static function backup_tables($link,string $tables = '*', string $relative_location = "../../backups/sql/", string $actual_location = "../backups/sql/")
+    public function backup_tables($link,string $tables = '*', string $relative_location = "../../backups/sql/", string $actual_location = "../backups/sql/")
     {
         mysqli_query($link, "SET NAMES 'utf8'");
         //get all of the tables
@@ -563,7 +563,7 @@ Class Utils
     /**
      * Removes all files from a directory
      */
-    public static function remove_files($path)
+    public function remove_files($path)
     {
         $files = glob($path.'/*'); //get all file names
         foreach($files as $file){
@@ -580,7 +580,7 @@ Class Utils
      * @return array
      */
 
-    public static function insert_data($con,string $table, array $columns, array $values)
+    public function insert_data($con,string $table, array $columns, array $values)
     {
         $column_count = count($columns);
         $overwriteArr = array_fill(0, $column_count, '?');
@@ -621,7 +621,7 @@ Class Utils
      * @array containing criteria
      * ex: criteria : array("id" => "11", "name" => "alexander")
      */
-    public static function update_data($con,string $table, array $criteria, array $cols, array $vals,string $dbName = "")
+    public function update_data($con,string $table, array $criteria, array $cols, array $vals,string $dbName = "")
     {
         if (count($cols) == count($vals)) {
             $begin_query = "UPDATE " . $table . " SET ";
@@ -659,7 +659,7 @@ Class Utils
      * Query Generator based on given parameters
      * Generates MySQL Query
      */
-    public static function buildParamsQuery(array $params, string $table_name)
+    public function buildParamsQuery(array $params, string $table_name)
     {
 
 

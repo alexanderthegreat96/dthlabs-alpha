@@ -2,7 +2,7 @@
 namespace LexSystems\Framework\Models;
 use LexSystems\Framework\Kernel\Model;
 
-class MyMode extends Model
+class MyModel extends Model
 {
     public function getUser(int $userId)
     {

@@ -1,5 +1,6 @@
 <?php
 namespace LexSystems\Framework\Kernel;
+use jabarihunt\Password;
 use LexSystems\Framework\Kernel\Helpers\CoreUtils\Query;
 use LexSystems\Framework\Kernel\Helpers\CoreUtils\RandomStringGenerator;
 use LexSystems\Framework\Kernel\Helpers\CoreUtils\Utils;
@@ -107,6 +108,42 @@ class System
     public function mysqli()
     {
         return new MySqli();
+    }
+
+    /**
+     * @param string $password
+     * @return string
+     * @throws \Exception
+     */
+
+    public function hashPassword(string $password = '')
+    {
+        try
+        {
+            return Password::create($password,'',10);
+        }
+        catch (\Exception $e)
+        {
+            return $e->getMessage();
+        }
+    }
+
+    /**
+     * @param string $password
+     * @param string $hash
+     * @return bool|string
+     */
+
+    public function isValidPassword(string $password = '', string $hash = '')
+    {
+        try
+        {
+           return Password::compare($password, $hash);  // returns boolean
+        }
+        catch (\Exception $e)
+        {
+           return $e->getMessage();
+        }
     }
 
 }

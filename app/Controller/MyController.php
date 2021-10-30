@@ -6,7 +6,7 @@ class MyController extends Controller
 {
     public function myActionNameAction()
     {
-        $this->var_dump($this->sessions()->getSession());
-        //$this->view()->renderTemplate('mytemplate',[]);
+        $args = [];
+        $this->view()->renderTemplate('mytemplate',[]);
     }
 }
