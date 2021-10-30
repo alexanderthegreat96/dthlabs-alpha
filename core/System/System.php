@@ -1,5 +1,6 @@
 <?php
 namespace LexSystems\Framework\Kernel;
+use duzun\hQuery;
 use jabarihunt\Password;
 use LexSystems\Framework\Kernel\Helpers\CoreUtils\Query;
 use LexSystems\Framework\Kernel\Helpers\CoreUtils\RandomStringGenerator;
@@ -145,5 +146,6 @@ class System
            return $e->getMessage();
         }
     }
+
 
 }
