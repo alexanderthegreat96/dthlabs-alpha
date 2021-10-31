@@ -8,5 +8,6 @@ class MyController extends Controller
     {
         $args = [];
         $this->system()->view()->renderTemplate('my_template',[]);
+        $this->system()->dd('');
     }
 }

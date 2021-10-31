@@ -22,9 +22,11 @@ class Router extends \Buki\Router\Router
             $params = [
                 'paths' => [
                     'controllers' => 'Controller',
+                    'middlewares' => 'Middleware'
                 ],
                 'namespaces' => [
                     'controllers' => 'LexSystems\Framework\Controllers',
+                    'middlewares' => 'LexSystems\Framework\Middlewares'
                 ],
                 'debug' => \LexSystems\Framework\Configs\Kernel\Error::ERROR_REPORTING
             ];
