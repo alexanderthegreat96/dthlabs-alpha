@@ -4,9 +4,9 @@ use LexSystems\Framework\Kernel\Controller;
 
 class MyController extends Controller
 {
-    public function myActionNameAction()
+    public function indexAction()
     {
         $args = [];
-        $this->view()->renderTemplate('mytemplate',[]);
+        $this->system()->view()->renderTemplate('my_template',[]);
     }
 }

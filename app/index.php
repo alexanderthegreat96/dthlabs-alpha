@@ -12,5 +12,5 @@ set_exception_handler('\LexSystems\Framework\Kernel\Error::exceptionHandler');
 /**
  * Routing
  */
-require 'dispatch.php';
+require 'routes.php';
 ?>
