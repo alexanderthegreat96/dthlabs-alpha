@@ -1,5 +1,6 @@
 <?php
 namespace LexSystems\Framework\Kernel;
+use Closure;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -32,5 +33,19 @@ class Router extends \Buki\Router\Router
             ];
         }
         parent::__construct($params, $request, $response);
+    }
+
+    /**
+     * @param Closure $callback
+     */
+
+    public function error(Closure $callback): void
+    {
+        parent::error(
+            function() {
+                $system = new System();
+                $system->view()->renderTemplate('404',['error' => 'The specified route does not exist.']);
+            }
+        );
     }
 }

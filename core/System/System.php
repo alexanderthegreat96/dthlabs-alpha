@@ -4,6 +4,7 @@ use duzun\hQuery;
 use jabarihunt\Password;
 use LexSystems\Framework\Kernel\Helpers\CoreUtils\Query;
 use LexSystems\Framework\Kernel\Helpers\CoreUtils\RandomStringGenerator;
+use LexSystems\Framework\Kernel\Helpers\CoreUtils\SqlFormatter;
 use LexSystems\Framework\Kernel\Helpers\CoreUtils\Utils;
 use LexSystems\Framework\Kernel\Helpers\Database\MySqli;
 use LexSystems\Framework\Kernel\Helpers\Debugger\Debugger;
@@ -145,6 +146,16 @@ class System
         {
            return $e->getMessage();
         }
+    }
+
+    /**
+     * @param string $sql
+     * @return String
+     */
+
+    public function formatSql(string $sql  = '')
+    {
+        return SqlFormatter::format($sql,true);
     }
 
 

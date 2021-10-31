@@ -83,7 +83,7 @@ Class Utils
         {
             foreach($words as $w)
             {
-                $ww[] = self::clean_this($w);
+                $ww[] = $this->clean($w);
             }
             return implode('+',array_filter($ww));
         }
@@ -892,12 +892,34 @@ Class Utils
 
 
         return $sql;
-
-
     }
 
+    /**
+     * @param array $array
+     * @return false|string
+     */
 
+    public function toJson(array $array = [])
+    {
+        return json_encode($array);
+    }
 
+    /**
+     * @param string $json
+     * @return mixed
+     * @throws \ErrorException
+     */
+    public function fromJson(string $json)
+    {
+        if(json_decode($json,true))
+        {
+            return json_decode($json,true);
+        }
+        else
+        {
+            throw new \ErrorException('No valid JSON string detected!');
+        }
+    }
 }
 
 ?>
