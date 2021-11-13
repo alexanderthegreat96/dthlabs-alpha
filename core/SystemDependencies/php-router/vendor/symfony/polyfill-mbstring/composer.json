@@ -1,7 +1,8 @@
 {
-    "name": "symfony/deprecation-contracts",
+    "name": "symfony/polyfill-mbstring",
     "type": "library",
-    "description": "A generic function and convention to trigger deprecation notices",
+    "description": "Symfony polyfill for the Mbstring extension",
+    "keywords": ["polyfill", "shim", "compatibility", "portable", "mbstring"],
     "homepage": "https://symfony.com",
     "license": "MIT",
     "authors": [
@@ -18,18 +19,22 @@
         "php": ">=7.1"
     },
     "autoload": {
+        "psr-4": { "Symfony\\Polyfill\\Mbstring\\": "" },
         "files": [
-            "function.php"
+          "bootstrap.php"
         ]
+    },
+    "suggest": {
+        "ext-mbstring": "For best performance"
     },
     "minimum-stability": "dev",
     "extra": {
         "branch-alias": {
-            "dev-main": "2.4-dev"
+            "dev-main": "1.23-dev"
         },
         "thanks": {
-            "name": "symfony/contracts",
-            "url": "https://github.com/symfony/contracts"
+            "name": "symfony/polyfill",
+            "url": "https://github.com/symfony/polyfill"
         }
     }
 }

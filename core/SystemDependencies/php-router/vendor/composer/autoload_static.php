@@ -7,9 +7,9 @@ namespace Composer\Autoload;
 class ComposerStaticInit37fbb633009c52de0e42c78de80dbdcd
 {
     public static $files = array (
-        '6e3fae29631ef280660b3cdad06f25a8' => __DIR__ . '/..' . '/symfony/deprecation-contracts/function.php',
-        'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
-        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
+        '6e3fae29631ef280660b3cdad06f25a8' => __DIR__ . '/..',
+        'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..',
+        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -28,28 +28,28 @@ class ComposerStaticInit37fbb633009c52de0e42c78de80dbdcd
     public static $prefixDirsPsr4 = array (
         'Symfony\\Polyfill\\Php80\\' => 
         array (
-            0 => __DIR__ . '/..' . '/symfony/polyfill-php80',
+            0 => __DIR__ . '/..',
         ),
         'Symfony\\Polyfill\\Mbstring\\' => 
         array (
-            0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
+            0 => __DIR__ . '/..',
         ),
         'Symfony\\Component\\HttpFoundation\\' => 
         array (
-            0 => __DIR__ . '/..' . '/symfony/http-foundation',
+            0 => __DIR__ . '/..',
         ),
         'Buki\\Router\\' => 
         array (
-            0 => __DIR__ . '/..' . '/izniburak/router/src',
+            0 => __DIR__ . '/..',
         ),
     );
 
     public static $classMap = array (
-        'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
-        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
-        'Stringable' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Stringable.php',
-        'UnhandledMatchError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/UnhandledMatchError.php',
-        'ValueError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/ValueError.php',
+        'Attribute' => __DIR__ . '/..',
+        'Composer\\InstalledVersions' => __DIR__ . '/..',
+        'Stringable' => __DIR__ . '/..',
+        'UnhandledMatchError' => __DIR__ . '/..',
+        'ValueError' => __DIR__ . '/..',
     );
 
     public static function getInitializer(ClassLoader $loader)

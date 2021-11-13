@@ -5,6 +5,11 @@ require "Autoload.php";
  */
 \LexSystems\Framework\Autoloader::loadComposerLibs(__DIR__.'/Libs/');
 /**
+ * System Dependencies - > Libraries mostly, but stuff that cannot be autoupdated
+ * without the risk of breaking the core.
+ */
+\LexSystems\Framework\Autoloader::loadComposerLibs(__DIR__.'/SystemDependencies/');
+/**
  * System Packages
  */
 \LexSystems\Framework\Autoloader::loadComposerLibs(__DIR__.'/Packages/');

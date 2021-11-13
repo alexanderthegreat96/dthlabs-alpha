@@ -20,28 +20,28 @@ class ComposerStaticInit6dc2d00ea2cc6965c62748d54ed4bda2
     public static $prefixDirsPsr4 = array (
         'Delight\\Http\\' => 
         array (
-            0 => __DIR__ . '/..' . '/delight-im/http/src',
+            0 => __DIR__ . '/..',
         ),
         'Delight\\Db\\' => 
         array (
-            0 => __DIR__ . '/..' . '/delight-im/db/src',
+            0 => __DIR__ . '/..',
         ),
         'Delight\\Cookie\\' => 
         array (
-            0 => __DIR__ . '/..' . '/delight-im/cookie/src',
+            0 => __DIR__ . '/..',
         ),
         'Delight\\Base64\\' => 
         array (
-            0 => __DIR__ . '/..' . '/delight-im/base64/src',
+            0 => __DIR__ . '/..',
         ),
         'Delight\\Auth\\' => 
         array (
-            0 => __DIR__ . '/..' . '/delight-im/auth/src',
+            0 => __DIR__ . '/..',
         ),
     );
 
     public static $classMap = array (
-        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'Composer\\InstalledVersions' => __DIR__ . '/..',
     );
 
     public static function getInitializer(ClassLoader $loader)

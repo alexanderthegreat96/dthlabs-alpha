@@ -52,11 +52,11 @@
   },
   "scripts": {
     "sniff": [
-      "phpcs --extensions=php ."
+      "phpcs --extensions=php "
     ],
     "fix": [
       "php-cs-fixer fix",
-      "phpcbf --extensions=php ."
+      "phpcbf --extensions=php "
     ]
   }
 }
