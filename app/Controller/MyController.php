@@ -6,8 +6,7 @@ class MyController extends Controller
 {
     public function indexAction()
     {
-        $args = [];
-        $this->system()->view()->renderTemplate('my_template',[]);
-        $this->system()->dd('');
+        $this->view()->renderTemplate('index',[]);
+        $this->dd(['myVar' => 'Something','somethingRequest' => $this->request()->hasArgument('something')]);
     }
 }

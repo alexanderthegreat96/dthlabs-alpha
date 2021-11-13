@@ -3,16 +3,8 @@
  * Route handler
  * Controller
  */
-
 namespace LexSystems\Framework\Kernel;
-
-abstract class Controller extends \Buki\Router\Http\Controller
+class Controller extends System
 {
-    /**
-     * @return System
-     */
-    public function system()
-    {
-        return new System();
-    }
+
 }

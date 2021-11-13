@@ -12,7 +12,7 @@ use LexSystems\Framework\Kernel\Helpers\Render\RenderEngine;
 use LexSystems\Framework\Kernel\Helpers\Requests;
 use LexSystems\Framework\Kernel\Helpers\Sesssions\Session;
 
-class System
+class System extends \Buki\Router\Http\Controller
 {
     /**
      * @return Utils
@@ -52,7 +52,7 @@ class System
      * @return Requests
      */
 
-    public function requests()
+    public function request()
     {
         return new Requests();
     }

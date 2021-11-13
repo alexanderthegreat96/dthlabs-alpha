@@ -16,12 +16,12 @@ class ComposerStaticInit2e985be06586a2837e7fb9cb9b0ced4a
     public static $prefixDirsPsr4 = array (
         'eftec\\bladeone\\' => 
         array (
-            0 => __DIR__ . '/..',
+            0 => __DIR__ . '/..' . '/eftec/bladeone/lib',
         ),
     );
 
     public static $classMap = array (
-        'Composer\\InstalledVersions' => __DIR__ . '/..',
+        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
