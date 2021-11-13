@@ -110,6 +110,18 @@ class Requests
     }
 
     /**
+     * @return array
+     */
+
+    public function getArguments()
+    {
+        $result=[];
+        $result['post'] = $this->post;
+        $result['get'] = $this->get;
+        return $result;
+    }
+
+    /**
      * @param $var
      * @return mixed|string|void|null
      */
