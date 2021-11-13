@@ -4,6 +4,7 @@ namespace Buki\Router;
 
 use Closure;
 use Exception;
+use LexSystems\Framework\Kernel\Helpers\Debugger\Debugger;
 use ReflectionClass;
 use ReflectionException;
 use ReflectionFunction;
@@ -11,6 +12,7 @@ use ReflectionMethod;
 use Reflector;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use function GuzzleHttp\Psr7\str;
 
 class RouterCommand
 {
@@ -196,11 +198,18 @@ class RouterCommand
         $info = $this->getControllerInfo();
         if (!is_object($command)) {
             [$class, $method] = explode('@', $command);
+
             $class = str_replace([$info['namespace'], '\\', '.'], ['', '/', '/'], $class);
+
+            /**
+             * Append and check for Action suffix
+             */
+            $method = $method.'Action';
 
             $controller = $this->resolveClass($class, $info['path'], $info['namespace']);
             if (!method_exists($controller, $method)) {
-                return $this->exception("{$method} method is not found in {$class} class.");
+                return $this->exception("{$method} method is not found in {$class} class. Make sure you use the suffix [Action] in your method name.
+                Example index -> indexAction");
             }
 
             if (property_exists($controller, 'middlewareBefore') && is_array($controller->middlewareBefore)) {
