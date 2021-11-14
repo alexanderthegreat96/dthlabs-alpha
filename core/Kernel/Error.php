@@ -1,5 +1,6 @@
 <?php
 namespace LexSystems\Framework\Kernel;
+use LexSystems\Framework\Kernel\System;
 /**
  * Error and exception handler
  *
@@ -62,8 +63,8 @@ class Error
             $message .= "\nStack trace: " . $exception->getTraceAsString();
             $message .= "\nThrown in '" . $exception->getFile() . "' on line " . $exception->getLine();
 
-            error_log($message);
-            View::renderTemplate("$code");
+            $system = new System();
+            $system->view()->renderTemplate($code);
         }
     }
 }

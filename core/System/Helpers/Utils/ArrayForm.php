@@ -71,7 +71,7 @@ class ArrayForm
      */
     public function dumpData()
     {
-        var_dump($this->elements, $this->formData);
+       return ['form' => $this->formData,'elements' => $this->elements];
     }
 
     /**
