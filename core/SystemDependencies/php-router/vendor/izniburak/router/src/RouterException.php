@@ -3,7 +3,7 @@
 namespace Buki\Router;
 
 use Exception;
-
+use LexSystems\Framework\Kernel\System;
 class RouterException
 {
     /**
@@ -26,6 +26,15 @@ class RouterException
         if (self::$debug) {
             throw new Exception($message, $statusCode);
         }
-        die("<style>body{background-color: #0073e6; color: #fff; font-family : arial; font-size: 15px;}</style><h2>Opps! An error occurred.</h2> {$message}");
+        if(file_exists(__DIR__.'/../../../../../../../resources/views/'.$statusCode.'.blade.php'))
+        {
+           $view = new System();
+           $view->view()->renderTemplate($statusCode);
+        }
+        else
+        {
+            die("<style>body{background-color: #0073e6; color: #fff; font-family : arial; font-size: 15px;}</style><h2>Opps! An error occurred.</h2> {$message}");
+        }
+
     }
 }
