@@ -43,7 +43,7 @@
         "doctrine/common": ">2.2,<2.4"
     },
     "autoload": {
-        "psr-4": { "Doctrine\\Common\\Cache\\": "lib/Doctrine/Common/Cache" }
+        "psr-4": { "Doctrine\\Common\\Cache\\": "lib/Doctrine/Common/Cache"}
     },
     "autoload-dev": {
         "psr-4": { "Doctrine\\Tests\\": "tests/Doctrine/Tests" }
