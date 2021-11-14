@@ -16,12 +16,38 @@ namespace LexSystems\Framework\Kernel\Helpers\Utils;
 class ArrayForm
 {
 
+    /**
+     * @var array
+     *
+     * [
+    'id' => 'nume',
+    'type' => 'text',
+    'label' => 'Nume',
+    'name' => 'first_name',
+    'required' => 'true'
+    ],
+    [
+    'id' => 'prenume',
+    'type' => 'text',
+    'label' => 'Prenume',
+    'name' => 'last_name',
+    'required' => 'true'
+    ],
+     *
+     * [
+     * 'id' => 'button',
+     * 'type' => 'submit',
+     * 'name' => 'name',
+     * 'value' => 'value'
+     * ]
+     */
+
     protected $elements;
     protected $formData = [];
     protected $formNo = 0;
     protected $id;
 
-    public function __construct(array $formData, array $elements)
+    public function __construct(array $elements = [],array $formData = [])
     {
         $this->formData = array_merge(
             [

@@ -5,6 +5,9 @@ use LexSystems\Framework\Kernel\Helpers\Arrays\ArrayUtility;
 
 class Requests
 {
+    /**
+     * Requests constructor.
+     */
     public function __construct()
     {
         $this->server = $_SERVER;
