@@ -12,7 +12,10 @@ class Autoloader {
                 if(is_dir($directory."/".$file)) {
                     self::load($directory."/".$file);
                 } else {
+                    if(pathinfo($file)['extension'] == 'php')
+                    {
                         require($directory."/".$file);
+                    }
                 }
             }
         }
