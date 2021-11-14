@@ -11,7 +11,7 @@
  * @return void
  */
 
-namespace DF;
+namespace LexSystems\Framework\Kernel\Helpers\Utils;
 
 class ArrayForm
 {
