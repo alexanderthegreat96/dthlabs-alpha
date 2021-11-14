@@ -6,7 +6,7 @@ class Error
      * enables or disables
      * development errors
      */
-    const ERROR_REPORTING = true;
+    const ERROR_REPORTING = false;
 
     public static function getErrorReporting()
     {

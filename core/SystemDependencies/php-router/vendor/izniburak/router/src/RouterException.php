@@ -26,6 +26,6 @@ class RouterException
         if (self::$debug) {
             throw new Exception($message, $statusCode);
         }
-        die("<h2>Opps! An error occurred.</h2> {$message}");
+        die("<style>body{background-color: #0073e6; color: #fff; font-family : arial; font-size: 15px;}</style><h2>Opps! An error occurred.</h2> {$message}");
     }
 }
