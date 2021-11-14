@@ -1,0 +1,33 @@
+{
+    "name": "nbish11/fileinfo",
+    "description": "A FileInfo class for thos without support for PHP's finfo class.",
+    "require-dev": {
+        "phpunit/phpunit": "^4.8",
+        "codeclimate/php-test-reporter": "^0.3.2"
+    },
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "Nathan Bishop",
+            "email": "nbish11@hotmail.com",
+            "homepage": "https://github.com/nbish11",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.2"
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "autoload": {
+        "classmap": [
+            "src/"
+        ]
+    },
+    "support": {
+        "email": "nbish11@hotmail.com",
+        "issues": "https://github.com/nbish11/FileInfo/issues",
+        "wiki": "https://github.com/nbish11/FileInfo/wiki"
+    }
+}

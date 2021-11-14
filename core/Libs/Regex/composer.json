@@ -1,0 +1,5 @@
+{
+    "require": {
+        "spatie/regex": "^1.4"
+    }
+}

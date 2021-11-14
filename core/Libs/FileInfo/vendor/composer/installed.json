@@ -1,0 +1,57 @@
+{
+    "packages": [
+        {
+            "name": "nbish11/fileinfo",
+            "version": "v1.0.0",
+            "version_normalized": "1.0.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nbish11/FileInfo.git",
+                "reference": "eeeae1061def5a7bcff8f962ca652e4e8416b698"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nbish11/FileInfo/zipball/eeeae1061def5a7bcff8f962ca652e4e8416b698",
+                "reference": "eeeae1061def5a7bcff8f962ca652e4e8416b698",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "codeclimate/php-test-reporter": "^0.3.2",
+                "phpunit/phpunit": "^4.8"
+            },
+            "time": "2016-07-14T21:03:14+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Nathan Bishop",
+                    "email": "nbish11@hotmail.com",
+                    "homepage": "https://github.com/nbish11",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A FileInfo class for thos without support for PHP's finfo class.",
+            "support": {
+                "email": "nbish11@hotmail.com",
+                "issues": "https://github.com/nbish11/FileInfo/issues",
+                "source": "https://github.com/nbish11/FileInfo/tree/master",
+                "wiki": "https://github.com/nbish11/FileInfo/wiki"
+            },
+            "install-path": "../nbish11/fileinfo"
+        }
+    ],
+    "dev": true,
+    "dev-package-names": []
+}

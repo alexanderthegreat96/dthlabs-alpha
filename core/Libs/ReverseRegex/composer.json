@@ -1,0 +1,5 @@
+{
+    "require": {
+        "icomefromthenet/reverse-regex": "^0.1.0"
+    }
+}

@@ -1,0 +1,49 @@
+{
+    "packages": [
+        {
+            "name": "gherkins/regexpbuilderphp",
+            "version": "1.0.0",
+            "version_normalized": "1.0.0.0",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:gherkins/regexpbuilderphp.git",
+                "reference": "0157db1ef594eda8b1c6879961b64bcf5b3d23a0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/gherkins/regexpbuilderphp/zipball/0157db1ef594eda8b1c6879961b64bcf5b3d23a0",
+                "reference": "0157db1ef594eda8b1c6879961b64bcf5b3d23a0",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.0|^8.0"
+            },
+            "require-dev": {
+                "php-coveralls/php-coveralls": "^2.4.3",
+                "phpunit/phpunit": "^9.0"
+            },
+            "time": "2021-01-11T11:51:49+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Gherkins\\RegExpBuilderPHP\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "PHP port of thebinarysearchtree/regexpbuilderjs",
+            "homepage": "https://github.com/gherkins/regexpbuilderphp/",
+            "keywords": [
+                "builder",
+                "php",
+                "regex"
+            ],
+            "install-path": "../gherkins/regexpbuilderphp"
+        }
+    ],
+    "dev": true,
+    "dev-package-names": []
+}

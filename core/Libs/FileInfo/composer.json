@@ -1,0 +1,5 @@
+{
+    "require": {
+        "nbish11/fileinfo": "^1.0"
+    }
+}

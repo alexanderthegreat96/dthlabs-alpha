@@ -1,0 +1,5 @@
+{
+    "require": {
+        "gherkins/regexpbuilderphp": "^1.0"
+    }
+}

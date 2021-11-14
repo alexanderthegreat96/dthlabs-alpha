@@ -1,0 +1,67 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "d84092ddab5b90420d8c3f0baab7712c",
+    "packages": [
+        {
+            "name": "nbish11/fileinfo",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nbish11/FileInfo.git",
+                "reference": "eeeae1061def5a7bcff8f962ca652e4e8416b698"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nbish11/FileInfo/zipball/eeeae1061def5a7bcff8f962ca652e4e8416b698",
+                "reference": "eeeae1061def5a7bcff8f962ca652e4e8416b698",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "codeclimate/php-test-reporter": "^0.3.2",
+                "phpunit/phpunit": "^4.8"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Nathan Bishop",
+                    "email": "nbish11@hotmail.com",
+                    "homepage": "https://github.com/nbish11",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A FileInfo class for thos without support for PHP's finfo class.",
+            "support": {
+                "email": "nbish11@hotmail.com",
+                "issues": "https://github.com/nbish11/FileInfo/issues",
+                "source": "https://github.com/nbish11/FileInfo/tree/master",
+                "wiki": "https://github.com/nbish11/FileInfo/wiki"
+            },
+            "time": "2016-07-14T21:03:14+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.0.0"
+}
