@@ -11,6 +11,7 @@ use LexSystems\Framework\Kernel\Helpers\Debugger\Debugger;
 use LexSystems\Framework\Kernel\Helpers\Render\RenderEngine;
 use LexSystems\Framework\Kernel\Helpers\Requests;
 use LexSystems\Framework\Kernel\Helpers\Sesssions\Session;
+use LexSystems\Framework\Kernel\Helpers\Utils\LoremIpsum;
 
 class System extends \Buki\Router\Http\Controller
 {
@@ -156,6 +157,15 @@ class System extends \Buki\Router\Http\Controller
     public function formatSql(string $sql  = '')
     {
         return SqlFormatter::format($sql,true);
+    }
+
+    /**
+     * @return LoremIpsum
+     */
+
+    public function loremIpsum()
+    {
+        return new LoremIpsum();
     }
 
 
