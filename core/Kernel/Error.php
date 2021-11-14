@@ -63,6 +63,8 @@ class Error
             $message .= "\nStack trace: " . $exception->getTraceAsString();
             $message .= "\nThrown in '" . $exception->getFile() . "' on line " . $exception->getLine();
 
+            error_log($message);
+
             $system = new System();
             $system->view()->renderTemplate($code);
         }
