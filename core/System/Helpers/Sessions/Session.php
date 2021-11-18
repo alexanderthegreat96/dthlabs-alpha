@@ -34,22 +34,12 @@ class Session
         {
             foreach($array as $key=>$value)
             {
-                if(is_array($value))
-                {
-                    self::sendTheseToSession($value);
-                }
-                else
-                {
-                    $this->setSession($key,$value);
-                    $result[] = [$key => $value];
-                }
+                $this->setSession($key,$value);
+                $result[$key] = [$key => $value];
             }
-
             return $result;
         }
     }
-
-
 
     /**
      * @return array
@@ -72,10 +62,31 @@ class Session
 
     /**
      * @param string $param
+     * @return mixed|string
+     */
+
+    public function getParam(string $param)
+    {
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
+
+        if(isset($_SESSION[$param]))
+        {
+            return $_SESSION[$param];
+        }
+        else
+        {
+            return '';
+        }
+    }
+
+    /**
+     * @param string $param
      * @return mixed
      */
 
-    public function setSession(string $param,string $value)
+    public function setSession(string $param,$value)
     {
         if (session_status() === PHP_SESSION_NONE) {
             session_start();
