@@ -1,4 +1,5 @@
 <?php
+namespace LexSystems\Framework\Kernel\Helpers;
 /** -------------------------------------------------------------------------------------------------------------------
  * URI CLASS
  * URI management class
@@ -7,7 +8,7 @@
  * @email slc(dot)universe(at)gmail(dot)com
  * @license Public Domain
  **/
-abstract class _URI
+abstract class UriHandler
 {
     /** ---------------------------------------------------------------------------------------------------------------
      *  - BASE PARAMETERS

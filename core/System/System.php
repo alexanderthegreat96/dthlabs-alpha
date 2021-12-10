@@ -63,7 +63,7 @@ class System extends \Buki\Router\Http\Controller
      * @return Session
      */
 
-    public function sessions()
+    public function session()
     {
         return new Session();
     }

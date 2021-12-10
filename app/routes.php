@@ -10,7 +10,7 @@ $router = new Router();
  * Routes go bellow
  */
 
-$router->get('/', 'MyController@index');
+$router->get('/', 'MyController@index',['before' => 'BeforeAuth','after' => 'AfterAuth']);
 $router->get('/create', ['MyController','indexAction']);
 $router->post('/store', 'IndexController@store');
 $router->get('/edit/:id', 'IndexController@edit');

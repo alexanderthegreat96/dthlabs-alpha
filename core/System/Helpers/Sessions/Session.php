@@ -21,6 +21,16 @@ class Session
             $_SESSION['session_id'] = $rand->generate(15);
         }
     }
+
+    /**
+     * @return array
+     */
+
+    public function initSession()
+    {
+        return $this->getSession();
+    }
+
     /**
      * @param array $array
      * @param array $result
@@ -104,6 +114,9 @@ class Session
 
     }
 
+    /**
+     * @return bool
+     */
     public function session_destroy()
     {
         return session_destroy();

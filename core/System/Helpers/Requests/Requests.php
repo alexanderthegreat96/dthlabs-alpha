@@ -1,5 +1,6 @@
 <?php
 namespace LexSystems\Framework\Kernel\Helpers;
+use LexSystems\Framework\Kernel\Helpers\CoreUtils\Utils;
 use LexSystems\Framework\Kernel\Helpers\Sesssions\Session;
 use LexSystems\Framework\Kernel\Helpers\Arrays\ArrayUtility;
 
@@ -14,6 +15,7 @@ class Requests
         $this->post = $_POST;
         $this->get = $_GET;
         $this->port = $_SERVER['SERVER_PORT'];
+        $this->session = $_SESSION;
     }
 
     /**
@@ -121,6 +123,7 @@ class Requests
         $result=[];
         $result['post'] = $this->post;
         $result['get'] = $this->get;
+        $result['session'] = $this->session;
         return $result;
     }
 
@@ -201,5 +204,24 @@ class Requests
             $value = (string)$value;
         }
         return $value;
+    }
+
+    /**
+     * @param string $url
+     */
+
+    public static function redirect(string $url = '')
+    {
+        if (!headers_sent()) {
+            header('Location: ' . $url);
+        } else {
+            $content = '<script type="text/javascript">';
+            $content .= 'window.location.href="' . $url . '";';
+            $content .= '</script>';
+            $content .= '<noscript>';
+            $content .= '<meta http-equiv="refresh" content="0;url=' . $url . '" />';
+            $content .= '</noscript>';
+            echo $content;
+        }
     }
 }
