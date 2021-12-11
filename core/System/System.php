@@ -170,6 +170,21 @@ class System extends \Buki\Router\Http\Controller
     }
 
     /**
+     * @param string $password
+     * @param string $hashKey
+     * @return false|string
+     */
+
+    public function hashThisPassword(string $password, string $hashKey = '')
+    {
+        if(!$hashKey)
+        {
+            $hashKey = 'RR5145LEXSYSTEMS';
+        }
+        return hash('sha512', $password . $hashKey);
+    }
+
+    /**
      * @param array $formData
      * @param array $formElements
      * @return ArrayForm

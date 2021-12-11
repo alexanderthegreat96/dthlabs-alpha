@@ -1,6 +1,8 @@
 <?php
 namespace LexSystems\Framework\Kernel\Helpers\Database;
 use LexSystems\Framework\Configs\Database\MysqlConfig;
+use ReverseRegex\Exception;
+
 /**
  * Database Connection Class
  * Connect the the database
@@ -42,7 +44,7 @@ class MySqli
         }
         else
         {
-            die("Unable to connect to the MySQL Server")." - ".mysqli_error($connection);
+            throw new \Exception('Unable to connect to the MySQL Server');
         }
     }
 

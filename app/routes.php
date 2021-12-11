@@ -11,7 +11,7 @@ $router = new Router();
  */
 
 $router->get('/', 'MyController@index',['before' => 'BeforeAuth','after' => 'AfterAuth']);
-$router->get('/create', ['MyController','indexAction']);
+$router->get('/login', 'Login@index', ['before' => 'BeforeAuth']);
 $router->post('/store', 'IndexController@store');
 $router->get('/edit/:id', 'IndexController@edit');
 $router->put('/update/:id', 'IndexController@update');

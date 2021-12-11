@@ -7,10 +7,10 @@ class MysqlConfig
      * for MYSQL
      */
 
-    const MYSQL_HOST = 'localhost';
-    const MYSQL_USER = 'usernme';
+    const MYSQL_HOST = 'host';
+    const MYSQL_USER = 'user';
     const MYSQL_PASS = 'pass';
-    const MYSQL_DB = 'db';
+    const MYSQL_DB = 'dth-labs-alpha';
 
     /**
      * @return string
