@@ -1,5 +1,6 @@
 <?php
 namespace LexSystems\Framework\Kernel;
+use LexSystems\Framework\Kernel\Helpers\Debugger\Debugger;
 use LexSystems\Framework\Kernel\System;
 class ExceptionHandler
 {
@@ -24,7 +25,7 @@ class ExceptionHandler
             echo "<style>body{background-color: #0073e6; color: #fff; font-family : arial; font-size: 15px;}.error-div{padding: 2%;background-color: #2b2c2e;color: #fff;border: 1px solid red;}.error-p{background-color: #3a3b3d;color: #cccc12;border: 1px solid #5d12cc;padding: 1%;}pre {	width: 100%;	padding: 0;	margin: 0;	overflow: auto;	overflow-y: hidden;	font-size: 12px;	line-height: 20px;	background-color:#1e211f;}</style>";
             echo '<div style="width: 70%;margin:auto;padding: 0.5%;">';
             echo "<h1>Kernel Crash</h1>";
-            echo "<h2>Fatal error</h2>";
+            echo "<h2>Exception</h2>";
             echo "<div class='error-div>'>";
             echo "<p class='error-p'><b>Uncaught exception</b>: '" . get_class($exception) . "'</p>";
             echo "<p class='error-p'><b>Message</b>: '" . $exception->getMessage() . "'</p>";
@@ -32,6 +33,9 @@ class ExceptionHandler
             echo '<pre>'.$exception->getTraceAsString().'</pre>';
             echo '</p>';
             echo "<p class='error-p'><b>Thrown in </b>: '" . $exception->getFile() . "' on line " . $exception->getLine() . "</p>";
+            echo "<p class='error-p'><b>Additional Information</b>:";
+            Debugger::var_dump($exception->getTrace());
+            echo "</p>";
             echo "</div>";
             echo "<p><h6>Built by LexSystems & powered by DTH Labs Alpha</h6></p>";
             echo '</div>';

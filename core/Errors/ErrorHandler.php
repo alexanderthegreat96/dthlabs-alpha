@@ -36,60 +36,59 @@ class ErrorHandler
         echo '<div class="error-div">';
         switch ($errno) {
             case E_USER_ERROR:
-                echo "<b>System caught an error </b> <p class='error-p'>[$errno] $errstr in $errfile</p>\n";
+                echo "<b>Error: </b> <p class='error-p'>[$errno] $errstr in $errfile at line <b>$errline</b></p>\n";
                 echo "<p>PHP " . PHP_VERSION . "  <br/> (" . PHP_OS . ")</p>\n";
                 break;
 
             case E_USER_WARNING:
-                echo "<b>System caught a warning error </b> <p class='error-p'>[$errno] $errstr in $errfile</p>\n";
+                echo "<b>Warning error:</b> <p class='error-p'>[$errno] $errstr in $errfile at <b>$errline</b></p>\n";
                 echo "<p>PHP " . PHP_VERSION . "  <br/> (" . PHP_OS . ")</p>\n";
                 break;
             case E_USER_NOTICE:
-                echo "<b>System caught a notice </b> <p class='error-p'>[$errno] $errstr in $errfile</p>\n";
+                echo "<b>Notice:</b> <p class='error-p'>[$errno] $errstr in <b>$errline</b> at <b>$errline</b></p>\n";
                 echo "<p>PHP " . PHP_VERSION . "  <br/> (" . PHP_OS . ")</p>\n";
                 break;
 
             case E_ERROR:
-                echo "<b>Runtime Error</b> [$errno] $errstr<br />\n";
-                echo "  Fatal error on line $errline in file $errfile";
-                echo ", PHP " . PHP_VERSION . " (" . PHP_OS . ")<br />\n";
-                echo "Aborting...<br />\n";
+                echo "<b>Runtime Error:</b> <p class='error-p'>[$errno] $errstr in $errfile at <b>$errline</b></p>\n";
+                echo "<p>PHP " . PHP_VERSION . "  <br/> (" . PHP_OS . ")</p>\n";
+                break;
                 break;
             case E_CORE_ERROR:
                 echo "<b>Core Error</b> [$errno] $errstr<br />\n";
                 echo ", PHP " . PHP_VERSION . " (" . PHP_OS . ")<br />\n";
                 break;
             case E_COMPILE_ERROR:
-                echo "<b>Script compile error</b> [$errno] $errstr<br />\n";
-                echo ", PHP " . PHP_VERSION . " (" . PHP_OS . ")<br />\n";
+                echo "<b>Compile error:</b> <p class='error-p'>[$errno] $errstr in $errfile at <b>$errline</b></p>\n";
+                echo "<p>PHP " . PHP_VERSION . "  <br/> (" . PHP_OS . ")</p>\n";
                 break;
             case E_PARSE:
 
-                echo "<p><b>System caught a parse error </b> <p class='error-p'>[$errno] $errstr in [$errfile] on line <b>$errline</b></p>\n";
+                echo "<p><b>Parsing error:</b> <p class='error-p'>[$errno] $errstr in [$errfile] on line <b>$errline</b></p>\n";
                 echo "<p>PHP " . PHP_VERSION . "  <br/> Operating system: (" . PHP_OS . ")</p>\n";
                 break;
             case E_RECOVERABLE_ERROR:
-                echo "<b>System caught a recoverable error </b> <p class='error-p'>$errstr in $errfile on line $errline</p>\n";
+                echo "<b>Recoverable error: </b> <p class='error-p'>$errstr in $errfile at line <b>$errline</b></p>\n";
                 echo "<p>PHP " . PHP_VERSION . "  <br/> (" . PHP_OS . ")</p>\n";
                 break;
             case E_WARNING:
-                echo "<b>System caught a warning error </b> <p class='error-p'>[$errno] $errstr in $errfile</p>\n";
+                echo "<b>Warning:</b> <p class='error-p'>[$errno] $errstr in $errfile at <b>$errline</b></p>\n";
                 echo "<p>PHP " . PHP_VERSION . "  <br/> (" . PHP_OS . ")</p>\n";
                 break;
             case E_CORE_WARNING:
-                echo "<b>System caught a warning error </b> <p class='error-p'>[$errno] $errstr in $errfile</p>\n";
+                echo "<b>Warning error:</b> <p class='error-p'>[$errno] $errstr in $errfile at <b>$errline</b></p>\n";
                 echo "<p>PHP " . PHP_VERSION . "  <br/> (" . PHP_OS . ")</p>\n";
                 break;
             case E_COMPILE_WARNING:
-                echo "<b>System caught a compiling error </b> <p class='error-p'>[$errno] in $errfile</p>\n";
+                echo "<b>Compile error:</b> <p class='error-p'>[$errno] $errstr in $errfile at <b>$errline</b></p>\n";
                 echo "<p>PHP " . PHP_VERSION . "  <br/> (" . PHP_OS . ")</p>\n";
                 break;
             case E_NOTICE:
-                echo "<b>System caught a notice </b> <p class='error-p'>[$errno] $errstr in $errfile on line $errline</p>\n";
+                echo "<b>Notice:</b> <p class='error-p'>[$errno] $errstr in <b>$errline</b> at <b>$errline</b></p>\n";
                 echo "<p>PHP " . PHP_VERSION . "  <br/> (" . PHP_OS . ")</p>\n";
                 break;
             case E_STRICT:
-                echo "<b>System caught a strict error </b> <p class='error-p'>[$errno] $errstr in $errfile</p>\n";
+                echo "<b>Strict Error:</b> <p class='error-p'>[$errno] $errstr in $errfile at <b>$errline</b></p>\n";
                 echo "<p>PHP " . PHP_VERSION . "  <br/> (" . PHP_OS . ")</p>\n";
                 break;
             default:
@@ -98,7 +97,6 @@ class ErrorHandler
                 break;
         }
         echo '</div>';
-        echo "<p><h6>Built by LexSystems & powered by DTH Labs Alpha</h6></p>";
         echo "</div>";
         /* Don't execute PHP internal error handler */
         return true;
