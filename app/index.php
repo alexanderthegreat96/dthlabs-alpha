@@ -2,13 +2,7 @@
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
-require __DIR__ . "/../core/Class.loader.php";
-/**
- * Error and Exception handling
- */
-error_reporting(E_ALL);
-set_error_handler('\LexSystems\Framework\Kernel\Error::errorHandler');
-set_exception_handler('\LexSystems\Framework\Kernel\Error::exceptionHandler');
+require __DIR__ . "/../core/Boot.php";
 /**
  * Routing
  */

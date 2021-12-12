@@ -100,17 +100,17 @@ class PackageManager
                 }
                 else
                 {
-                    throw new \Exception('Insufficient permissions to write file to '.$extLocation.'/module_status');
+                    throw new Exception('Insufficient permissions to write file to '.$extLocation.'/module_status');
                 }
             }
             else
             {
-                throw new \Exception(mysqli_error($con));
+                throw new Exception(mysqli_error($con));
             }
         }
         else
         {
-            throw new \Exception('No module_sql file found in: '.$extLocation);
+            throw new Exception('No module_sql file found in: '.$extLocation);
         }
     }
 
@@ -119,6 +119,7 @@ class PackageManager
      */
     public function boot()
     {
+        $loaded = [];
         $modules = self::loadConfigFilesAndClasses($this->packageLocation);
         if($modules)
         {
@@ -145,23 +146,22 @@ class PackageManager
                         }
                     }
 
-                    $loaded =
+                    array_push($loaded,[
+                        $module_key =>
                         [
-                            $module_key =>
-                                [
-                                    'name' => $modules[$module_key]['config']['name'],
-                                    'author' => $modules[$module_key]['config']['author'],
-                                    'version' => $modules[$module_key]['config']['version'],
-                                    'title' => $modules[$module_key]['config']['title'],
-                                    'is_installed' => $modules[$module_key]['status'],
-                                    'loaded-classes' => $loadedClasses
-                                ]
-                        ];
+                            'name' => $modules[$module_key]['config']['name'],
+                            'author' => $modules[$module_key]['config']['author'],
+                            'version' => $modules[$module_key]['config']['version'],
+                            'title' => $modules[$module_key]['config']['title'],
+                            'is_installed' => $modules[$module_key]['status'],
+                            'loaded-classes' => $loadedClasses
+                        ]]);
                 }
 
             }
         }
 
         return $loaded;
+
     }
 }

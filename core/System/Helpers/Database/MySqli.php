@@ -44,7 +44,7 @@ class MySqli
         }
         else
         {
-            throw new \Exception('Unable to connect to the MySQL Server');
+            throw new Exception('Unable to connect to the MySQL Server');
         }
     }
 
