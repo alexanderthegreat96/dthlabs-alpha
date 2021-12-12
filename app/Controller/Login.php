@@ -5,6 +5,6 @@ class Login extends Controller
 {
     public function indexAction()
     {
-        return '';
+        return 'Something';
     }
 }

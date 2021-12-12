@@ -1,29 +1,56 @@
 <?php
+/**
+ * Require autoloader
+ */
+require 'Autoloader.php';
 
 /**
- * Require shutdown for error mapping
+ * Require error handler
  */
-require "Shutdown.php";
+
+require "Errors/ErrorHandler.php";
+
+/**
+ * Require shutdown handler
+ */
+
+require "Errors/ShutdownHandler.php";
 register_shutdown_function('shutdownHandler');
 
 /**
- * Require classes and packages
+ * Require class loader
  */
+
 require "LoadClasses.php";
+
+/**
+ * Use autoloader to load configuration for excetion handler
+ */
+
+\LexSystems\Framework\Autoloader::load(__DIR__ . '/../config/');
+
+/**
+ * Require exception handler
+ */
+require "Errors/ExceptionHandler.php";
+
+/**
+ * Require package manager
+ */
 require "PackageManager.php";
 
 /**
- * Error and Exception handling
+ * Handle erros internally
  */
 
 error_reporting(E_ALL);
-set_error_handler('\LexSystems\Framework\Kernel\Error::errorHandler');
-set_exception_handler('\LexSystems\Framework\Kernel\Error::exceptionHandler');
+set_error_handler('\LexSystems\Framework\Kernel\ErrorHandler::errorHandler');
+set_exception_handler('\LexSystems\Framework\Kernel\ExceptionHandler::exceptionHandler');
 
 /**
- * Boot packages
- * aka include them
+ * Boot framework packages
  */
-$packages  = new LexSystems\Framework\Kernel\PackageManager\PackageManager();
+
+$packages = new LexSystems\Framework\Kernel\PackageManager\PackageManager();
 $packages->boot();
 

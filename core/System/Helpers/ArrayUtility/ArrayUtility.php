@@ -3,6 +3,7 @@
  * Code bellow was  taken from the Typo3 Project
  */
 namespace LexSystems\Framework\Kernel\Helpers\Arrays;
+use LexSystems\Framework\Kernel\Helpers\Debugger\Debugger;
 use Symfony\Component\String\Exception\ExceptionInterface;
 
 /**
@@ -31,6 +32,47 @@ class ArrayUtility
                 1325697085
             );
         }
+    }
+
+    /**
+     * @param array $array
+     * @return string
+     * Flattens array to string
+     */
+
+    public static function readableArray(array $array, array &$result = []):string
+    {
+        if($array)
+        {
+            foreach($array as $key=>$value)
+            {
+                if(!is_array($array[$key]))
+                {
+                    array_push($result,$key." : ". $array[$key]);
+                }
+                else
+                {
+                    array_push($result,self::readableArray($array[$key]));
+                }
+            }
+
+        }
+
+        if($result)
+        {
+            $output = '<ul>';
+                foreach ($result as $r)
+                {
+                    $output .= '<li>'.$r.'</li>';
+                }
+            $output .= '</ul>';
+        }
+        else
+        {
+            $output = '';
+        }
+
+        return $output;
     }
 
     /**
