@@ -11,7 +11,6 @@ It's fast, easy to use and can support a ton of features.
 # Removed docs 
 
 If you want to use it , just head over to app and explore a little bit.
-Or send me an email alexandrulupaescu[at]gmail.com.
 
 This Framework was made for my own internal projects. I sampled the software I ussually use
 as I do not like to get bloated by popular frameworks.
