@@ -11,37 +11,13 @@ class AfterAuth extends Middleware
 {
     public function handle()
     {
-
-        $session = new Session();
-
-        if($session->getParam('logged_in'))
+        if($this->session->getParam('logged_in'))
         {
-            if($session->getParam('rank'))
-            {
-                switch ($session->getParam('rank'))
-                {
-                    case 'admin':
-                        Requests::redirect('/admin');
-                        break;
-                    case 'moderator':
-                        Requests::redirect('/moderator');
-                        break;
-                    default:
-                        Requests::redirect('/');
-                }
-
-                return true;
-            }
-            else
-            {
-                Requests::redirect('/login');
-            }
+            return true;
         }
         else
         {
-            Requests::redirect('/login');
+            return false;
         }
-
-        return true;
     }
 }

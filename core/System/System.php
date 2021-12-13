@@ -14,7 +14,7 @@ use LexSystems\Framework\Kernel\Helpers\Sesssions\Session;
 use LexSystems\Framework\Kernel\Helpers\Utils\ArrayForm;
 use LexSystems\Framework\Kernel\Helpers\Utils\LoremIpsum;
 
-class System extends \Buki\Router\Http\Controller
+class System
 {
     /**
      * @return Utils

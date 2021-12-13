@@ -7,5 +7,15 @@ namespace LexSystems\Framework\Kernel;
 
 abstract class Middleware extends  \Buki\Router\Http\Middleware
 {
+    protected $request;
+    protected $session;
+    protected $system;
 
+    public function __construct()
+    {
+        $system = new System();
+        $this->request = $system->request();
+        $this->session = $system->session();
+        $this->system = $system;
+    }
 }

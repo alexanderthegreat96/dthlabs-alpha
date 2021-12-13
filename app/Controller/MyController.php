@@ -7,7 +7,6 @@ class MyController extends Controller
 {
     public function indexAction()
     {
-        Debugger::var_dump($this->request()->getArguments());
-        $this->requests->getArguments();
+        Debugger::var_dump($this->request->getArguments());
     }
 }

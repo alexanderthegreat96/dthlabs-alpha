@@ -210,7 +210,7 @@ class Requests
      * @param string $url
      */
 
-    public static function redirect(string $url = '')
+    public function redirect(string $url = '')
     {
         if (!headers_sent()) {
             header('Location: ' . $url);

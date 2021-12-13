@@ -20,13 +20,12 @@ class View extends System
     public static function render($view, $args = [])
     {
         extract($args, EXTR_SKIP);
-
-        $file = dirname(__DIR__) . "/resources/views/$view";  // relative to Core directory
+        $file = dirname(__DIR__) . "/../resources/views/$view";  // relative to Core directory
 
         if (is_readable($file)) {
             require $file;
         } else {
-            throw new \Exception("$file not found");
+            throw new \Exception("$file not found, $file has to exist in resources/view");
         }
     }
 

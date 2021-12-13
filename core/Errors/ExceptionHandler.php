@@ -1,7 +1,8 @@
 <?php
 namespace LexSystems\Framework\Kernel;
+use GuzzleHttp\Psr7\Request;
 use LexSystems\Framework\Kernel\Helpers\Debugger\Debugger;
-use LexSystems\Framework\Kernel\System;
+use LexSystems\Framework\Kernel\Helpers\Requests;
 class ExceptionHandler
 {
     /**
@@ -13,6 +14,7 @@ class ExceptionHandler
      */
     public static function exceptionHandler($exception)
     {
+        $requests = new Requests();
         // Code is 404 (not found) or 500 (general error)
         $code = $exception->getCode();
         if ($code != 404) {
@@ -33,8 +35,8 @@ class ExceptionHandler
             echo '<pre>'.$exception->getTraceAsString().'</pre>';
             echo '</p>';
             echo "<p class='error-p'><b>Thrown in </b>: '" . $exception->getFile() . "' on line " . $exception->getLine() . "</p>";
-            echo "<p class='error-p'><b>Additional Information</b>:";
-            Debugger::var_dump($exception->getTrace());
+            echo "<p class='error-p'><b>Request Mapping</b>:";
+            Debugger::var_dump($requests->getArguments());
             echo "</p>";
             echo "</div>";
             echo "<p><h6>Built by LexSystems & powered by DTH Labs Alpha</h6></p>";

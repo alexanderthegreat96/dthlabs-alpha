@@ -26,15 +26,7 @@ class RouterException
         if (self::$debug) {
             throw new Exception($message, $statusCode);
         }
-        if(file_exists(__DIR__.'/../../../../../../../resources/views/'.$statusCode.'.blade.php'))
-        {
-           $view = new System();
-           $view->view()->renderTemplate($statusCode);
-        }
-        else
-        {
-            die("<style>body{background-color: #0073e6; color: #fff; font-family : arial; font-size: 15px;}</style><h2>Opps! An error occurred.</h2> {$message}");
-        }
+        die("<h2>Opps! An error occurred.</h2> {$message}");
 
     }
 }

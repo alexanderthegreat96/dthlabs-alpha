@@ -87,7 +87,7 @@ class Session
         }
         else
         {
-            return '';
+            return null;
         }
     }
 

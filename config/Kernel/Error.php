@@ -7,9 +7,4 @@ class Error
      * development errors
      */
     const ERROR_REPORTING = true;
-
-    public static function getErrorReporting()
-    {
-        return self::ERROR_REPORTING;
-    }
 }
