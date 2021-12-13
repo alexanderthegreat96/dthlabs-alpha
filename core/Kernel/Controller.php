@@ -8,10 +8,27 @@ use LexSystems\Framework\Kernel\System;
 
 class Controller extends \Buki\Router\Http\Controller
 {
+    /**
+     * @var Helpers\CoreUtils\Utils
+     */
     protected $utils;
+    /**
+     * @var Helpers\Requests
+     */
     protected $request;
+    /**
+     * @var Helpers\Sesssions\Session
+     */
     protected $session;
+    /**
+     * @var \LexSystems\Framework\Kernel\System
+     */
     protected $system;
+    /**
+     * @var View
+     */
+    protected $view;
+
 
     public function __construct()
     {
@@ -20,6 +37,6 @@ class Controller extends \Buki\Router\Http\Controller
         $this->request = $system->request();
         $this->session = $system->session();
         $this->system = $system;
-
+        $this->view = $system->view();
     }
 }

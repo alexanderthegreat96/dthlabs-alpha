@@ -6,7 +6,7 @@ class MyModel extends Model
 {
     public function getUser(int $userId)
     {
-        $con = $this->system()->mysqli()->connect();
+        $con = $this->mysqli->connect();
         $get = mysqli_query($con,'SELECT * FROM users WHERE id = "'.$this->utils()->clean($userId).'" LIMIT 1');
         if(mysqli_num_rows($get))
         {
