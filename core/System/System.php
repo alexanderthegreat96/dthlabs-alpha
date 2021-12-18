@@ -1,6 +1,5 @@
 <?php
 namespace LexSystems\Framework\Kernel;
-use duzun\hQuery;
 use jabarihunt\Password;
 use LexSystems\Framework\Kernel\Helpers\Arrays\ArrayUtility;
 use LexSystems\Framework\Kernel\Helpers\CoreUtils\Query;

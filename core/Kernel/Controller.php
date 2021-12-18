@@ -5,7 +5,7 @@
  */
 namespace LexSystems\Framework\Kernel;
 use LexSystems\Framework\Kernel\System;
-
+use Illuminate\Database\Capsule\Manager;
 class Controller extends \Buki\Router\Http\Controller
 {
     /**
@@ -38,5 +38,6 @@ class Controller extends \Buki\Router\Http\Controller
         $this->session = $system->session();
         $this->system = $system;
         $this->view = $system->view();
+        $this->db = new Manager();
     }
 }

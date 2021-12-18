@@ -3,7 +3,6 @@
  * Code bellow was  taken from the Typo3 Project
  */
 namespace LexSystems\Framework\Kernel\Helpers\Arrays;
-use LexSystems\Framework\Kernel\Helpers\Debugger\Debugger;
 use Symfony\Component\String\Exception\ExceptionInterface;
 
 /**

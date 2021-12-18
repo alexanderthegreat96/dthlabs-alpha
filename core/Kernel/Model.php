@@ -1,6 +1,7 @@
 <?php
 namespace LexSystems\Framework\Kernel;
-abstract class Model
+use Illuminate\Database\Eloquent;
+abstract class Model extends Eloquent\Model
 {
     /**
      * @var System
@@ -19,12 +20,19 @@ abstract class Model
      */
     protected $mysqli;
 
-    public function __construct()
+    public function __construct(array $attributes = [])
     {
         $system = new System();
         $this->system = $system;
         $this->utils  = $system->utils();
         $this->queryBuilder = $system->queryBuilder();
         $this->mysqli = $system->mysqli();
+
+        /**
+         * Call the Eloquent Model Constructor
+         * with the assigned attributes:
+         * fillable,guarded etc
+         */
+        parent::__construct($attributes);
     }
 }

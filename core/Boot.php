@@ -2,6 +2,9 @@
 /**
  * Require autoloader
  */
+
+use Illuminate\Database\Capsule\Manager as Capsule;
+
 require 'Autoloader.php';
 
 /**
@@ -46,6 +49,27 @@ require "PackageManager.php";
 error_reporting(E_ALL);
 set_error_handler('\LexSystems\Framework\Kernel\ErrorHandler::errorHandler');
 set_exception_handler('\LexSystems\Framework\Kernel\ExceptionHandler::exceptionHandler');
+
+
+/**
+ * Boot eloquent ORM
+ */
+
+$capsule = new Capsule;
+
+$capsule->addConnection(array(
+    'driver'    => 'mysql',
+    'host'      => \LexSystems\Framework\Configs\Database\MysqlConfig::getHost(),
+    'database'  => \LexSystems\Framework\Configs\Database\MysqlConfig::getDb(),
+    'username'  => \LexSystems\Framework\Configs\Database\MysqlConfig::getUser(),
+    'password'  => \LexSystems\Framework\Configs\Database\MysqlConfig::getPass(),
+    'charset'   => 'utf8',
+    'collation' => 'utf8_unicode_ci',
+    'prefix'    => ''
+));
+
+$capsule->bootEloquent();
+$capsule->setAsGlobal();
 
 /**
  * Boot framework packages

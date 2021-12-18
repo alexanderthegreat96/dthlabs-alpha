@@ -2,8 +2,9 @@
 namespace LexSystems\Framework\Kernel\Helpers\CoreUtils;
 use Doctrine\DBAL\DriverManager;
 use Doctrine\DBAL\Exception;
-use LexSystems\Framework\Configs\Database\MysqlConfig;
 use Doctrine\DBAL\Query\QueryBuilder;
+use LexSystems\Framework\Configs\Database\MysqlConfig;
+
 class Query
 {
     /**
