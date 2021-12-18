@@ -2,6 +2,7 @@
 namespace LexSystems\Framework\Kernel;
 use duzun\hQuery;
 use jabarihunt\Password;
+use LexSystems\Framework\Kernel\Helpers\Arrays\ArrayUtility;
 use LexSystems\Framework\Kernel\Helpers\CoreUtils\Query;
 use LexSystems\Framework\Kernel\Helpers\CoreUtils\RandomStringGenerator;
 use LexSystems\Framework\Kernel\Helpers\CoreUtils\SqlFormatter;
@@ -13,6 +14,7 @@ use LexSystems\Framework\Kernel\Helpers\Requests;
 use LexSystems\Framework\Kernel\Helpers\Sesssions\Session;
 use LexSystems\Framework\Kernel\Helpers\Utils\ArrayForm;
 use LexSystems\Framework\Kernel\Helpers\Utils\LoremIpsum;
+use MadeSimple\Validator\Validator;
 
 class System
 {
@@ -57,6 +59,18 @@ class System
     public function request()
     {
         return new Requests();
+    }
+
+    /**
+     * @param $values
+     * @param array $ruleSet
+     * @param string|null $prefix
+     * @return bool
+     */
+    public function validateInputs($values, array $ruleSet, string $prefix = null)
+    {
+        $validator = new Validator();
+        return $validator->validate($values,$ruleSet,$prefix);
     }
 
     /**
@@ -192,5 +206,13 @@ class System
     public function arrayForm(array $formElements = [], array $formData = [])
     {
         return new ArrayForm($formElements,$formData);
+    }
+
+    /**
+     * @return ArrayUtility
+     */
+    public function arrayUtility()
+    {
+        return new ArrayUtility();
     }
 }

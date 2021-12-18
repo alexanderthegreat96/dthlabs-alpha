@@ -172,6 +172,7 @@ class ArrayForm
 
                     break;
                 case "radio":
+                   $input = "<input id=\"$inputID\" type=\"checkbox\" class=\"$class\" name=\"$name\" $attributes value=\"$value\" />";
                 case "checkbox":
                     foreach ($options as $key => $val) {
                         if (is_numeric($key)) {
@@ -193,6 +194,9 @@ class ArrayForm
                     $input = $element["custom"];
                     $label = "";
                     break;
+                case "button":
+                    $input = '<button type="'.$type.'" name="'.$name.'" class="'.$class.'" '.$attributes.'>'.$value.'</button>';
+                    break;
                 default:
                     $input = "<input id=\"$inputID\" type=\"$type\" class=\"$class\" name=\"$name\" $attributes value=\"$value\" />";
 
@@ -201,28 +205,42 @@ class ArrayForm
                 $hidden .= '<input type="hidden" name="' . $name . '" value="' . $value . '">';
                 continue;
             }
-            switch ($this->formData["display"]) {
+//            switch ($this->formData["display"]) {
+//
+//                case "table":
+//                    $output .= <<<INPUT
+//					<tr $wrapper_attr>
+//						<td class="DFForm-input-title">$label</td>
+//						<td class="DFForm-input-content">$input</td>
+//					</tr>
+//INPUT;
+//                    break;
+//
+//                default:
+//                    $output .= <<<INPUT
+//					<div $wrapper_attr class="form-group">
+//						$label
+//						<div>$input</div>
+//					</div>
+//
+//INPUT;
+//
+//            }
 
-                case "table":
-                    $output .= <<<INPUT
-					<tr $wrapper_attr>
-						<td class="DFForm-input-title">$label</td>
-						<td class="DFForm-input-content">$input</td>
-					</tr>
-INPUT;
-                    break;
-
-                default:
-                    $output .= <<<INPUT
-					<div $wrapper_attr class="form-group">
-						$label
-						<div>$input</div>
-					</div>
-                   
-INPUT;
-
+            if($this->formData['display'] == 'table')
+            {
+                $output .= '<tr '.$wrapper_attr.'>';
+                $output .= '<td class="DFForm-input-title">'.$label.'</td>';
+                $output .= '<td class="DFForm-input-content">'.$input.'</td>';
+                $output .= '</tr>';
             }
-
+            else
+            {
+                $output .= '<div '.$wrapper_attr.' class="form-group">';
+                $output .= $label;
+                $output .= '<div>'.$input.'</div>';
+                $output .= '</div>';
+            }
 
         }
 
@@ -231,12 +249,15 @@ INPUT;
 
     }
 
+    /**
+     * @param $inputs
+     * @return string
+     */
     protected function printOutput($inputs)
     {
 
         $output = $inputs[0];
         $hidden = $inputs[1];
-
 
         $formData = $this->formData;
         $class = isset($formData['class']) ? $formData['class'] : null;

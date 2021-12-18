@@ -37,42 +37,52 @@ class ArrayUtility
     /**
      * @param array $array
      * @return string
-     * Flattens array to string
+     * Converts array to plain
+     * HTML list
      */
 
-    public static function readableArray(array $array, array &$result = []):string
+    public static function arrayToList(array $array)
     {
+        /**
+         * Make sure we convert any objects to array elements
+         * not the best for performance
+         * but you should never output large arrays in the front end
+         * use Debugger::var_dump for that
+         */
+        $array = self::convertObjectsToArray($array);
+
         if($array)
         {
+          $html = '<ul>';
+
             foreach($array as $key=>$value)
             {
                 if(!is_array($array[$key]))
                 {
-                    array_push($result,$key." : ". $array[$key]);
+                    $html .= '<li><b>'.$key.'</b> - '.$value.'</li>';
+
                 }
                 else
                 {
-                    array_push($result,self::readableArray($array[$key]));
+                    $html .= '<li><b>'.$key.'</b>'.self::arrayToList($array[$key]).'</li>';
+                    
                 }
+
             }
 
-        }
+            $html .= '</ul>';
 
-        if($result)
-        {
-            $output = '<ul>';
-                foreach ($result as $r)
-                {
-                    $output .= '<li>'.$r.'</li>';
-                }
-            $output .= '</ul>';
         }
-        else
-        {
-            $output = '';
-        }
+        return $html;
+    }
 
-        return $output;
+    /**
+     * @param array $array
+     * @return mixed
+     */
+    public static function convertObjectsToArray(array $array)
+    {
+       return json_decode(json_encode($array), true);
     }
 
     /**
@@ -464,7 +474,7 @@ class ArrayUtility
                 // Quote \ to \\
                 // Quote ' to \'
                 $stringContent = str_replace(['\\', '\''], ['\\\\', '\\\''], $value);
-                $lines .= '\'' . $stringContent . "',\n";
+                $lines .= '\'' . $stringContent . "',\r\n";
             } else {
                 throw new \RuntimeException('Objects are not supported', 1342294987);
             }

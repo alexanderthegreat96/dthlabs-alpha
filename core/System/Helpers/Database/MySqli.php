@@ -6,7 +6,7 @@ use ReverseRegex\Exception;
 /**
  * Database Connection Class
  * Connect the the database
- * (c) 2020 Alexandru Lupaescu
+ * (c) 2021 Alexandru Lupaescu
  */
 
 class MySqli
@@ -39,7 +39,6 @@ class MySqli
             /**
              * Return the connection link
              */
-            
             return $connection;
         }
         else
@@ -55,7 +54,7 @@ class MySqli
      * @param string $dbName
      * @return array
      */
-    public function insertData(string $table, array $columns, array $values, string $dbName = '')
+    public function insertData(string $table = '', array $columns = [], array $values = [], string $dbName = '')
     {
 
         $con = $this->connect($dbName);
@@ -78,16 +77,10 @@ class MySqli
         }
         $result = mysqli_query($con, $query);
 
-        if ($result == true) {
-            return array(
-                "status" => true,
-                "query_id" => mysqli_insert_id($con)
-            );
+        if ($result) {
+            return mysqli_insert_id($con);
         } else {
-            return array(
-                "status" => false,
-                "error" => mysqli_error($con),
-                "sql" => $query);
+            throw new \Exception('There was a problem running the query. MySQL Error:'.mysqli_error($con).'SQL Code:'.$query);
         }
     }
 
@@ -119,18 +112,17 @@ class MySqli
             }
 
             $begin_query .= implode(" AND ", $criterias);
-
             $execute = mysqli_query($con, $begin_query);
 
             if ($execute) {
-                return array("status" => true);
+                    return true;
             } else {
-                return array("status" => false, "error" => mysqli_error($con) . " - " . $begin_query . "");
+                throw new \Exception('There was an error.'.mysqli_error($con).' - ' .$begin_query);
             }
 
 
         } else {
-            return array("status" => false, "error" => "Mismatch between column and value count! : " . count($cols) . " columns and " . count($vals) . "");
+            throw new \Exception('Mismatch between column and value count: '.count($vals).' and '. count($cols));
         }
     }
 }

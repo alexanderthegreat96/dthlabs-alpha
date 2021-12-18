@@ -72,20 +72,13 @@ class Login extends System
             }
             else
             {
-                return array
-                (
-                    "status" => false,
-                    "error" => "Error account has been banned."
-                );
+                throw new \Exception('Account has been banned');
             }
 
         }
         else
         {
-            return array(
-                "status" => false,
-                "error" => "Incorrect credentials."
-            );
+           throw new \Exception('Incorrect login credentials!');
         }
     }
 }

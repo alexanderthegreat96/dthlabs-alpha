@@ -31,6 +31,20 @@ class Requests
     }
 
     /**
+     * @param string $input_name
+     * @return false|mixed|string|void
+     */
+    public function getFormValue(string $input_name = '')
+    {
+        return $this->hasArgument($input_name) ? $this->getArgument($input_name) : '';
+    }
+
+    public function getFormInputs()
+    {
+        return array_filter($this->getArguments());
+    }
+
+    /**
      * @param bool $withQuery
      * @return array|string|string[]
      */
@@ -106,6 +120,7 @@ class Requests
                     break;
                 case 'POST':
                     return $this->post[$param];
+                    break;
             }
         }
         else

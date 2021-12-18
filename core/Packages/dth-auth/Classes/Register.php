@@ -81,6 +81,12 @@ class Register extends System
                 time()
             ];
 
-        return $this->mysqli()->insertData('dth_auth_users',$cols,$vals);
+        try{
+            $this->mysqli()->insertData('dth_auth_users',$cols,$vals);
+        }
+        catch (\Exception $e)
+        {
+            return $e->getMessage();
+        }
     }
 }
