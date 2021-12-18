@@ -2,11 +2,11 @@
 
 namespace MathPHP\Tests\Statistics\Multivariate\PCA;
 
-use MathPHP\LinearAlgebra\NumericMatrix;
+use MathPHP\Exception;
 use MathPHP\LinearAlgebra\MatrixFactory;
+use MathPHP\LinearAlgebra\NumericMatrix;
 use MathPHP\SampleData;
 use MathPHP\Statistics\Multivariate\PCA;
-use MathPHP\Exception;
 
 class PCATest extends \PHPUnit\Framework\TestCase
 {

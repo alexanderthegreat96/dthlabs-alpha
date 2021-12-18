@@ -2,9 +2,9 @@
 
 namespace MathPHP\Functions;
 
-use MathPHP\Probability\Combinatorics;
-use MathPHP\Functions\Map\Single;
 use MathPHP\Exception;
+use MathPHP\Functions\Map\Single;
+use MathPHP\Probability\Combinatorics;
 
 class Special
 {

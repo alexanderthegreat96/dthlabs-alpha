@@ -2,8 +2,8 @@
 
 namespace MathPHP\Tests\LinearAlgebra\Decomposition;
 
-use MathPHP\LinearAlgebra\MatrixFactory;
 use MathPHP\Exception;
+use MathPHP\LinearAlgebra\MatrixFactory;
 use MathPHP\LinearAlgebra\Vector;
 use MathPHP\Tests\LinearAlgebra\Fixture\MatrixDataProvider;
 

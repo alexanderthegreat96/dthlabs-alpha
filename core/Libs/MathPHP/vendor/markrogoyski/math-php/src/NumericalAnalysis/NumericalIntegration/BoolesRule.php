@@ -2,8 +2,8 @@
 
 namespace MathPHP\NumericalAnalysis\NumericalIntegration;
 
-use MathPHP\NumericalAnalysis\Interpolation\LagrangePolynomial;
 use MathPHP\Exception;
+use MathPHP\NumericalAnalysis\Interpolation\LagrangePolynomial;
 
 /**
  * Boole's Rule

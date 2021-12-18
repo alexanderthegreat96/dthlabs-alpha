@@ -3,7 +3,6 @@
 namespace Doctrine\Common\Cache;
 
 use Redis;
-
 use function array_combine;
 use function array_diff_key;
 use function array_fill_keys;

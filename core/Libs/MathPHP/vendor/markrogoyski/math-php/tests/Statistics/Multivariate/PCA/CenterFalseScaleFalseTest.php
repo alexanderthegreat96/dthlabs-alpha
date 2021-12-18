@@ -2,12 +2,12 @@
 
 namespace MathPHP\Tests\Statistics\Multivariate\PCA;
 
+use MathPHP\Exception;
 use MathPHP\Functions\Map\Multi;
-use MathPHP\LinearAlgebra\NumericMatrix;
 use MathPHP\LinearAlgebra\MatrixFactory;
+use MathPHP\LinearAlgebra\NumericMatrix;
 use MathPHP\SampleData;
 use MathPHP\Statistics\Multivariate\PCA;
-use MathPHP\Exception;
 
 class CenterFalseScaleFalseTest extends \PHPUnit\Framework\TestCase
 {

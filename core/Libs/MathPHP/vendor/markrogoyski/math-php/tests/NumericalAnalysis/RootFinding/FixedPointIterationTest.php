@@ -2,9 +2,9 @@
 
 namespace MathPHP\Tests\NumericalAnalysis\RootFinding;
 
+use MathPHP\Exception;
 use MathPHP\Expression\Polynomial;
 use MathPHP\NumericalAnalysis\RootFinding\FixedPointIteration;
-use MathPHP\Exception;
 
 class FixedPointIterationTest extends \PHPUnit\Framework\TestCase
 {

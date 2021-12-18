@@ -2,7 +2,6 @@
 <?php
 namespace Skrz\Meta;
 
-use Google\Protobuf\Compiler\CodeGeneratorResponse;
 use Google\Protobuf\Compiler\Meta\CodeGeneratorRequestMeta;
 use Google\Protobuf\Compiler\Meta\CodeGeneratorResponseMeta;
 use Skrz\Meta\Protobuf\ProtocGenPhp;

@@ -2,9 +2,8 @@
 
 namespace MathPHP\Probability\Distribution\Discrete;
 
-use MathPHP\Arithmetic;
-use MathPHP\Probability\Combinatorics;
 use MathPHP\Functions\Support;
+use MathPHP\Probability\Combinatorics;
 
 /**
  * Binomial distribution - probability mass function

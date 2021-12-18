@@ -8,7 +8,6 @@ use Couchbase\Bucket;
 use Couchbase\Document;
 use Couchbase\Exception;
 use RuntimeException;
-
 use function phpversion;
 use function serialize;
 use function sprintf;

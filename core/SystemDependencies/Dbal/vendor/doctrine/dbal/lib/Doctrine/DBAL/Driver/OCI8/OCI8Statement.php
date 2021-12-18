@@ -14,7 +14,6 @@ use InvalidArgumentException;
 use IteratorAggregate;
 use PDO;
 use ReturnTypeWillChange;
-
 use function array_key_exists;
 use function assert;
 use function count;
@@ -35,7 +34,6 @@ use function oci_parse;
 use function preg_match;
 use function preg_quote;
 use function substr;
-
 use const OCI_ASSOC;
 use const OCI_B_BIN;
 use const OCI_B_BLOB;

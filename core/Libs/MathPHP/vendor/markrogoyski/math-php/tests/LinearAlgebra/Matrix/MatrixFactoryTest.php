@@ -2,16 +2,16 @@
 
 namespace MathPHP\Tests\LinearAlgebra\Matrix;
 
+use MathPHP\Exception;
 use MathPHP\LinearAlgebra\ComplexMatrix;
-use MathPHP\LinearAlgebra\NumericDiagonalMatrix;
-use MathPHP\LinearAlgebra\NumericMatrix;
 use MathPHP\LinearAlgebra\Matrix;
 use MathPHP\LinearAlgebra\MatrixFactory;
+use MathPHP\LinearAlgebra\NumericDiagonalMatrix;
+use MathPHP\LinearAlgebra\NumericMatrix;
 use MathPHP\LinearAlgebra\NumericSquareMatrix;
 use MathPHP\LinearAlgebra\ObjectMatrix;
 use MathPHP\LinearAlgebra\ObjectSquareMatrix;
 use MathPHP\LinearAlgebra\Vector;
-use MathPHP\Exception;
 
 class MatrixFactoryTest extends \PHPUnit\Framework\TestCase
 {

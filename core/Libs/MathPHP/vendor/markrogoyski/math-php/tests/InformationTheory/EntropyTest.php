@@ -2,8 +2,8 @@
 
 namespace MathPHP\Tests\InformationTheory;
 
-use MathPHP\InformationTheory\Entropy;
 use MathPHP\Exception;
+use MathPHP\InformationTheory\Entropy;
 
 class EntropyTest extends \PHPUnit\Framework\TestCase
 {

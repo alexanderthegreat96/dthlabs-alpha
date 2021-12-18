@@ -2,9 +2,9 @@
 
 namespace MathPHP\Tests\Expression;
 
+use MathPHP\Exception;
 use MathPHP\Expression\Piecewise;
 use MathPHP\Expression\Polynomial;
-use MathPHP\Exception;
 
 class PiecewiseTest extends \PHPUnit\Framework\TestCase
 {

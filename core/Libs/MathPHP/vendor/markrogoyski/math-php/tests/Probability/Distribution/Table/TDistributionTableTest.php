@@ -2,8 +2,8 @@
 
 namespace MathPHP\Tests\Probability\Distribution\Table;
 
-use MathPHP\Probability\Distribution\Table\TDistribution;
 use MathPHP\Exception;
+use MathPHP\Probability\Distribution\Table\TDistribution;
 
 class TDistributionTableTest extends \PHPUnit\Framework\TestCase
 {

@@ -2,8 +2,8 @@
 
 namespace MathPHP\Tests\Expression;
 
-use MathPHP\Expression\Polynomial;
 use MathPHP\Exception;
+use MathPHP\Expression\Polynomial;
 
 class PolynomialTest extends \PHPUnit\Framework\TestCase
 {

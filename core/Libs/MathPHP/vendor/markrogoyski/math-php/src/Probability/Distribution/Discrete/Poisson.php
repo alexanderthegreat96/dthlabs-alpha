@@ -2,8 +2,8 @@
 
 namespace MathPHP\Probability\Distribution\Discrete;
 
-use MathPHP\Probability\Combinatorics;
 use MathPHP\Functions\Support;
+use MathPHP\Probability\Combinatorics;
 
 /**
  * Poisson distribution

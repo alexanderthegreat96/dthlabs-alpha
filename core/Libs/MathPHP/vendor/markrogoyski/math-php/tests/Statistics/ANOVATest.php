@@ -2,8 +2,8 @@
 
 namespace MathPHP\Tests\Statistics;
 
-use MathPHP\Statistics\ANOVA;
 use MathPHP\Exception;
+use MathPHP\Statistics\ANOVA;
 
 class ANOVATest extends \PHPUnit\Framework\TestCase
 {

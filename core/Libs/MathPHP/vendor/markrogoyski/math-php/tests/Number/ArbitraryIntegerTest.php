@@ -2,9 +2,9 @@
 
 namespace MathPHP\Tests\Number;
 
+use MathPHP\Exception;
 use MathPHP\Number\ArbitraryInteger;
 use MathPHP\Number\Rational;
-use MathPHP\Exception;
 
 class ArbitraryIntegerTest extends \PHPUnit\Framework\TestCase
 {

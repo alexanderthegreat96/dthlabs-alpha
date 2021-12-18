@@ -2,12 +2,8 @@
 
 namespace Mpdf;
 
-use Mpdf\Strict;
-
 use Mpdf\Color\ColorConverter;
-
 use Mpdf\Image\ImageProcessor;
-
 use Mpdf\Language\LanguageToFontInterface;
 
 class Tag

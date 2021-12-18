@@ -8,7 +8,6 @@ use DateTimeInterface;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\Common\Persistence\Proxy;
 use stdClass;
-
 use function array_keys;
 use function assert;
 use function class_exists;

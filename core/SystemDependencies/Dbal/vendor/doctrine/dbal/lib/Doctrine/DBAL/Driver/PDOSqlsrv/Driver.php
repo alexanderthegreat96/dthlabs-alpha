@@ -6,7 +6,6 @@ use Doctrine\DBAL\Driver\AbstractSQLServerDriver;
 use Doctrine\DBAL\Driver\AbstractSQLServerDriver\Exception\PortWithoutHost;
 use Doctrine\DBAL\Driver\PDO;
 use Doctrine\Deprecations\Deprecation;
-
 use function is_int;
 use function sprintf;
 

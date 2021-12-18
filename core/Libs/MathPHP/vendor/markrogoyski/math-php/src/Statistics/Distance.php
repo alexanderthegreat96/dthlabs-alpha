@@ -2,9 +2,9 @@
 
 namespace MathPHP\Statistics;
 
+use MathPHP\Exception;
 use MathPHP\Functions\Map;
 use MathPHP\LinearAlgebra\NumericMatrix;
-use MathPHP\Exception;
 use MathPHP\LinearAlgebra\Vector;
 
 /**

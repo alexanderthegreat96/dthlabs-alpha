@@ -7,7 +7,6 @@ use Doctrine\DBAL\Driver\PDO;
 use Doctrine\DBAL\Exception;
 use Doctrine\Deprecations\Deprecation;
 use PDOException;
-
 use function defined;
 
 /**

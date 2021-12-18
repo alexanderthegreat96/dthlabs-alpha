@@ -2,10 +2,10 @@
 
 namespace MathPHP\Tests\LinearAlgebra\Matrix\Numeric;
 
+use MathPHP\Exception;
 use MathPHP\LinearAlgebra\MatrixFactory;
 use MathPHP\LinearAlgebra\NumericMatrix;
 use MathPHP\LinearAlgebra\NumericSquareMatrix;
-use MathPHP\Exception;
 
 class MatrixOperationsTest extends \PHPUnit\Framework\TestCase
 {

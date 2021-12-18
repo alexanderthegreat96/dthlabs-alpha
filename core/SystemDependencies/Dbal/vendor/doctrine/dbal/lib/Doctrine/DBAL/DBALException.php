@@ -8,7 +8,6 @@ use Doctrine\DBAL\Exception\DriverException;
 use Doctrine\DBAL\Platforms\AbstractPlatform;
 use Doctrine\DBAL\Types\Type;
 use Throwable;
-
 use function array_map;
 use function bin2hex;
 use function get_class;

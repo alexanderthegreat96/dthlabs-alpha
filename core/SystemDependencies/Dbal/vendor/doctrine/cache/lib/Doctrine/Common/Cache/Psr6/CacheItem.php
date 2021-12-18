@@ -7,7 +7,6 @@ use DateTime;
 use DateTimeInterface;
 use Psr\Cache\CacheItemInterface;
 use TypeError;
-
 use function get_class;
 use function gettype;
 use function is_int;

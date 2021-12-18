@@ -2,10 +2,10 @@
 
 namespace MathPHP\Tests\LinearAlgebra\Matrix;
 
+use MathPHP\Exception;
 use MathPHP\Expression\Polynomial;
 use MathPHP\LinearAlgebra\MatrixFactory;
 use MathPHP\LinearAlgebra\NumericMatrix;
-use MathPHP\Exception;
 
 class MatrixAugmentationTest extends \PHPUnit\Framework\TestCase
 {

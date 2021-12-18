@@ -2,8 +2,8 @@
 
 namespace MathPHP\Tests\Statistics;
 
-use MathPHP\Statistics\Correlation;
 use MathPHP\Exception;
+use MathPHP\Statistics\Correlation;
 
 class CorrelationTest extends \PHPUnit\Framework\TestCase
 {

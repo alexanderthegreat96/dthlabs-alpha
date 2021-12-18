@@ -3,7 +3,6 @@
 namespace Doctrine\DBAL;
 
 use Doctrine\DBAL\Types\Type;
-
 use function array_fill;
 use function array_fill_keys;
 use function array_key_exists;
@@ -21,7 +20,6 @@ use function sprintf;
 use function strlen;
 use function strpos;
 use function substr;
-
 use const PREG_OFFSET_CAPTURE;
 
 /**

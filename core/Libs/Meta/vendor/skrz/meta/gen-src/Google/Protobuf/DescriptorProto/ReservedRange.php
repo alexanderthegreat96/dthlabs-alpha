@@ -1,8 +1,6 @@
 <?php
 namespace Google\Protobuf\DescriptorProto;
 
-use Skrz\Meta\Protobuf\ProtobufField;
-
 /**
  * Range of reserved tag numbers. Reserved tag numbers may not be used by
  *  fields or extension ranges in the same message. Reserved ranges may

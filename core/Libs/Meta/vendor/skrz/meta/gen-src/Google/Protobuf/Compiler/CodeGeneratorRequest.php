@@ -2,7 +2,6 @@
 namespace Google\Protobuf\Compiler;
 
 use Google\Protobuf\FileDescriptorProto;
-use Skrz\Meta\Protobuf\ProtobufField;
 
 /**
  * An encoded CodeGeneratorRequest is written to the plugin's stdin.

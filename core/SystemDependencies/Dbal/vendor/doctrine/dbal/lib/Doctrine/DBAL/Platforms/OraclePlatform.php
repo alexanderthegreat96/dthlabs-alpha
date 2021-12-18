@@ -13,7 +13,6 @@ use Doctrine\DBAL\TransactionIsolationLevel;
 use Doctrine\DBAL\Types\BinaryType;
 use Doctrine\Deprecations\Deprecation;
 use InvalidArgumentException;
-
 use function array_merge;
 use function count;
 use function explode;

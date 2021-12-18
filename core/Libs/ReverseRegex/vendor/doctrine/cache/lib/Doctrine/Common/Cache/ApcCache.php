@@ -9,7 +9,6 @@ use function apc_exists;
 use function apc_fetch;
 use function apc_sma_info;
 use function apc_store;
-
 use const PHP_VERSION_ID;
 
 /**

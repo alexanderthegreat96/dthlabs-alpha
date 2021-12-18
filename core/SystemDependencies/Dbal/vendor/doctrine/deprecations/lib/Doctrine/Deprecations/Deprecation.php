@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Doctrine\Deprecations;
 
 use Psr\Log\LoggerInterface;
-
 use function array_key_exists;
 use function array_reduce;
 use function debug_backtrace;
@@ -14,7 +13,6 @@ use function strpos;
 use function strrpos;
 use function substr;
 use function trigger_error;
-
 use const DEBUG_BACKTRACE_IGNORE_ARGS;
 use const DIRECTORY_SEPARATOR;
 use const E_USER_DEPRECATED;

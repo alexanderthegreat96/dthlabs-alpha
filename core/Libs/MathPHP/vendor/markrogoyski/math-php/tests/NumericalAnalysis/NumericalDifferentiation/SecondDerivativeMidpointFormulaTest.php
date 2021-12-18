@@ -2,8 +2,8 @@
 
 namespace MathPHP\Tests\NumericalAnalysis\NumericalDifferentiation;
 
-use MathPHP\NumericalAnalysis\NumericalDifferentiation\SecondDerivativeMidpointFormula;
 use MathPHP\Exception;
+use MathPHP\NumericalAnalysis\NumericalDifferentiation\SecondDerivativeMidpointFormula;
 
 class SecondDerivativeMidpointFormulaTest extends \PHPUnit\Framework\TestCase
 {

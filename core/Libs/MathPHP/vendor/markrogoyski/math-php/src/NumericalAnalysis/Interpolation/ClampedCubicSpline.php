@@ -2,9 +2,9 @@
 
 namespace MathPHP\NumericalAnalysis\Interpolation;
 
-use MathPHP\Expression\Polynomial;
-use MathPHP\Expression\Piecewise;
 use MathPHP\Exception;
+use MathPHP\Expression\Piecewise;
+use MathPHP\Expression\Polynomial;
 
 /**
  * Clamped Cubic Spline Interpolating Polynomial

@@ -2,10 +2,7 @@
 
 namespace Mpdf;
 
-use Mpdf\Strict;
-
 use Mpdf\Color\ColorConverter;
-
 use Mpdf\Writer\BaseWriter;
 use Mpdf\Writer\FormWriter;
 

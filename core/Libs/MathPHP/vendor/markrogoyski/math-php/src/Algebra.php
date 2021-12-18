@@ -2,8 +2,8 @@
 
 namespace MathPHP;
 
-use MathPHP\Number\Complex;
 use MathPHP\Functions\Map\Single;
+use MathPHP\Number\Complex;
 use MathPHP\NumberTheory\Integer;
 
 class Algebra

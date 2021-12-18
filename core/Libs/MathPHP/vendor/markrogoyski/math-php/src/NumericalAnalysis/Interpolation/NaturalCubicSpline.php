@@ -3,8 +3,8 @@
 namespace MathPHP\NumericalAnalysis\Interpolation;
 
 use MathPHP\Exception;
-use MathPHP\Expression\Polynomial;
 use MathPHP\Expression\Piecewise;
+use MathPHP\Expression\Polynomial;
 
 /**
  * Natural Cubic Spline Interpolating Polynomial

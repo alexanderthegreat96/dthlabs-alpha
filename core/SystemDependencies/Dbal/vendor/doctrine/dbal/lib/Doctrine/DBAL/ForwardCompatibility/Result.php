@@ -11,7 +11,6 @@ use IteratorAggregate;
 use PDO;
 use ReturnTypeWillChange;
 use Traversable;
-
 use function array_shift;
 use function func_get_args;
 use function method_exists;

@@ -3,7 +3,6 @@
 namespace MathPHP\Tests\LinearAlgebra\Matrix\Base;
 
 use MathPHP\LinearAlgebra\MatrixFactory;
-use MathPHP\LinearAlgebra\NumericMatrix;
 
 class MatrixPropertiesTest extends \PHPUnit\Framework\TestCase
 {

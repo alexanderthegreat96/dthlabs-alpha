@@ -5,7 +5,6 @@ namespace Doctrine\DBAL\Driver\OCI8;
 use Doctrine\DBAL\Driver\AbstractOracleDriver;
 use Doctrine\DBAL\Exception;
 use Doctrine\Deprecations\Deprecation;
-
 use const OCI_NO_AUTO_COMMIT;
 
 /**

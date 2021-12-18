@@ -2,8 +2,8 @@
 
 namespace MathPHP\Statistics;
 
-use MathPHP\Probability\Distribution\Continuous\F;
 use MathPHP\Exception;
+use MathPHP\Probability\Distribution\Continuous\F;
 
 /**
  * ANOVA (Analysis of Variance)

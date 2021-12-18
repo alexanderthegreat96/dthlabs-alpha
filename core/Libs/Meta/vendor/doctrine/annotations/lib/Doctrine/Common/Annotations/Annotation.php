@@ -3,7 +3,6 @@
 namespace Doctrine\Common\Annotations;
 
 use BadMethodCallException;
-
 use function sprintf;
 
 /**

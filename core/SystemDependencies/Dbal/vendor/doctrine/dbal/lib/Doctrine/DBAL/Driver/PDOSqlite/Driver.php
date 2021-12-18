@@ -8,7 +8,6 @@ use Doctrine\DBAL\Exception;
 use Doctrine\DBAL\Platforms\SqlitePlatform;
 use Doctrine\Deprecations\Deprecation;
 use PDOException;
-
 use function array_merge;
 
 /**

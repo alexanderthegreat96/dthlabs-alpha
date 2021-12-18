@@ -4,7 +4,6 @@ namespace Doctrine\DBAL\Event;
 
 use Doctrine\DBAL\Platforms\AbstractPlatform;
 use Doctrine\DBAL\Schema\TableDiff;
-
 use function array_merge;
 use function func_get_args;
 use function is_array;

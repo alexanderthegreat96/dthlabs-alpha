@@ -2,8 +2,8 @@
 
 namespace MathPHP\Tests\LinearAlgebra\Vector;
 
-use MathPHP\LinearAlgebra\Vector;
 use MathPHP\LinearAlgebra\NumericMatrix;
+use MathPHP\LinearAlgebra\Vector;
 
 /**
  * Tests of Vector axioms

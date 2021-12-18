@@ -16,7 +16,6 @@ use PDOStatement;
 use ReturnTypeWillChange;
 use Throwable;
 use Traversable;
-
 use function array_shift;
 use function func_get_args;
 use function is_array;

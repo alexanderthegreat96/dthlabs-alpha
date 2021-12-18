@@ -2,8 +2,8 @@
 
 namespace MathPHP\Tests\Probability\Distribution\Multivariate;
 
-use MathPHP\Probability\Distribution\Multivariate\Dirichlet;
 use MathPHP\Exception;
+use MathPHP\Probability\Distribution\Multivariate\Dirichlet;
 
 class DirichletTest extends \PHPUnit\Framework\TestCase
 {

@@ -7,7 +7,6 @@ use ReflectionClass;
 use ReflectionMethod;
 use ReflectionProperty;
 use RuntimeException;
-
 use function chmod;
 use function file_put_contents;
 use function filemtime;

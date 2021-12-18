@@ -2,8 +2,8 @@
 
 namespace MathPHP\Tests\Statistics;
 
-use MathPHP\Statistics\Average;
 use MathPHP\Exception;
+use MathPHP\Statistics\Average;
 
 class AverageTest extends \PHPUnit\Framework\TestCase
 {

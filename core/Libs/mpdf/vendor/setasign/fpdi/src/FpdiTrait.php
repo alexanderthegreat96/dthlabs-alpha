@@ -31,10 +31,7 @@ use setasign\Fpdi\PdfParser\Type\PdfTypeException;
 use setasign\Fpdi\PdfReader\PageBoundaries;
 use setasign\Fpdi\PdfReader\PdfReader;
 use setasign\Fpdi\PdfReader\PdfReaderException;
-use /* This namespace/class is used by the commercial FPDI PDF-Parser add-on. */
-    /** @noinspection PhpUndefinedClassInspection */
-    /** @noinspection PhpUndefinedNamespaceInspection */
-    setasign\FpdiPdfParser\PdfParser\PdfParser as FpdiPdfParser;
+use setasign\FpdiPdfParser\PdfParser\PdfParser as FpdiPdfParser;
 
 /**
  * The FpdiTrait

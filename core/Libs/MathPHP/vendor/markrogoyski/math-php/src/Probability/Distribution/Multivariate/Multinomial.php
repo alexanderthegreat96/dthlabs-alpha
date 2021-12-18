@@ -2,8 +2,8 @@
 
 namespace MathPHP\Probability\Distribution\Multivariate;
 
-use MathPHP\Probability\Combinatorics;
 use MathPHP\Exception;
+use MathPHP\Probability\Combinatorics;
 
 /**
  * Multinomial distribution (multivariate)

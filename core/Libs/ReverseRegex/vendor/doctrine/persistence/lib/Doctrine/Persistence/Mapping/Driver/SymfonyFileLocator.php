@@ -6,7 +6,6 @@ use Doctrine\Persistence\Mapping\MappingException;
 use InvalidArgumentException;
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
-use const DIRECTORY_SEPARATOR;
 use function array_keys;
 use function array_merge;
 use function class_exists;
@@ -19,6 +18,7 @@ use function strpos;
 use function strrpos;
 use function strtr;
 use function substr;
+use const DIRECTORY_SEPARATOR;
 
 /**
  * The Symfony File Locator makes a simplifying assumptions compared

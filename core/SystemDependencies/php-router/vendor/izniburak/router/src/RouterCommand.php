@@ -4,7 +4,6 @@ namespace Buki\Router;
 
 use Closure;
 use Exception;
-use LexSystems\Framework\Kernel\Helpers\Debugger\Debugger;
 use ReflectionClass;
 use ReflectionException;
 use ReflectionFunction;
@@ -12,7 +11,6 @@ use ReflectionMethod;
 use Reflector;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use function GuzzleHttp\Psr7\str;
 
 class RouterCommand
 {

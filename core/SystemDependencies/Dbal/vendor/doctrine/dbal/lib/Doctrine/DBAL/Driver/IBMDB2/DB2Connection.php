@@ -10,7 +10,6 @@ use Doctrine\DBAL\Driver\ServerInfoAwareConnection;
 use Doctrine\DBAL\ParameterType;
 use Doctrine\Deprecations\Deprecation;
 use stdClass;
-
 use function assert;
 use function db2_autocommit;
 use function db2_commit;
@@ -28,7 +27,6 @@ use function db2_server_info;
 use function error_get_last;
 use function func_get_args;
 use function is_bool;
-
 use const DB2_AUTOCOMMIT_OFF;
 use const DB2_AUTOCOMMIT_ON;
 

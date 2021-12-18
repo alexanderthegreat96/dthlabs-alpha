@@ -8,7 +8,6 @@ use Iterator;
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
 use SplFileInfo;
-
 use function bin2hex;
 use function chmod;
 use function defined;
@@ -31,7 +30,6 @@ use function strrpos;
 use function substr;
 use function tempnam;
 use function unlink;
-
 use const DIRECTORY_SEPARATOR;
 use const PATHINFO_DIRNAME;
 

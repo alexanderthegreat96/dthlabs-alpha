@@ -10,7 +10,6 @@ use Doctrine\Common\Cache\MultiPutCache;
 use Psr\Cache\CacheItemInterface;
 use Psr\Cache\CacheItemPoolInterface;
 use Symfony\Component\Cache\DoctrineProvider as SymfonyDoctrineProvider;
-
 use function array_key_exists;
 use function assert;
 use function count;
@@ -22,7 +21,6 @@ use function is_string;
 use function microtime;
 use function sprintf;
 use function strpbrk;
-
 use const PHP_VERSION_ID;
 
 final class CacheAdapter implements CacheItemPoolInterface

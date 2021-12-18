@@ -4,7 +4,6 @@ namespace Doctrine\DBAL\Cache;
 
 use Doctrine\Common\Cache\Cache;
 use Doctrine\DBAL\Types\Type;
-
 use function hash;
 use function serialize;
 use function sha1;

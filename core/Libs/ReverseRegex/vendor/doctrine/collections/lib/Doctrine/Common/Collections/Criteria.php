@@ -4,7 +4,6 @@ namespace Doctrine\Common\Collections;
 
 use Doctrine\Common\Collections\Expr\CompositeExpression;
 use Doctrine\Common\Collections\Expr\Expression;
-
 use function array_map;
 use function strtoupper;
 

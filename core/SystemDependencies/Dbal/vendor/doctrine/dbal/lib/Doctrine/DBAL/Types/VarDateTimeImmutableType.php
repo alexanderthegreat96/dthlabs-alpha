@@ -4,7 +4,6 @@ namespace Doctrine\DBAL\Types;
 
 use DateTimeImmutable;
 use Doctrine\DBAL\Platforms\AbstractPlatform;
-
 use function date_create_immutable;
 
 /**

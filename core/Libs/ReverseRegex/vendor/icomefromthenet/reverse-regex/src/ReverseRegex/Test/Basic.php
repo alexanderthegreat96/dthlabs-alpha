@@ -2,8 +2,8 @@
 namespace ReverseRegex\Test;
 
 use PHPUnit\Framework\TestCase;
-use ReverseRegex\PimpleBootstrap;
 use Pimple\Pimple;
+use ReverseRegex\PimpleBootstrap;
 
 abstract class Basic extends TestCase
 {

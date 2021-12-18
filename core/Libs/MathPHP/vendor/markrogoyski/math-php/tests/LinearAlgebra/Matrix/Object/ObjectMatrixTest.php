@@ -2,13 +2,13 @@
 
 namespace MathPHP\Tests\LinearAlgebra\Matrix\Object;
 
+use MathPHP\Exception;
 use MathPHP\Expression\Polynomial;
 use MathPHP\LinearAlgebra\MatrixFactory;
 use MathPHP\LinearAlgebra\ObjectMatrix;
 use MathPHP\LinearAlgebra\Vector;
 use MathPHP\Number\ArbitraryInteger;
 use MathPHP\Number\Complex;
-use MathPHP\Exception;
 use MathPHP\Number\ObjectArithmetic;
 
 class ObjectMatrixTest extends \PHPUnit\Framework\TestCase

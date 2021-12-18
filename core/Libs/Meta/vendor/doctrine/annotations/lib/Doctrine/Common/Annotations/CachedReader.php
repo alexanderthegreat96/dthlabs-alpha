@@ -6,7 +6,6 @@ use Doctrine\Common\Cache\Cache;
 use ReflectionClass;
 use ReflectionMethod;
 use ReflectionProperty;
-
 use function array_map;
 use function array_merge;
 use function assert;

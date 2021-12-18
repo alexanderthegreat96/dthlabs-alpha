@@ -1,10 +1,10 @@
 <?php
 namespace ReverseRegex\Parser;
 
+use Patchwork\Utf8;
+use ReverseRegex\Exception as ParserException;
 use ReverseRegex\Generator\Scope;
 use ReverseRegex\Lexer;
-use ReverseRegex\Exception as ParserException;
-use Patchwork\Utf8;
 
 /**
   *  Parse a unicode sequence e.g  \x54 \X{4444}

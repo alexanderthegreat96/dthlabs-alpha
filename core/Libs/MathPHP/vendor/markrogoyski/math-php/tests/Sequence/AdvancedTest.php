@@ -2,8 +2,8 @@
 
 namespace MathPHP\Tests\Sequence;
 
-use MathPHP\Sequence\Advanced;
 use MathPHP\Exception;
+use MathPHP\Sequence\Advanced;
 
 class AdvancedTest extends \PHPUnit\Framework\TestCase
 {

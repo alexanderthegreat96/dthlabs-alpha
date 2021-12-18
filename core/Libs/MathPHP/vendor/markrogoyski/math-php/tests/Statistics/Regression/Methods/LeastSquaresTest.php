@@ -2,8 +2,8 @@
 
 namespace MathPHP\Tests\Statistics\Regression;
 
-use MathPHP\Statistics\Regression\Linear;
 use MathPHP\Exception;
+use MathPHP\Statistics\Regression\Linear;
 
 class LeastSquaresTest extends \PHPUnit\Framework\TestCase
 {

@@ -3,8 +3,8 @@
 namespace MathPHP\Tests\LinearAlgebra\Eigen;
 
 use MathPHP\Exception;
-use MathPHP\LinearAlgebra\MatrixFactory;
 use MathPHP\LinearAlgebra\Eigenvector;
+use MathPHP\LinearAlgebra\MatrixFactory;
 
 class EigenvectorTest extends \PHPUnit\Framework\TestCase
 {

@@ -4,6 +4,16 @@ namespace Doctrine\Common\Reflection;
 
 use Doctrine\Common\Annotations\TokenParser;
 use ReflectionException;
+use function array_merge;
+use function file_get_contents;
+use function is_array;
+use function ltrim;
+use function preg_match;
+use function sprintf;
+use function strpos;
+use function strrpos;
+use function strtolower;
+use function substr;
 use const T_CLASS;
 use const T_DOC_COMMENT;
 use const T_EXTENDS;
@@ -17,16 +27,6 @@ use const T_STRING;
 use const T_USE;
 use const T_VAR;
 use const T_VARIABLE;
-use function array_merge;
-use function file_get_contents;
-use function is_array;
-use function ltrim;
-use function preg_match;
-use function sprintf;
-use function strpos;
-use function strrpos;
-use function strtolower;
-use function substr;
 
 /**
  * Parses a file for namespaces/use/class declarations.

@@ -2,7 +2,6 @@
 namespace Google\Protobuf;
 
 use Google\Protobuf\FileOptions\OptimizeModeEnum;
-use Skrz\Meta\Protobuf\ProtobufField;
 
 /**
  * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

@@ -1,8 +1,6 @@
 <?php
 namespace Skrz\Meta\Fixtures\Protobuf;
 
-use Skrz\Meta\Protobuf\ProtobufField;
-
 /**
  * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
  * !!!                                                     !!!

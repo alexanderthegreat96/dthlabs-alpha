@@ -2,9 +2,9 @@
 
 namespace MathPHP\Tests\Statistics;
 
+use MathPHP\Exception;
 use MathPHP\LinearAlgebra\NumericMatrix;
 use MathPHP\Statistics\Distance;
-use MathPHP\Exception;
 
 class DistanceTest extends \PHPUnit\Framework\TestCase
 {

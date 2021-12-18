@@ -3,7 +3,6 @@ namespace Google\Protobuf;
 
 use Google\Protobuf\FieldOptions\CTypeEnum;
 use Google\Protobuf\FieldOptions\JSTypeEnum;
-use Skrz\Meta\Protobuf\ProtobufField;
 
 /**
  * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

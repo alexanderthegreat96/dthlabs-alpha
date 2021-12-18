@@ -7,7 +7,6 @@ use function count;
 use function explode;
 use function strtolower;
 use function token_get_all;
-
 use const PHP_VERSION_ID;
 use const T_AS;
 use const T_COMMENT;

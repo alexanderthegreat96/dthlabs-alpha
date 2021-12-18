@@ -2,8 +2,8 @@
 
 namespace MathPHP\Tests\Statistics;
 
-use MathPHP\Statistics\Descriptive;
 use MathPHP\Exception;
+use MathPHP\Statistics\Descriptive;
 
 class DescriptiveTest extends \PHPUnit\Framework\TestCase
 {

@@ -2,8 +2,8 @@
 
 namespace MathPHP\Tests\Functions;
 
-use MathPHP\Functions\Support;
 use MathPHP\Exception;
+use MathPHP\Functions\Support;
 
 class SupportTest extends \PHPUnit\Framework\TestCase
 {

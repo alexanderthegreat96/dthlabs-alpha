@@ -2,8 +2,8 @@
 
 namespace MathPHP\Tests\Probability\Distribution\Table;
 
-use MathPHP\Probability\Distribution\Table\ChiSquared;
 use MathPHP\Exception;
+use MathPHP\Probability\Distribution\Table\ChiSquared;
 
 class ChiSquaredTableTest extends \PHPUnit\Framework\TestCase
 {

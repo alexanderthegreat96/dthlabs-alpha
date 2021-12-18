@@ -2,8 +2,8 @@
 
 namespace MathPHP\Tests\NumericalAnalysis\NumericalDifferentiation;
 
-use MathPHP\NumericalAnalysis\NumericalDifferentiation\NumericalDifferentiation;
 use MathPHP\Exception;
+use MathPHP\NumericalAnalysis\NumericalDifferentiation\NumericalDifferentiation;
 
 class NumericalDifferentiationTest extends \PHPUnit\Framework\TestCase
 {

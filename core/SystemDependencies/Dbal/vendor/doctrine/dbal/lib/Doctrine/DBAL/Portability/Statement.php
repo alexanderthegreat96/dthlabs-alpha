@@ -11,7 +11,6 @@ use Doctrine\DBAL\ParameterType;
 use IteratorAggregate;
 use PDO;
 use ReturnTypeWillChange;
-
 use function array_change_key_case;
 use function assert;
 use function is_string;

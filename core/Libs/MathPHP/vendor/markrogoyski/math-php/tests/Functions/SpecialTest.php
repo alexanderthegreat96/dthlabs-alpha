@@ -2,8 +2,8 @@
 
 namespace MathPHP\Tests\Functions;
 
-use MathPHP\Functions\Special;
 use MathPHP\Exception;
+use MathPHP\Functions\Special;
 
 class SpecialTest extends \PHPUnit\Framework\TestCase
 {

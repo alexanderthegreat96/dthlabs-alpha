@@ -33,7 +33,6 @@ use Doctrine\Inflector\Rules\Word;
 use InvalidArgumentException;
 use function array_keys;
 use function array_map;
-use function array_unshift;
 use function array_values;
 use function sprintf;
 use function trigger_error;

@@ -83,17 +83,7 @@ class AClass extends AParent implements AnInterface, AnotherInterface
 
 require __DIR__ . "/../vendor/autoload.php";
 
-use Doctrine\Common\Annotations\Annotation;
-use Doctrine\Common\Annotations\AnnotationReader;
-use Doctrine\Common\Annotations\PhpParser;
 use Nette\PhpGenerator\PhpFile;
-use Skrz\Meta\Reflection\Method;
-use Skrz\Meta\Reflection\MixedType;
-use Skrz\Meta\Reflection\ObjectType;
-use Skrz\Meta\Reflection\Parameter;
-use Skrz\Meta\Reflection\Property;
-use Skrz\Meta\Reflection\Type;
-use Skrz\Meta\Reflection\VoidType;
 
 $classes = array(
 	"ReflectionClass" => "Skrz\\Meta\\Reflection\\Type",

@@ -1,8 +1,6 @@
 <?php
 namespace Skrz\Meta\Fixtures\Protobuf\ClassWithEmbeddedMessageProperty;
 
-use Skrz\Meta\Protobuf\ProtobufField;
-
 /**
  * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
  * !!!                                                     !!!

@@ -3,9 +3,9 @@
 namespace MathPHP\Tests\LinearAlgebra\Matrix\Other;
 
 use MathPHP\Exception\MatrixException;
+use MathPHP\LinearAlgebra\MatrixFactory;
 use MathPHP\LinearAlgebra\NumericDiagonalMatrix;
 use MathPHP\LinearAlgebra\NumericMatrix;
-use MathPHP\LinearAlgebra\MatrixFactory;
 
 class DiagonalMatrixTest extends \PHPUnit\Framework\TestCase
 {

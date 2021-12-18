@@ -1,9 +1,17 @@
 <?php
-\LexSystems\Framework\Autoloader::loadComposerLibs(__DIR__.'/Libs/');
-\LexSystems\Framework\Autoloader::loadComposerLibs(__DIR__.'/SystemDependencies/');
-\LexSystems\Framework\Autoloader::load(__DIR__.'/../core/System/');
-\LexSystems\Framework\Autoloader::load(__DIR__.'/../core/Kernel/');
-\LexSystems\Framework\Autoloader::load(__DIR__.'/../app/Routes/');
-\LexSystems\Framework\Autoloader::load(__DIR__.'/../app/Model/');
-\LexSystems\Framework\Autoloader::load(__DIR__.'/../app/Controller/');
+namespace LexSystems\Framework\Boot;
+class LoadClasses
+{
+    public static function boot():void
+    {
+        Autoloader::loadComposerLibs(__DIR__.'/Libs/');
+        Autoloader::loadComposerLibs(__DIR__.'/SystemDependencies/');
+        Autoloader::load(__DIR__.'/../core/System/');
+        Autoloader::load(__DIR__.'/../core/Kernel/');
+        Autoloader::load(__DIR__.'/../app/Routes/');
+        Autoloader::load(__DIR__.'/../app/Model/');
+        Autoloader::load(__DIR__.'/../app/Controller/');
+        return;
+    }
+}
 ?>

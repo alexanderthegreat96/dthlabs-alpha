@@ -3,9 +3,7 @@
 namespace Doctrine\DBAL\Types;
 
 use Doctrine\DBAL\Platforms\AbstractPlatform;
-
 use function is_float;
-
 use const PHP_VERSION_ID;
 
 /**

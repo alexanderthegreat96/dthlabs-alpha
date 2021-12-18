@@ -7,7 +7,6 @@ use Doctrine\DBAL\Exception;
 use Doctrine\DBAL\Types\StringType;
 use Doctrine\DBAL\Types\TextType;
 use Doctrine\DBAL\Types\Type;
-
 use function array_change_key_case;
 use function array_map;
 use function array_merge;
@@ -27,7 +26,6 @@ use function strtolower;
 use function trim;
 use function unlink;
 use function usort;
-
 use const CASE_LOWER;
 
 /**

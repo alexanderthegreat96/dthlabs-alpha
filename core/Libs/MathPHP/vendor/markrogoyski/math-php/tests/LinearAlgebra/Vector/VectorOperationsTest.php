@@ -2,9 +2,9 @@
 
 namespace MathPHP\Tests\LinearAlgebra\Vector;
 
-use MathPHP\LinearAlgebra\Vector;
-use MathPHP\LinearAlgebra\NumericMatrix;
 use MathPHP\Exception;
+use MathPHP\LinearAlgebra\NumericMatrix;
+use MathPHP\LinearAlgebra\Vector;
 
 class VectorOperationsTest extends \PHPUnit\Framework\TestCase
 {

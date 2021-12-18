@@ -5,7 +5,6 @@ namespace Doctrine\DBAL\Schema;
 use Doctrine\DBAL\Platforms\MariaDb1027Platform;
 use Doctrine\DBAL\Platforms\MySqlPlatform;
 use Doctrine\DBAL\Types\Type;
-
 use function array_change_key_case;
 use function array_shift;
 use function array_values;
@@ -17,7 +16,6 @@ use function strpos;
 use function strtok;
 use function strtolower;
 use function strtr;
-
 use const CASE_LOWER;
 
 /**

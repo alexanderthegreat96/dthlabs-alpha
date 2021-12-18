@@ -3,7 +3,6 @@ namespace Google\Protobuf;
 
 use Google\Protobuf\FieldDescriptorProto\LabelEnum;
 use Google\Protobuf\FieldDescriptorProto\TypeEnum;
-use Skrz\Meta\Protobuf\ProtobufField;
 
 /**
  * Describes a field within a message.

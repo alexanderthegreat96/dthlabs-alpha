@@ -2,8 +2,8 @@
 
 namespace MathPHP\InformationTheory;
 
-use MathPHP\Functions\Map;
 use MathPHP\Exception;
+use MathPHP\Functions\Map;
 
 /**
  * Functions dealing with information entropy in the field of statistical field of information thoery.

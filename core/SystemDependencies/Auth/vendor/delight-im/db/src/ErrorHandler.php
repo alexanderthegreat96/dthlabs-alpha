@@ -8,7 +8,6 @@
 
 namespace Delight\Db;
 
-use PDOException;
 use Delight\Db\Throwable\DatabaseNotFoundError;
 use Delight\Db\Throwable\Error;
 use Delight\Db\Throwable\Exception;
@@ -18,6 +17,7 @@ use Delight\Db\Throwable\SyntaxError;
 use Delight\Db\Throwable\TableNotFoundError;
 use Delight\Db\Throwable\UnknownColumnError;
 use Delight\Db\Throwable\WrongCredentialsError;
+use PDOException;
 
 /**
  * Handles, processes and re-throws exceptions and errors

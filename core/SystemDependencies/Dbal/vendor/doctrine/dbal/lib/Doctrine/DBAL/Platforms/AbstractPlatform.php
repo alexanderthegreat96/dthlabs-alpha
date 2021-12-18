@@ -29,7 +29,6 @@ use Doctrine\DBAL\Types\Type;
 use Doctrine\Deprecations\Deprecation;
 use InvalidArgumentException;
 use UnexpectedValueException;
-
 use function addcslashes;
 use function array_map;
 use function array_merge;

@@ -3,9 +3,8 @@ namespace ReverseRegex;
 
 
 use ReverseRegex\Exception as ParserException;
-use ReverseRegex\Lexer;
-use ReverseRegex\Generator\Scope;
 use ReverseRegex\Generator\LiteralScope;
+use ReverseRegex\Generator\Scope;
 
 /**
   *  Parser to convert regex into Group

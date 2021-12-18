@@ -8,9 +8,7 @@ use Doctrine\DBAL\Connection as BaseConnection;
 use Doctrine\DBAL\Driver\PDO\Connection as PDOConnection;
 use Doctrine\DBAL\ForwardCompatibility;
 use PDO;
-
 use function func_get_args;
-
 use const CASE_LOWER;
 use const CASE_UPPER;
 

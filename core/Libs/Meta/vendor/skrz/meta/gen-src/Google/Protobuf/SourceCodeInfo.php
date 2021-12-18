@@ -2,7 +2,6 @@
 namespace Google\Protobuf;
 
 use Google\Protobuf\SourceCodeInfo\Location;
-use Skrz\Meta\Protobuf\ProtobufField;
 
 /**
  * Encapsulates information about the original source file from which a

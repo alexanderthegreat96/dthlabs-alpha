@@ -1,8 +1,6 @@
 <?php
 namespace Google\Protobuf\Compiler\CodeGeneratorResponse;
 
-use Skrz\Meta\Protobuf\ProtobufField;
-
 /**
  * Represents a single generated file.
  *

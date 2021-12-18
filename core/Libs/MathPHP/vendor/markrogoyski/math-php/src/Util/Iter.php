@@ -2,8 +2,6 @@
 
 namespace MathPHP\Util;
 
-use MathPHP\Exception;
-
 /**
  * @internal
  */

@@ -7,7 +7,6 @@ use Closure;
 use Doctrine\Common\Collections\Expr\ClosureExpressionVisitor;
 use ReturnTypeWillChange;
 use Traversable;
-
 use function array_filter;
 use function array_key_exists;
 use function array_keys;
@@ -25,7 +24,6 @@ use function next;
 use function reset;
 use function spl_object_hash;
 use function uasort;
-
 use const ARRAY_FILTER_USE_BOTH;
 
 /**

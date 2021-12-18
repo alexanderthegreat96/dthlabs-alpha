@@ -1,8 +1,6 @@
 <?php
 namespace Google\Protobuf;
 
-use Skrz\Meta\Protobuf\ProtobufField;
-
 /**
  * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
  * !!!                                                     !!!

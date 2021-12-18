@@ -2,8 +2,6 @@
 
 require __DIR__ . '/../../vendor/autoload.php';
 
-use Buki\Router;
-
 $params = [
     'paths' => [
         'controllers' => 'controllers/',

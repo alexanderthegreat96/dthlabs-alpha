@@ -2,9 +2,9 @@
 
 namespace MathPHP\Tests\Number;
 
-use MathPHP\Number\Quaternion;
 use MathPHP\Exception;
 use MathPHP\Number\ObjectArithmetic;
+use MathPHP\Number\Quaternion;
 
 class QuaternionTest extends \PHPUnit\Framework\TestCase
 {

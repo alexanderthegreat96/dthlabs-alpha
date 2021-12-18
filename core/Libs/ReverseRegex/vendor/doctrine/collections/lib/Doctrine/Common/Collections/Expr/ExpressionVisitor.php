@@ -3,7 +3,6 @@
 namespace Doctrine\Common\Collections\Expr;
 
 use RuntimeException;
-
 use function get_class;
 
 /**

@@ -2,8 +2,8 @@
 
 namespace MathPHP\Statistics;
 
-use MathPHP\Functions\Map;
 use MathPHP\Exception;
+use MathPHP\Functions\Map;
 
 /**
  * Statistical averages

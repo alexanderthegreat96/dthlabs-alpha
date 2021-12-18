@@ -2,9 +2,9 @@
 
 namespace MathPHP\Tests\NumericalAnalysis\Interpolation;
 
-use MathPHP\NumericalAnalysis\Interpolation\ClampedCubicSpline;
-use MathPHP\Expression\Polynomial;
 use MathPHP\Exception;
+use MathPHP\Expression\Polynomial;
+use MathPHP\NumericalAnalysis\Interpolation\ClampedCubicSpline;
 
 class ClampedCubicSplineTest extends \PHPUnit\Framework\TestCase
 {

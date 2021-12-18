@@ -3,11 +3,10 @@
 namespace MathPHP\Statistics;
 
 use MathPHP\Exception;
-use MathPHP\Functions\Map;
 use MathPHP\LinearAlgebra\Eigenvalue;
 use MathPHP\LinearAlgebra\Eigenvector;
-use MathPHP\LinearAlgebra\NumericMatrix;
 use MathPHP\LinearAlgebra\MatrixFactory;
+use MathPHP\LinearAlgebra\NumericMatrix;
 use MathPHP\Probability\Distribution\Continuous\ChiSquared;
 use MathPHP\Probability\Distribution\Continuous\StandardNormal;
 use MathPHP\Trigonometry;

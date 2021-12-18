@@ -4,7 +4,6 @@ namespace Doctrine\DBAL\Query\Expression;
 
 use Doctrine\DBAL\Connection;
 use Doctrine\Deprecations\Deprecation;
-
 use function func_get_arg;
 use function func_get_args;
 use function func_num_args;

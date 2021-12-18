@@ -11,7 +11,6 @@ use Doctrine\DBAL\Driver\ServerInfoAwareConnection;
 use Doctrine\DBAL\ParameterType;
 use Doctrine\Deprecations\Deprecation;
 use mysqli;
-
 use function assert;
 use function floor;
 use function func_get_args;
@@ -23,7 +22,6 @@ use function mysqli_init;
 use function mysqli_options;
 use function sprintf;
 use function stripos;
-
 use const MYSQLI_INIT_COMMAND;
 use const MYSQLI_OPT_CONNECT_TIMEOUT;
 use const MYSQLI_OPT_LOCAL_INFILE;

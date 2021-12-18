@@ -2,8 +2,8 @@
 
 namespace MathPHP\Tests\Probability\Distribution\Multivariate;
 
-use MathPHP\Probability\Distribution\Multivariate\Hypergeometric;
 use MathPHP\Exception;
+use MathPHP\Probability\Distribution\Multivariate\Hypergeometric;
 
 class HypergeometricTest extends \PHPUnit\Framework\TestCase
 {

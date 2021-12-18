@@ -7,7 +7,6 @@ use Doctrine\DBAL\Driver\Result;
 use Doctrine\DBAL\Driver\ServerInfoAwareConnection;
 use Doctrine\DBAL\ParameterType;
 use Doctrine\Deprecations\Deprecation;
-
 use function assert;
 use function func_get_args;
 use function is_float;

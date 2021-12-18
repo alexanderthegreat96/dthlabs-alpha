@@ -2,8 +2,8 @@
 
 namespace MathPHP\Tests\Sequence;
 
-use MathPHP\Sequence\Basic;
 use MathPHP\Exception;
+use MathPHP\Sequence\Basic;
 
 class BasicTest extends \PHPUnit\Framework\TestCase
 {

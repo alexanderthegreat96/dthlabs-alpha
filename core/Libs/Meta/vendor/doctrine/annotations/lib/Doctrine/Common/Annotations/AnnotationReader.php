@@ -8,7 +8,6 @@ use ReflectionClass;
 use ReflectionFunction;
 use ReflectionMethod;
 use ReflectionProperty;
-
 use function array_merge;
 use function class_exists;
 use function extension_loaded;

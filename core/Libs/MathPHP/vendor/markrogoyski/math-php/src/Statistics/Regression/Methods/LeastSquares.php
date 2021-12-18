@@ -2,14 +2,14 @@
 
 namespace MathPHP\Statistics\Regression\Methods;
 
-use MathPHP\LinearAlgebra\MatrixFactory;
-use MathPHP\Statistics\RandomVariable;
-use MathPHP\Functions\Map\Single;
+use MathPHP\Exception;
 use MathPHP\Functions\Map\Multi;
+use MathPHP\Functions\Map\Single;
+use MathPHP\LinearAlgebra\MatrixFactory;
+use MathPHP\LinearAlgebra\NumericMatrix;
 use MathPHP\Probability\Distribution\Continuous\F;
 use MathPHP\Probability\Distribution\Continuous\StudentT;
-use MathPHP\LinearAlgebra\NumericMatrix;
-use MathPHP\Exception;
+use MathPHP\Statistics\RandomVariable;
 
 trait LeastSquares
 {

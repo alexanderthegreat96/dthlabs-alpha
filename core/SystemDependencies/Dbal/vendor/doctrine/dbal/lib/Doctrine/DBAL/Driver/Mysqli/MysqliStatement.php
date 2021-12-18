@@ -18,7 +18,6 @@ use mysqli;
 use mysqli_stmt;
 use PDO;
 use ReturnTypeWillChange;
-
 use function array_combine;
 use function array_fill;
 use function assert;

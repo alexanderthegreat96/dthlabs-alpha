@@ -2,8 +2,8 @@
 
 namespace MathPHP\Tests\NumericalAnalysis\NumericalIntegration;
 
-use MathPHP\NumericalAnalysis\NumericalIntegration\NumericalIntegration;
 use MathPHP\Exception;
+use MathPHP\NumericalAnalysis\NumericalIntegration\NumericalIntegration;
 
 class NumericalIntegrationTest extends \PHPUnit\Framework\TestCase
 {

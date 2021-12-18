@@ -9,7 +9,6 @@ use function is_file;
 use function serialize;
 use function time;
 use function unserialize;
-
 use const PHP_EOL;
 
 /**

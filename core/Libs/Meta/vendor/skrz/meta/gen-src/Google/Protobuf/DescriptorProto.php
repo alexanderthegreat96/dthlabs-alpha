@@ -3,7 +3,6 @@ namespace Google\Protobuf;
 
 use Google\Protobuf\DescriptorProto\ExtensionRange;
 use Google\Protobuf\DescriptorProto\ReservedRange;
-use Skrz\Meta\Protobuf\ProtobufField;
 
 /**
  * Describes a message type.

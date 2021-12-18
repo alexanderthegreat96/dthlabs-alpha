@@ -19,7 +19,6 @@ use ReflectionObject;
 use ReflectionProperty;
 use ReturnTypeWillChange;
 use stdClass;
-
 use function array_change_key_case;
 use function assert;
 use function db2_bind_param;
@@ -49,7 +48,6 @@ use function stream_copy_to_stream;
 use function stream_get_meta_data;
 use function strtolower;
 use function tmpfile;
-
 use const CASE_LOWER;
 use const DB2_BINARY;
 use const DB2_CHAR;

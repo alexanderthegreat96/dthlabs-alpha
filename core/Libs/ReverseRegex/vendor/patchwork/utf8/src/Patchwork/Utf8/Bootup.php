@@ -12,8 +12,8 @@
 namespace Patchwork\Utf8;
 
 use Normalizer as n;
-use Patchwork\Utf8 as u;
 use Patchwork\PHP\Shim as s;
+use Patchwork\Utf8 as u;
 
 class Bootup
 {

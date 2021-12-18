@@ -2,8 +2,8 @@
 
 namespace MathPHP\NumericalAnalysis\RootFinding;
 
-use MathPHP\Functions\Special;
 use MathPHP\Exception;
+use MathPHP\Functions\Special;
 
 /**
  * Bisection's Method (also known as the Binary-search method)

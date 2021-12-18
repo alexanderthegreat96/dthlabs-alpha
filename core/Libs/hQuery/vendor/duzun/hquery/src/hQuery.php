@@ -5,13 +5,12 @@ namespace duzun;
 // ------------------------------------------------------------------------
 use duzun\hQuery\Parser\HTML as HTMLParser;
 use duzun\hQuery\Parser\Selector as SelectorParser;
-
-// ------------------------------------------------------------------------
 use Http\Discovery\HttpClientDiscovery;
-// use Psr\Http\Message\ResponseInterface;
-
 use Psr\Http\Message\MessageInterface;
 use Psr\Http\Message\RequestInterface;
+
+// ------------------------------------------------------------------------
+// use Psr\Http\Message\ResponseInterface;
 
 // ------------------------------------------------------------------------
 class_exists('duzun\\hQuery\\HTML_Index', false) or require_once __DIR__ . DIRECTORY_SEPARATOR . 'hQuery' . DIRECTORY_SEPARATOR . 'HTML_Index.php';

@@ -2,8 +2,8 @@
 
 namespace MathPHP\Tests\Statistics\Regression;
 
-use MathPHP\Statistics\Regression\LOESS;
 use MathPHP\Exception;
+use MathPHP\Statistics\Regression\LOESS;
 
 class LOESSTest extends \PHPUnit\Framework\TestCase
 {

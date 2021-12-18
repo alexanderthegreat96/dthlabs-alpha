@@ -2,9 +2,9 @@
 
 namespace MathPHP\Statistics;
 
-use MathPHP\Probability\Distribution\Table;
-use MathPHP\Functions\Map;
 use MathPHP\Exception;
+use MathPHP\Functions\Map;
+use MathPHP\Probability\Distribution\Table;
 
 /**
  * Functions dealing with random variables.

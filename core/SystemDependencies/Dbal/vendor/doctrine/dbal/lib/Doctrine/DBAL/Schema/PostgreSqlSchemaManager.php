@@ -7,7 +7,6 @@ use Doctrine\DBAL\FetchMode;
 use Doctrine\DBAL\Platforms\PostgreSqlPlatform;
 use Doctrine\DBAL\Types\Type;
 use Doctrine\DBAL\Types\Types;
-
 use function array_change_key_case;
 use function array_filter;
 use function array_keys;
@@ -25,7 +24,6 @@ use function strlen;
 use function strpos;
 use function strtolower;
 use function trim;
-
 use const CASE_LOWER;
 
 /**

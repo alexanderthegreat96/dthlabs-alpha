@@ -2,8 +2,8 @@
 
 namespace MathPHP\Tests\Probability\Distribution\Multivariate;
 
-use MathPHP\Probability\Distribution\Multivariate\Multinomial;
 use MathPHP\Exception;
+use MathPHP\Probability\Distribution\Multivariate\Multinomial;
 
 class MultinomialTest extends \PHPUnit\Framework\TestCase
 {

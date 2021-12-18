@@ -2,8 +2,8 @@
 
 namespace MathPHP\Tests\NumberTheory;
 
-use MathPHP\NumberTheory\Integer;
 use MathPHP\Exception;
+use MathPHP\NumberTheory\Integer;
 
 class IntegerTest extends \PHPUnit\Framework\TestCase
 {

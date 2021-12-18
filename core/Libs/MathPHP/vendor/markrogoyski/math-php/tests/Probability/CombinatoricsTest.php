@@ -2,8 +2,8 @@
 
 namespace MathPHP\Tests\Probability;
 
-use MathPHP\Probability\Combinatorics;
 use MathPHP\Exception;
+use MathPHP\Probability\Combinatorics;
 
 class CombinatoricsTest extends \PHPUnit\Framework\TestCase
 {

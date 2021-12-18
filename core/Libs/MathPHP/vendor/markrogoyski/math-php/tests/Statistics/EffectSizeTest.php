@@ -2,8 +2,8 @@
 
 namespace MathPHP\Tests\Statistics;
 
-use MathPHP\Statistics\EffectSize;
 use MathPHP\Exception;
+use MathPHP\Statistics\EffectSize;
 
 class EffectSizeTest extends \PHPUnit\Framework\TestCase
 {

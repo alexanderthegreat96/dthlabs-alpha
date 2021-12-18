@@ -4,7 +4,6 @@ namespace Doctrine\DBAL\Types;
 
 use Doctrine\DBAL\ParameterType;
 use Doctrine\DBAL\Platforms\AbstractPlatform;
-
 use function assert;
 use function fopen;
 use function fseek;

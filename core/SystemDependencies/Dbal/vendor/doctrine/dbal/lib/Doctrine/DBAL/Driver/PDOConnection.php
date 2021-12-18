@@ -11,7 +11,6 @@ use PDO;
 use PDOException;
 use PDOStatement;
 use ReturnTypeWillChange;
-
 use function assert;
 
 /**

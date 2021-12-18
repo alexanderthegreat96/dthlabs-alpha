@@ -2,8 +2,8 @@
 
 namespace Mpdf;
 
-use Mpdf\Utils\Arrays;
 use DeepCopy\DeepCopy;
+use Mpdf\Utils\Arrays;
 
 class TableOfContents
 {

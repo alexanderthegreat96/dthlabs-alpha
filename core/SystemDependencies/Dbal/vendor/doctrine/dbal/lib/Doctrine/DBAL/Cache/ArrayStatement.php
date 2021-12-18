@@ -11,7 +11,6 @@ use InvalidArgumentException;
 use IteratorAggregate;
 use PDO;
 use ReturnTypeWillChange;
-
 use function array_merge;
 use function array_values;
 use function count;

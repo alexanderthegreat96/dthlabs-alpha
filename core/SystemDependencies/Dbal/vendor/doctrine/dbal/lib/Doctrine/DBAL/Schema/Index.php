@@ -4,7 +4,6 @@ namespace Doctrine\DBAL\Schema;
 
 use Doctrine\DBAL\Platforms\AbstractPlatform;
 use InvalidArgumentException;
-
 use function array_filter;
 use function array_keys;
 use function array_map;

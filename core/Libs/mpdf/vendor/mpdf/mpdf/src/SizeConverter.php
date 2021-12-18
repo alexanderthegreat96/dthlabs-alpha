@@ -2,8 +2,8 @@
 
 namespace Mpdf;
 
-use Psr\Log\LoggerInterface;
 use Mpdf\Log\Context as LogContext;
+use Psr\Log\LoggerInterface;
 
 class SizeConverter implements \Psr\Log\LoggerAwareInterface
 {

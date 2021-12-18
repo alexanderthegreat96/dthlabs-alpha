@@ -6,7 +6,6 @@ use Doctrine\DBAL\Exception;
 use Doctrine\DBAL\ParameterType;
 use Doctrine\DBAL\Platforms\AbstractPlatform;
 use Doctrine\Deprecations\Deprecation;
-
 use function array_map;
 use function get_class;
 use function str_replace;

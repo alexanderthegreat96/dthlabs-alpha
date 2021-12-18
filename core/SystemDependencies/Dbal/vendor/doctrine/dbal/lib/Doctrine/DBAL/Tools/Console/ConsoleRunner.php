@@ -13,7 +13,6 @@ use Symfony\Component\Console\Application;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Helper\HelperSet;
 use TypeError;
-
 use function sprintf;
 
 /**

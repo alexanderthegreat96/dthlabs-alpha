@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Doctrine\Inflector\Rules;
 
 use Doctrine\Inflector\WordInflector;
-
 use function preg_replace;
 
 final class Transformation implements WordInflector

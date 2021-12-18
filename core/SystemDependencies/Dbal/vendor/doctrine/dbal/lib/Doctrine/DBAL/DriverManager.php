@@ -10,7 +10,6 @@ use Doctrine\DBAL\Driver\OCI8;
 use Doctrine\DBAL\Driver\PDO;
 use Doctrine\DBAL\Driver\SQLAnywhere;
 use Doctrine\DBAL\Driver\SQLSrv;
-
 use function array_keys;
 use function array_merge;
 use function assert;

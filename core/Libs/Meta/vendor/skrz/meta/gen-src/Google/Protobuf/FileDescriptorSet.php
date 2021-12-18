@@ -1,8 +1,6 @@
 <?php
 namespace Google\Protobuf;
 
-use Skrz\Meta\Protobuf\ProtobufField;
-
 /**
  * The protocol compiler can output a FileDescriptorSet containing the .proto
  *  files it parses.

@@ -11,7 +11,6 @@ use Doctrine\DBAL\Exception;
 use Doctrine\DBAL\Platforms\AbstractPlatform;
 use Doctrine\Deprecations\Deprecation;
 use Throwable;
-
 use function array_filter;
 use function array_intersect;
 use function array_map;

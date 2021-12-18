@@ -5,8 +5,8 @@ namespace MathPHP\Probability\Distribution\Multivariate;
 use MathPHP\Exception;
 use MathPHP\Functions\Map;
 use MathPHP\LinearAlgebra\MatrixFactory;
-use MathPHP\LinearAlgebra\Vector;
 use MathPHP\LinearAlgebra\NumericMatrix;
+use MathPHP\LinearAlgebra\Vector;
 
 /**
  * Normal distribution

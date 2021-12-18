@@ -3,8 +3,8 @@
 namespace MathPHP\Statistics\Regression\Methods;
 
 use MathPHP\Exception;
-use MathPHP\LinearAlgebra\NumericMatrix;
 use MathPHP\LinearAlgebra\MatrixFactory;
+use MathPHP\LinearAlgebra\NumericMatrix;
 
 trait WeightedLeastSquares
 {

@@ -1,11 +1,10 @@
 <?php
 namespace ReverseRegex\Parser;
 
-use ReverseRegex\Generator\Scope;
-use ReverseRegex\Generator\LiteralScope;
-use ReverseRegex\Lexer;
-use ReverseRegex\Exception as ParserException;
 use Patchwork\Utf8;
+use ReverseRegex\Exception as ParserException;
+use ReverseRegex\Generator\Scope;
+use ReverseRegex\Lexer;
 
 /**
   *  Parse a character class [0-9][a-z]

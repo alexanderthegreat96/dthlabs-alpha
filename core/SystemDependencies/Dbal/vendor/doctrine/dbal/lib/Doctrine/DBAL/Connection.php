@@ -25,7 +25,6 @@ use Doctrine\Deprecations\Deprecation;
 use PDO;
 use Throwable;
 use Traversable;
-
 use function array_key_exists;
 use function array_shift;
 use function assert;

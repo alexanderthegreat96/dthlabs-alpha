@@ -2,8 +2,6 @@
 
 namespace MathPHP\Probability\Distribution\Continuous;
 
-use MathPHP\Functions\Support;
-
 /**
  * Standard normal distribution
  * The simplest case of a normal distribution.

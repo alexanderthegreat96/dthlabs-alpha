@@ -1,9 +1,9 @@
 <?php
 namespace ReverseRegex\Test;
 
+use ReverseRegex\Generator\LiteralScope;
 use ReverseRegex\Generator\Scope;
 use ReverseRegex\Random\MersenneRandom;
-use ReverseRegex\Generator\LiteralScope;
 
 class ScopeTest extends Basic
 {

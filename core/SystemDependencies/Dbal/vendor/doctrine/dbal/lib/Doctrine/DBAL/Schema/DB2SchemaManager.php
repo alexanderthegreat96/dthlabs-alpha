@@ -4,7 +4,6 @@ namespace Doctrine\DBAL\Schema;
 
 use Doctrine\DBAL\Platforms\DB2Platform;
 use Doctrine\DBAL\Types\Type;
-
 use function array_change_key_case;
 use function assert;
 use function preg_match;
@@ -12,7 +11,6 @@ use function str_replace;
 use function strpos;
 use function strtolower;
 use function substr;
-
 use const CASE_LOWER;
 
 /**

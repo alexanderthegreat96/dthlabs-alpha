@@ -8,7 +8,6 @@ use Doctrine\DBAL\Sharding\ShardManager;
 use Doctrine\DBAL\Types\Type;
 use Doctrine\Deprecations\Deprecation;
 use RuntimeException;
-
 use function sprintf;
 
 /**

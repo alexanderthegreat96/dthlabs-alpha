@@ -3,7 +3,6 @@
 namespace Doctrine\Common\Annotations;
 
 use Doctrine\Common\Lexer\AbstractLexer;
-
 use function ctype_alpha;
 use function is_numeric;
 use function str_replace;

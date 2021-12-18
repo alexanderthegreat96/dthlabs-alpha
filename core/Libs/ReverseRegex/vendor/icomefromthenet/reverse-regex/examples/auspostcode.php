@@ -1,7 +1,8 @@
 <?php
+
+use ReverseRegex\Generator\Scope;
 use ReverseRegex\Lexer;
 use ReverseRegex\Parser;
-use ReverseRegex\Generator\Scope;
 use ReverseRegex\Random\MersenneRandom;
 
 # require composer

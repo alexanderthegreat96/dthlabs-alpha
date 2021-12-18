@@ -2,8 +2,8 @@
 
 namespace MathPHP\Tests\Probability\Distribution\Discrete;
 
-use MathPHP\Probability\Distribution\Discrete\Categorical;
 use MathPHP\Exception;
+use MathPHP\Probability\Distribution\Discrete\Categorical;
 
 class CategoricalTest extends \PHPUnit\Framework\TestCase
 {

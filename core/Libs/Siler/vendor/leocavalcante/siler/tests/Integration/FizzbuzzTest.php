@@ -7,7 +7,6 @@ namespace Siler\Test\Integration;
 use PHPUnit\Framework\TestCase;
 use function Siler\Functional\always;
 use function Siler\Functional\identity as id;
-use function Siler\Functional\match;
 use function Siler\Functional\mod;
 use function Siler\Functional\not;
 

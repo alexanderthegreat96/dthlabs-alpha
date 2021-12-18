@@ -1,4 +1,5 @@
 <?php
+
 use Doctrine\Common\Annotations\AnnotationRegistry;
 
 foreach (get_declared_classes() as $className) {

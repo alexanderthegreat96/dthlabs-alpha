@@ -1,8 +1,6 @@
 <?php
 namespace Google\Protobuf\UninterpretedOption;
 
-use Skrz\Meta\Protobuf\ProtobufField;
-
 /**
  * The name of the uninterpreted option.  Each string represents a segment in
  *  a dot-separated name.  is_extension is true iff a segment represents an

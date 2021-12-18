@@ -5,7 +5,6 @@ namespace Doctrine\Common\Collections;
 use Doctrine\Common\Collections\Expr\Comparison;
 use Doctrine\Common\Collections\Expr\CompositeExpression;
 use Doctrine\Common\Collections\Expr\Value;
-
 use function func_get_args;
 
 /**

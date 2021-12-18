@@ -3,9 +3,7 @@
 namespace Doctrine\DBAL\Logging;
 
 use Doctrine\Deprecations\Deprecation;
-
 use function var_dump;
-
 use const PHP_EOL;
 
 /**

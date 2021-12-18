@@ -5,7 +5,6 @@ namespace Doctrine\DBAL\Types;
 use DateTime;
 use DateTimeInterface;
 use Doctrine\DBAL\Platforms\AbstractPlatform;
-
 use function date_create;
 
 /**

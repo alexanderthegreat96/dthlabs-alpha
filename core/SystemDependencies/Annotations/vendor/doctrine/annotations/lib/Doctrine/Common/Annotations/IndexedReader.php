@@ -5,7 +5,6 @@ namespace Doctrine\Common\Annotations;
 use ReflectionClass;
 use ReflectionMethod;
 use ReflectionProperty;
-
 use function call_user_func_array;
 use function get_class;
 

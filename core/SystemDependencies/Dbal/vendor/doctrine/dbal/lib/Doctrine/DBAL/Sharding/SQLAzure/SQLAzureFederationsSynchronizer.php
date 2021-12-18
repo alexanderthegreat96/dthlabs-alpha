@@ -11,7 +11,6 @@ use Doctrine\DBAL\Schema\Synchronizer\SingleDatabaseSynchronizer;
 use Doctrine\DBAL\Types\Type;
 use Doctrine\DBAL\Types\Types;
 use RuntimeException;
-
 use function array_merge;
 
 /**

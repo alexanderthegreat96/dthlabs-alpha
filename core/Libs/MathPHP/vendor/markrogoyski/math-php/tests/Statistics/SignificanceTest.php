@@ -2,10 +2,10 @@
 
 namespace MathPHP\Tests\Statistics;
 
+use MathPHP\Exception;
 use MathPHP\Statistics\Average;
 use MathPHP\Statistics\Descriptive;
 use MathPHP\Statistics\Significance;
-use MathPHP\Exception;
 
 class SignificanceTest extends \PHPUnit\Framework\TestCase
 {

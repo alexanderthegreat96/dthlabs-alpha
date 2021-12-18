@@ -2,9 +2,9 @@
 
 namespace MathPHP\LinearAlgebra;
 
+use MathPHP\Exception;
 use MathPHP\Functions\Map;
 use MathPHP\Functions\Support;
-use MathPHP\Exception;
 use MathPHP\LinearAlgebra\Reduction;
 
 /**

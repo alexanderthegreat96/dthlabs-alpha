@@ -2,8 +2,8 @@
 
 namespace MathPHP\LinearAlgebra;
 
-use MathPHP\Functions\Map;
 use MathPHP\Exception;
+use MathPHP\Functions\Map;
 use MathPHP\Statistics\Distance;
 
 /**

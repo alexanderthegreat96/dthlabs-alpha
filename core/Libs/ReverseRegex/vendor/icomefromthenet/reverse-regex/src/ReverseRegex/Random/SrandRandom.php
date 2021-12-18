@@ -1,8 +1,6 @@
 <?php
 namespace ReverseRegex\Random;
 
-use ReverseRegex\Exception as ReverseRegexException;
-
 /*
  * class SrandRandom
  *

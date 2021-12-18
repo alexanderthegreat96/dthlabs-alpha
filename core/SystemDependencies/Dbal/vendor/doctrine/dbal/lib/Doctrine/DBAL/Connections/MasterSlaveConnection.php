@@ -5,7 +5,6 @@ namespace Doctrine\DBAL\Connections;
 use Doctrine\Common\EventManager;
 use Doctrine\DBAL\Configuration;
 use Doctrine\DBAL\Driver;
-use Doctrine\DBAL\DriverManager;
 use Doctrine\Deprecations\Deprecation;
 use InvalidArgumentException;
 

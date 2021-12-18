@@ -2,8 +2,8 @@
 
 namespace MathPHP\Tests\Number;
 
-use MathPHP\Number\Rational;
 use MathPHP\Exception;
+use MathPHP\Number\Rational;
 
 class RationalTest extends \PHPUnit\Framework\TestCase
 {

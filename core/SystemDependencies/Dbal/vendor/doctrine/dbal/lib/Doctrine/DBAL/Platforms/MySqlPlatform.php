@@ -11,7 +11,6 @@ use Doctrine\DBAL\TransactionIsolationLevel;
 use Doctrine\DBAL\Types\BlobType;
 use Doctrine\DBAL\Types\TextType;
 use InvalidArgumentException;
-
 use function array_diff_key;
 use function array_merge;
 use function array_unique;

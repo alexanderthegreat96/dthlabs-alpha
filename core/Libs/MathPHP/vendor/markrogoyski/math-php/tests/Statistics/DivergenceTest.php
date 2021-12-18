@@ -2,8 +2,8 @@
 
 namespace MathPHP\Tests\Statistics;
 
-use MathPHP\Statistics\Divergence;
 use MathPHP\Exception;
+use MathPHP\Statistics\Divergence;
 
 class DivergenceTest extends \PHPUnit\Framework\TestCase
 {

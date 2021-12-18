@@ -2,11 +2,11 @@
 
 namespace MathPHP\Tests\LinearAlgebra\MatrixNumeric;
 
+use MathPHP\Exception;
 use MathPHP\LinearAlgebra\MatrixFactory;
 use MathPHP\LinearAlgebra\NumericMatrix;
 use MathPHP\LinearAlgebra\NumericSquareMatrix;
 use MathPHP\LinearAlgebra\Vector;
-use MathPHP\Exception;
 
 class MatrixArithmeticOperationsTest extends \PHPUnit\Framework\TestCase
 {

@@ -2,9 +2,9 @@
 
 namespace MathPHP\Tests\LinearAlgebra\Matrix\Numeric;
 
-use MathPHP\LinearAlgebra\NumericSquareMatrix;
-use MathPHP\LinearAlgebra\NumericMatrix;
 use MathPHP\Exception;
+use MathPHP\LinearAlgebra\NumericMatrix;
+use MathPHP\LinearAlgebra\NumericSquareMatrix;
 
 class SquareMatrixTest extends \PHPUnit\Framework\TestCase
 {

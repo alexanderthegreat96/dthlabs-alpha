@@ -2,7 +2,6 @@
 namespace Google\Protobuf\Compiler;
 
 use Google\Protobuf\Compiler\CodeGeneratorResponse\File;
-use Skrz\Meta\Protobuf\ProtobufField;
 
 /**
  * The plugin writes an encoded CodeGeneratorResponse to stdout.

@@ -2,7 +2,6 @@
 
 namespace MathPHP\Tests\NumberTheory;
 
-use MathPHP\NumberTheory\Integer;
 use MathPHP\Algebra;
 
 /**

@@ -11,7 +11,6 @@ use MongoDB\Collection;
 use MongoDB\Database;
 use MongoDB\Driver\Exception\Exception;
 use MongoDB\Model\BSONDocument;
-
 use function serialize;
 use function time;
 use function unserialize;

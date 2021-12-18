@@ -7,7 +7,6 @@ use ReflectionClass;
 use ReflectionMethod;
 use ReflectionProperty;
 use Reflector;
-
 use function array_map;
 use function array_merge;
 use function assert;

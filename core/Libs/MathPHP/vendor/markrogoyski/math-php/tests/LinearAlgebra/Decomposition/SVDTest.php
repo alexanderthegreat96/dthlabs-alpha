@@ -2,9 +2,9 @@
 
 namespace MathPHP\Tests\LinearAlgebra\Decomposition;
 
+use MathPHP\Exception;
 use MathPHP\Functions\Support;
 use MathPHP\LinearAlgebra\MatrixFactory;
-use MathPHP\Exception;
 use MathPHP\LinearAlgebra\NumericMatrix;
 use MathPHP\LinearAlgebra\Vector;
 use MathPHP\Tests\LinearAlgebra\Fixture\MatrixDataProvider;

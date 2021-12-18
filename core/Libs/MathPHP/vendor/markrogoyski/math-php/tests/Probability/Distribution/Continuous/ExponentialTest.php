@@ -2,8 +2,8 @@
 
 namespace MathPHP\Tests\Probability\Distribution\Continuous;
 
-use MathPHP\Probability\Distribution\Continuous\Exponential;
 use MathPHP\Exception\OutOfBoundsException;
+use MathPHP\Probability\Distribution\Continuous\Exponential;
 
 class ExponentialTest extends \PHPUnit\Framework\TestCase
 {

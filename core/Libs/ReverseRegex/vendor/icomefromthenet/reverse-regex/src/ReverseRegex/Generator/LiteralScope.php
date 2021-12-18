@@ -1,7 +1,6 @@
 <?php
 namespace ReverseRegex\Generator;
 
-use ReverseRegex\Generator\Scope;
 use PHPStats\Generator\GeneratorInterface;
 use ReverseRegex\ArrayCollection;
 use ReverseRegex\Exception as GeneratorException;

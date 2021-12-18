@@ -2,8 +2,8 @@
 
 namespace MathPHP\Tests\Number;
 
-use MathPHP\Number\Complex;
 use MathPHP\Exception;
+use MathPHP\Number\Complex;
 use MathPHP\Number\ObjectArithmetic;
 
 class ComplexTest extends \PHPUnit\Framework\TestCase

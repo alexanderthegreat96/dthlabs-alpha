@@ -2,9 +2,9 @@
 
 namespace MathPHP\Probability\Distribution\Multivariate;
 
-use MathPHP\Probability\Combinatorics;
 use MathPHP\Exception;
 use MathPHP\Functions\Support;
+use MathPHP\Probability\Combinatorics;
 
 /**
  * Multivariate Hypergeometric distribution

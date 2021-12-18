@@ -1,9 +1,9 @@
 <?php
 namespace ReverseRegex\Parser;
 
+use ReverseRegex\Exception as ParserException;
 use ReverseRegex\Generator\Scope;
 use ReverseRegex\Lexer;
-use ReverseRegex\Exception as ParserException;
 
 /**
   *  Parse a group quantifer e.g (abghb){1,5} , (abghb){5} , (abghb)* , (abghb)? , (abghb)+

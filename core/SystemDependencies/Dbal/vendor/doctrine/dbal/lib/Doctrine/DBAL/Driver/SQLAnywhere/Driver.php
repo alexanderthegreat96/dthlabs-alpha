@@ -5,7 +5,6 @@ namespace Doctrine\DBAL\Driver\SQLAnywhere;
 use Doctrine\DBAL\Driver\AbstractSQLAnywhereDriver;
 use Doctrine\DBAL\Exception;
 use Doctrine\Deprecations\Deprecation;
-
 use function array_keys;
 use function array_map;
 use function implode;

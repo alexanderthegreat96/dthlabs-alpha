@@ -1,6 +1,7 @@
 <?php
 namespace DthLabs\Modules;
 use LexSystems\Framework\Kernel\System;
+
 class Register extends System
 {
     protected $username;

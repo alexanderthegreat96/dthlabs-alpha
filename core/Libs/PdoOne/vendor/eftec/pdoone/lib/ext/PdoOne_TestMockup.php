@@ -7,7 +7,6 @@
 namespace eftec\ext;
 
 use eftec\PdoOne;
-use Exception;
 use stdClass;
 
 /**

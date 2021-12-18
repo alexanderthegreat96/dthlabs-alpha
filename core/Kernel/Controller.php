@@ -4,8 +4,8 @@
  * Controller
  */
 namespace LexSystems\Framework\Kernel;
-use LexSystems\Framework\Kernel\System;
 use Illuminate\Database\Capsule\Manager;
+
 class Controller extends \Buki\Router\Http\Controller
 {
     /**

@@ -3,8 +3,8 @@
 namespace MathPHP\Probability\Distribution\Discrete;
 
 use MathPHP\Exception\MathException;
-use MathPHP\Probability\Combinatorics;
 use MathPHP\Functions\Support;
+use MathPHP\Probability\Combinatorics;
 
 /**
  * Negative binomial distribution (Pascal distribution)

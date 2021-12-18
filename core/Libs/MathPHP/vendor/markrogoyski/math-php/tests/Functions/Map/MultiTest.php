@@ -2,8 +2,8 @@
 
 namespace MathPHP\Tests\Functions\Map;
 
-use MathPHP\Functions\Map\Multi;
 use MathPHP\Exception;
+use MathPHP\Functions\Map\Multi;
 
 class MultiTest extends \PHPUnit\Framework\TestCase
 {

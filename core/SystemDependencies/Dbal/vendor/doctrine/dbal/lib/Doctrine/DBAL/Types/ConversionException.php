@@ -4,7 +4,6 @@ namespace Doctrine\DBAL\Types;
 
 use Doctrine\DBAL\Exception;
 use Throwable;
-
 use function get_class;
 use function gettype;
 use function implode;

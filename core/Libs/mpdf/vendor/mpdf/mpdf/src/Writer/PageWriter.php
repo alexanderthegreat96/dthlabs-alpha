@@ -2,9 +2,9 @@
 
 namespace Mpdf\Writer;
 
-use Mpdf\Strict;
-use Mpdf\Mpdf;
 use Mpdf\Form;
+use Mpdf\Mpdf;
+use Mpdf\Strict;
 
 final class PageWriter
 {

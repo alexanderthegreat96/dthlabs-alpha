@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Doctrine\Inflector;
 
 use RuntimeException;
-
 use function chr;
 use function function_exists;
 use function lcfirst;

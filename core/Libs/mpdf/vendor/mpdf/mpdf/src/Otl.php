@@ -2,15 +2,11 @@
 
 namespace Mpdf;
 
-use Mpdf\Strict;
-
 use Mpdf\Css\TextVars;
 use Mpdf\Fonts\FontCache;
-
 use Mpdf\Shaper\Indic;
 use Mpdf\Shaper\Myanmar;
 use Mpdf\Shaper\Sea;
-
 use Mpdf\Utils\UtfString;
 
 class Otl

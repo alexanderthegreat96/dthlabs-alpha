@@ -5,7 +5,6 @@ namespace Doctrine\DBAL\Query\Expression;
 use Countable;
 use Doctrine\Deprecations\Deprecation;
 use ReturnTypeWillChange;
-
 use function array_merge;
 use function count;
 use function implode;

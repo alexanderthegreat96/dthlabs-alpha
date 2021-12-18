@@ -5,7 +5,6 @@ namespace Doctrine\Common\Annotations;
 use ReflectionClass;
 use ReflectionFunction;
 use SplFileObject;
-
 use function is_file;
 use function method_exists;
 use function preg_quote;

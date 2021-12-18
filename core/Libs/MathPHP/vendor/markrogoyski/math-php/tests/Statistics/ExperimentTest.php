@@ -2,8 +2,8 @@
 
 namespace MathPHP\Tests\Statistics;
 
-use MathPHP\Statistics\Experiment;
 use MathPHP\Exception;
+use MathPHP\Statistics\Experiment;
 
 class ExperimentTest extends \PHPUnit\Framework\TestCase
 {

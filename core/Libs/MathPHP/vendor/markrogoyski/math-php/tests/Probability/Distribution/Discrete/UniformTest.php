@@ -2,8 +2,8 @@
 
 namespace MathPHP\Tests\Probability\Distribution\Discrete;
 
-use MathPHP\Probability\Distribution\Discrete\Uniform;
 use MathPHP\Exception;
+use MathPHP\Probability\Distribution\Discrete\Uniform;
 
 class UniformTest extends \PHPUnit\Framework\TestCase
 {

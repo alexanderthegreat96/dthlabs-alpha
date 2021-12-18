@@ -1,6 +1,7 @@
 <?php
 namespace LexSystems\Framework\Kernel;
 use Illuminate\Database\Eloquent;
+
 abstract class Model extends Eloquent\Model
 {
     /**

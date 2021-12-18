@@ -2,8 +2,6 @@
 
 namespace Mpdf\Tag;
 
-use Mpdf\Strict;
-
 use Mpdf\Cache;
 use Mpdf\Color\ColorConverter;
 use Mpdf\CssManager;
@@ -13,6 +11,7 @@ use Mpdf\Language\LanguageToFontInterface;
 use Mpdf\Mpdf;
 use Mpdf\Otl;
 use Mpdf\SizeConverter;
+use Mpdf\Strict;
 use Mpdf\TableOfContents;
 
 abstract class Tag

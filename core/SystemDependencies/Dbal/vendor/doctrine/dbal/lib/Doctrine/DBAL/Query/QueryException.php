@@ -3,7 +3,6 @@
 namespace Doctrine\DBAL\Query;
 
 use Doctrine\DBAL\Exception;
-
 use function implode;
 
 /**

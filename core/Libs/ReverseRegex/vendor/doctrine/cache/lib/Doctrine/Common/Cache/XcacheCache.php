@@ -3,7 +3,6 @@
 namespace Doctrine\Common\Cache;
 
 use BadMethodCallException;
-
 use function ini_get;
 use function serialize;
 use function unserialize;
@@ -13,7 +12,6 @@ use function xcache_info;
 use function xcache_isset;
 use function xcache_set;
 use function xcache_unset;
-
 use const XC_TYPE_VAR;
 
 /**

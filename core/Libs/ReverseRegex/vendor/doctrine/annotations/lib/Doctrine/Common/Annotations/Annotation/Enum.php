@@ -3,7 +3,6 @@
 namespace Doctrine\Common\Annotations\Annotation;
 
 use InvalidArgumentException;
-
 use function get_class;
 use function gettype;
 use function in_array;

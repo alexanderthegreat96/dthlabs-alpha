@@ -2,8 +2,8 @@
 
 namespace MathPHP\Tests\Functions\Map;
 
-use MathPHP\Functions\Map\Single;
 use MathPHP\Exception;
+use MathPHP\Functions\Map\Single;
 
 class SingleTest extends \PHPUnit\Framework\TestCase
 {

@@ -2,9 +2,9 @@
 
 namespace Mpdf;
 
+use Mpdf\Log\Context as LogContext;
 use Mpdf\Utils\Arrays;
 use Psr\Log\LoggerInterface;
-use Mpdf\Log\Context as LogContext;
 
 class RemoteContentFetcher implements \Psr\Log\LoggerAwareInterface
 {

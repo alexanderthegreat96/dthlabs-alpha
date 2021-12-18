@@ -1,7 +1,8 @@
 <?php
+
 use duzun\hQuery\Parser;
-use duzun\hQuery\Parser\Selector as SelectorParser;
 use duzun\hQuery\Parser\HTML as HTMLParser;
+use duzun\hQuery\Parser\Selector as SelectorParser;
 
 // -----------------------------------------------------
 /**

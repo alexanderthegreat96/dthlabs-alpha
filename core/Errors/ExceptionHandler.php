@@ -1,8 +1,8 @@
 <?php
 namespace LexSystems\Framework\Kernel;
-use GuzzleHttp\Psr7\Request;
 use LexSystems\Framework\Kernel\Helpers\Debugger\Debugger;
 use LexSystems\Framework\Kernel\Helpers\Requests;
+
 class ExceptionHandler
 {
     /**

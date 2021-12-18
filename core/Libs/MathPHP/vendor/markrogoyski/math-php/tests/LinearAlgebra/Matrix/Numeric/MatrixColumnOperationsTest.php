@@ -2,8 +2,8 @@
 
 namespace MathPHP\Tests\LinearAlgebra\Matrix\Numeric;
 
-use MathPHP\LinearAlgebra\MatrixFactory;
 use MathPHP\Exception;
+use MathPHP\LinearAlgebra\MatrixFactory;
 
 class MatrixColumnOperationsTest extends \PHPUnit\Framework\TestCase
 {

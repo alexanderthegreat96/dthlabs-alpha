@@ -8,14 +8,14 @@
 
 namespace Delight\Db;
 
-use PDO;
-use PDOException;
-use PDOStatement;
 use Delight\Db\Throwable\BeginTransactionFailureException;
 use Delight\Db\Throwable\CommitTransactionFailureException;
 use Delight\Db\Throwable\EmptyValueListError;
 use Delight\Db\Throwable\EmptyWhereClauseError;
 use Delight\Db\Throwable\RollBackTransactionFailureException;
+use PDO;
+use PDOException;
+use PDOStatement;
 
 /** Database access using PHP's built-in PDO */
 final class PdoDatabase implements Database {

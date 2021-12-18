@@ -2,10 +2,10 @@
 
 namespace MathPHP\Statistics\Regression;
 
+use MathPHP\Exception;
 use MathPHP\Functions\Map\Single;
 use MathPHP\LinearAlgebra\MatrixFactory;
 use MathPHP\Statistics\Average;
-use MathPHP\Exception;
 
 /**
  * LOESS - Locally Weighted Scatterplot Smoothing (Local regression)

@@ -10,7 +10,6 @@ use Doctrine\Deprecations\Deprecation;
 use PDO;
 use PDOException;
 use ReturnTypeWillChange;
-
 use function array_slice;
 use function assert;
 use function func_get_args;

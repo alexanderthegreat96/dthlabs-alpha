@@ -10,7 +10,10 @@ declare(strict_types=1);
 namespace Nette\Utils;
 
 use Nette;
-use function is_array, is_int, is_object, count;
+use function count;
+use function is_array;
+use function is_int;
+use function is_object;
 
 
 /**

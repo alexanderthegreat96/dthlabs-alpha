@@ -2,8 +2,8 @@
 
 namespace Mpdf\Writer;
 
-use Mpdf\Strict;
 use Mpdf\Mpdf;
+use Mpdf\Strict;
 use Psr\Log\LoggerInterface;
 
 final class ResourceWriter implements \Psr\Log\LoggerAwareInterface

@@ -5,7 +5,6 @@ namespace Doctrine\DBAL\Types;
 use DateInterval;
 use Doctrine\DBAL\Platforms\AbstractPlatform;
 use Throwable;
-
 use function substr;
 
 /**

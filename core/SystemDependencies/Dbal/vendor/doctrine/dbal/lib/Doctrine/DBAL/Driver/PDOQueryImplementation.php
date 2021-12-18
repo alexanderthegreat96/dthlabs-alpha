@@ -4,9 +4,7 @@ namespace Doctrine\DBAL\Driver;
 
 use PDOStatement;
 use ReturnTypeWillChange;
-
 use function func_get_args;
-
 use const PHP_VERSION_ID;
 
 if (PHP_VERSION_ID >= 80000) {

@@ -2,9 +2,8 @@
 
 namespace Mpdf\Writer;
 
-use Mpdf\Strict;
-
 use Mpdf\Mpdf;
+use Mpdf\Strict;
 
 final class FormWriter
 {

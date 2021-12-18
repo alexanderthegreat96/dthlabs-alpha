@@ -1,11 +1,11 @@
 <?php
 namespace ReverseRegex\Generator;
 
-use \ArrayObject;
-use \SplObjectStorage;
-use \ArrayAccess;
-use \Countable;
-use \Iterator;
+use ArrayAccess;
+use ArrayObject;
+use Countable;
+use Iterator;
+use SplObjectStorage;
 
 /**
   *  Base to all Generator Scopes 

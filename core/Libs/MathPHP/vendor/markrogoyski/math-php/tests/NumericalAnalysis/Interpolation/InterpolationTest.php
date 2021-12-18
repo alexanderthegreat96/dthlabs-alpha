@@ -2,8 +2,8 @@
 
 namespace MathPHP\Tests\NumericalAnalysis\Interpolation;
 
-use MathPHP\NumericalAnalysis\Interpolation\Interpolation;
 use MathPHP\Exception;
+use MathPHP\NumericalAnalysis\Interpolation\Interpolation;
 
 class InterpolationTest extends \PHPUnit\Framework\TestCase
 {

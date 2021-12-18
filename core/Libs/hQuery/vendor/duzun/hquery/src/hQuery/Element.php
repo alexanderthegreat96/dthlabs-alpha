@@ -2,6 +2,7 @@
 namespace duzun\hQuery;
 
 use duzun\hQuery\Parser\HTML;
+
 // ------------------------------------------------------------------------
 class_exists('duzun\\hQuery\\Node', false) or require_once __DIR__ . DIRECTORY_SEPARATOR . 'Node.php';
 

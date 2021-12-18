@@ -2,7 +2,6 @@
 
 namespace Buki\Tests;
 
-use Buki\Router;
 use GuzzleHttp\Client;
 use PHPUnit\Framework\TestCase;
 

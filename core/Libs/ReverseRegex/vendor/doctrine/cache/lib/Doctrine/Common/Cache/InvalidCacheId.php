@@ -4,7 +4,6 @@ declare(strict_types=1);
 namespace Doctrine\Common\Cache;
 
 use InvalidArgumentException;
-
 use function sprintf;
 
 /**

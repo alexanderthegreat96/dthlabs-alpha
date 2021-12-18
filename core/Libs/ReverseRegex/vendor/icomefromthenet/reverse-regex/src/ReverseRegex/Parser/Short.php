@@ -2,9 +2,7 @@
 namespace ReverseRegex\Parser;
 
 use ReverseRegex\Generator\Scope;
-use ReverseRegex\Generator\LiteralScope;
 use ReverseRegex\Lexer;
-use ReverseRegex\Exception as ParserException;
 
 /**
   *  Parse a following Shorts (\d, \w, \D, \W, \s, \S, dot)

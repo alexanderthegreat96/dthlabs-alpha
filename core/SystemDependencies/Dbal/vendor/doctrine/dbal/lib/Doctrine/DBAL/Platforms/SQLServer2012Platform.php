@@ -3,11 +3,9 @@
 namespace Doctrine\DBAL\Platforms;
 
 use Doctrine\DBAL\Schema\Sequence;
-
 use function preg_match;
 use function preg_match_all;
 use function substr_count;
-
 use const PREG_OFFSET_CAPTURE;
 
 /**

@@ -12,7 +12,6 @@ use ReflectionException;
 use ReflectionProperty;
 use RuntimeException;
 use stdClass;
-
 use function array_keys;
 use function array_map;
 use function array_pop;
@@ -41,7 +40,6 @@ use function strrpos;
 use function strtolower;
 use function substr;
 use function trim;
-
 use const PHP_VERSION_ID;
 
 /**

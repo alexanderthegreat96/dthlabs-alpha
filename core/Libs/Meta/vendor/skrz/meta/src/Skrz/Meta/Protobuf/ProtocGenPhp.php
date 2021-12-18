@@ -13,7 +13,6 @@ use Google\Protobuf\SourceCodeInfo;
 use Nette\PhpGenerator\ClassType;
 use Nette\PhpGenerator\PhpFile;
 use Skrz\Meta\AbstractMetaSpec;
-use Skrz\Meta\MetaSpec;
 use Skrz\Meta\Reflection\Type;
 use Skrz\Meta\Result;
 

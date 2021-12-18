@@ -2,9 +2,9 @@
 
 namespace MathPHP\Tests\Probability\Distribution\Multivariate;
 
-use MathPHP\Probability\Distribution\Multivariate\Normal;
-use MathPHP\LinearAlgebra\MatrixFactory;
 use MathPHP\Exception;
+use MathPHP\LinearAlgebra\MatrixFactory;
+use MathPHP\Probability\Distribution\Multivariate\Normal;
 use MathPHP\Tests;
 
 class NormalTest extends \PHPUnit\Framework\TestCase

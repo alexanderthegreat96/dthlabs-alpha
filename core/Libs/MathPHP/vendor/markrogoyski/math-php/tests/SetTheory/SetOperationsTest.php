@@ -2,9 +2,9 @@
 
 namespace MathPHP\Tests\SetTheory;
 
-use MathPHP\SetTheory\Set;
-use MathPHP\LinearAlgebra\Vector;
 use MathPHP\LinearAlgebra\NumericMatrix;
+use MathPHP\LinearAlgebra\Vector;
+use MathPHP\SetTheory\Set;
 
 class SetOperationsTest extends \PHPUnit\Framework\TestCase
 {

@@ -16,7 +16,6 @@ use Doctrine\DBAL\Types\IntegerType;
 use Doctrine\DBAL\Types\Type;
 use Doctrine\Deprecations\Deprecation;
 use UnexpectedValueException;
-
 use function array_diff;
 use function array_merge;
 use function array_unique;

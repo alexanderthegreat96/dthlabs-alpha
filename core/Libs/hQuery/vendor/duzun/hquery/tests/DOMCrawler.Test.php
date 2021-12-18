@@ -1,4 +1,5 @@
 <?php
+
 use duzun\hQuery;
 use Symfony\Component\DomCrawler\Crawler;
 

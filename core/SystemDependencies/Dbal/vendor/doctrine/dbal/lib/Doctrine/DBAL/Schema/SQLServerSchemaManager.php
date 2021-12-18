@@ -8,7 +8,6 @@ use Doctrine\DBAL\Platforms\SQLServerPlatform;
 use Doctrine\DBAL\Types\Type;
 use PDOException;
 use Throwable;
-
 use function assert;
 use function count;
 use function in_array;

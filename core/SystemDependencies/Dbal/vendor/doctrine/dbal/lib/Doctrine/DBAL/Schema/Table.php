@@ -5,14 +5,12 @@ namespace Doctrine\DBAL\Schema;
 use Doctrine\DBAL\Exception;
 use Doctrine\DBAL\Schema\Visitor\Visitor;
 use Doctrine\DBAL\Types\Type;
-
 use function array_filter;
 use function array_merge;
 use function in_array;
 use function preg_match;
 use function strlen;
 use function strtolower;
-
 use const ARRAY_FILTER_USE_KEY;
 
 /**

@@ -11,7 +11,6 @@ use Doctrine\DBAL\Event\ConnectionEventArgs;
 use Doctrine\DBAL\Events;
 use Doctrine\DBAL\Sharding\ShardChoser\ShardChoser;
 use InvalidArgumentException;
-
 use function array_merge;
 use function is_numeric;
 use function is_string;

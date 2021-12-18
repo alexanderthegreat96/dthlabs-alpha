@@ -4,7 +4,6 @@ namespace Doctrine\DBAL\Schema;
 
 use Doctrine\DBAL\Types\Type;
 use Doctrine\Deprecations\Deprecation;
-
 use function array_merge;
 use function is_numeric;
 use function method_exists;

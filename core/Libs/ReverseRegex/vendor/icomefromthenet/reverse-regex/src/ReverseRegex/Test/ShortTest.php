@@ -1,10 +1,9 @@
 <?php
 namespace ReverseRegex\Test;
 
-use ReverseRegex\Lexer;
-use ReverseRegex\Parser;
-use ReverseRegex\Generator\Scope;
 use ReverseRegex\Generator\LiteralScope;
+use ReverseRegex\Generator\Scope;
+use ReverseRegex\Lexer;
 use ReverseRegex\Parser\Short;
 
 class ShortTest extends Basic

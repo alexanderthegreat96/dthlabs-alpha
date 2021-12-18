@@ -1,8 +1,9 @@
 <?php
+
 use duzun\hQuery;
 use GuzzleHttp\Client;
 
-    // Read $url and $sel from request ($_POST | $_GET)
+// Read $url and $sel from request ($_POST | $_GET)
     $url = @$_POST['url'] ?: @$_GET['url'];
     $sel = @$_POST['sel'] ?: @$_GET['sel'];
     $go  = @$_POST['go']  ?: @$_GET['go'];

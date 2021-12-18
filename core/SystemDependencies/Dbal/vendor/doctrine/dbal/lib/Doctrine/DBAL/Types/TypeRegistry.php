@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Doctrine\DBAL\Types;
 
 use Doctrine\DBAL\Exception;
-
 use function array_search;
 use function in_array;
 

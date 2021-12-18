@@ -2,8 +2,8 @@
 
 namespace MathPHP\LinearAlgebra;
 
-use MathPHP\Functions\Map\Single;
 use MathPHP\Exception\MatrixException;
+use MathPHP\Functions\Map\Single;
 
 /**
  * Diagonal matrix

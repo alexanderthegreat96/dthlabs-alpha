@@ -6,7 +6,6 @@ use Doctrine\Common\Cache\Cache;
 use Doctrine\DBAL\Logging\SQLLogger;
 use Doctrine\DBAL\Schema\AbstractAsset;
 use Doctrine\Deprecations\Deprecation;
-
 use function preg_match;
 
 /**

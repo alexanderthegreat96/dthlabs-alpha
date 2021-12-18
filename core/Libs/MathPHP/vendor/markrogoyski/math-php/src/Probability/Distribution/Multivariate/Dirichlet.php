@@ -2,10 +2,9 @@
 
 namespace MathPHP\Probability\Distribution\Multivariate;
 
-use MathPHP\Functions\Map;
+use MathPHP\Exception;
 use MathPHP\Functions\Special;
 use MathPHP\Functions\Support;
-use MathPHP\Exception;
 
 /**
  * Dirichlet distribution

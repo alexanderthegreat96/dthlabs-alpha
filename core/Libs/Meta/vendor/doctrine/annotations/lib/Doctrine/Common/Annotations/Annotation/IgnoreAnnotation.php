@@ -3,7 +3,6 @@
 namespace Doctrine\Common\Annotations\Annotation;
 
 use RuntimeException;
-
 use function is_array;
 use function is_string;
 use function json_encode;

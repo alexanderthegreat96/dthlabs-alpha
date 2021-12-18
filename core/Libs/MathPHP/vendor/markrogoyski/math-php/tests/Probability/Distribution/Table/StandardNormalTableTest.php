@@ -2,8 +2,8 @@
 
 namespace MathPHP\Tests\Probability\Distribution\Table;
 
-use MathPHP\Probability\Distribution\Table\StandardNormal;
 use MathPHP\Exception;
+use MathPHP\Probability\Distribution\Table\StandardNormal;
 
 class StandardNormalTableTest extends \PHPUnit\Framework\TestCase
 {

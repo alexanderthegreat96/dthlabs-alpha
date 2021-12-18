@@ -1,7 +1,6 @@
 <?php
 namespace duzun\hQuery;
 
-use duzun\hQuery\Parser\Selector as SelectorParser;
 use duzun\hQuery\Parser\HTML as HTMLParser;
 
 // ------------------------------------------------------------------------

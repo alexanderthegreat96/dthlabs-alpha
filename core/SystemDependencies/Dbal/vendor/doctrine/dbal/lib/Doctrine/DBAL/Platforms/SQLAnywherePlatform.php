@@ -15,7 +15,6 @@ use Doctrine\DBAL\Schema\TableDiff;
 use Doctrine\DBAL\TransactionIsolationLevel;
 use Doctrine\Deprecations\Deprecation;
 use InvalidArgumentException;
-
 use function array_merge;
 use function array_unique;
 use function array_values;

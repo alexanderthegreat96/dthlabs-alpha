@@ -2,7 +2,6 @@
 namespace Google\Protobuf;
 
 use Google\Protobuf\UninterpretedOption\NamePart;
-use Skrz\Meta\Protobuf\ProtobufField;
 
 /**
  * A message representing a option the parser does not recognize. This only

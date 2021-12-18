@@ -3,7 +3,6 @@
 namespace Doctrine\Common\Annotations;
 
 use Exception;
-
 use function get_class;
 use function gettype;
 use function implode;

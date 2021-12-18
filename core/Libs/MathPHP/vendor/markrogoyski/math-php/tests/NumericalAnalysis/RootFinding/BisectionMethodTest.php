@@ -2,9 +2,9 @@
 
 namespace MathPHP\Tests\NumericalAnalysis\RootFinding;
 
+use MathPHP\Exception;
 use MathPHP\Expression\Polynomial;
 use MathPHP\NumericalAnalysis\RootFinding\BisectionMethod;
-use MathPHP\Exception;
 
 class BisectionMethodTest extends \PHPUnit\Framework\TestCase
 {

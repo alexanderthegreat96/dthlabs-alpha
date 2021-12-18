@@ -2,8 +2,8 @@
 
 namespace MathPHP\Tests\LinearAlgebra\Vector;
 
-use MathPHP\LinearAlgebra\Vector;
 use MathPHP\Exception;
+use MathPHP\LinearAlgebra\Vector;
 
 class VectorInterfaceTest extends \PHPUnit\Framework\TestCase
 {
