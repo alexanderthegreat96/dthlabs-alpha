@@ -84,7 +84,7 @@ class ErrorHandler
                 echo "<p>PHP " . PHP_VERSION . "  <br/> (" . PHP_OS . ")</p>\n";
                 break;
             case E_NOTICE:
-                echo "<b>Notice:</b> <p class='error-p'>[$errno] $errstr in <b>$errline</b> at <b>$errline</b></p>\n";
+                echo "<b>Notice:</b> <p class='error-p'>[$errno] $errstr in <b>$errfile</b> at <b>$errline</b></p>\n";
                 echo "<p>PHP " . PHP_VERSION . "  <br/> (" . PHP_OS . ")</p>\n";
                 break;
             case E_STRICT:

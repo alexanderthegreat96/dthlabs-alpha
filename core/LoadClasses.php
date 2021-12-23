@@ -6,10 +6,11 @@ class LoadClasses
     {
         Autoloader::loadComposerLibs(__DIR__.'/Libs/');
         Autoloader::loadComposerLibs(__DIR__.'/SystemDependencies/');
-        Autoloader::load(__DIR__.'/../core/System/');
-        Autoloader::load(__DIR__.'/../core/Kernel/');
-        Autoloader::load(__DIR__.'/../app/Routes/');
+        Autoloader::load(__DIR__.'/System/');
+        Autoloader::load(__DIR__.'/Kernel/');
+        Autoloader::load(__DIR__.'/bin/');
         Autoloader::load(__DIR__.'/../app/Model/');
+        Autoloader::load(__DIR__.'/../app/Middleware/');
         Autoloader::load(__DIR__.'/../app/Controller/');
         return;
     }

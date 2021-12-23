@@ -1,54 +1,31 @@
 <?php
 namespace LexSystems\Framework\Controllers;
+use Illuminate\Support\Str;
 use LexSystems\Framework\Kernel\Controller;
+use LexSystems\Framework\Kernel\Helpers\CoreUtils\Hash;
+use LexSystems\Framework\Kernel\Helpers\Database\DB;
 use LexSystems\Framework\Kernel\Helpers\Debugger\Debugger;
-use LexSystems\Framework\Models\MyData;
 class MyController extends Controller
 {
     public function indexAction()
     {
         Debugger::var_dump($this->request->getArguments());
 
-        /**
-         * Data insert test
-         */
-
-//        $data = new MyData();
-//        $data->first_name = 'Smith';
-//        $data->last_name = 'Paul';
-//        $data->company_name = 'Microsoft';
-//        $data->car_make = 'Audi';
-//        $data->car_model = 'A6';
-//
-//        $data->save();
-
-//        Debugger::var_dump(MyData::create(
-//            [
-//                'first_name'  => 'Deontay',
-//                'last_name' => 'Wilder',
-//                'company_name' => 'UFC',
-//                'car_make' => 'Lamborghini',
-//                'car_model' => 'Urus'
-//            ]
-//        ));
-        /**
-         * Data fetch test
-         */
-
-
-
-//        foreach (MyData::all() as $item)
-//        {
-//            echo $item->first_name."<br/>";
-//        }
-
-
-        /**
-         * Call eloquent ORM query builder
-         */
-        $my_data = $this->db::table('my_data');
-        Debugger::var_dump($my_data->get());
-
-
+        DB::table('dth_auth_users')->insert
+        (
+            [
+                'username' => Str::random(10).'_'.Str::random(2),
+                'password' => Hash::make('password'),
+                'first_name' =>  Str::random(10),
+                'last_name' =>  Str::random(10),
+                'email' => Str::random(10).'@gmail.com',
+                'adress' => Str::random(20),
+                'phone_number' => Str::random(10),
+                'user_rank' => Str::words(5),
+                'status' => Str::words(5),
+                'created_at' => date('Y-m-d H:i:s'),
+                'updated_at' => date('Y-m-d H:i:s')
+            ]
+        );
     }
 }
