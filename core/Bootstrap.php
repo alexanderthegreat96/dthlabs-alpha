@@ -1,7 +1,7 @@
 <?php
 namespace LexSystems\Framework\Boot;
 require "BootSystem.php";
-class Boot extends BootSystem
+class Bootstrap extends BootSystem
 {
     /**
      * @return BootSystem

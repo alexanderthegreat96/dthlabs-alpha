@@ -1,8 +1,8 @@
 <?php
 require 'Boot.php';
-\LexSystems\Framework\Boot\Boot::boot();
+\LexSystems\Framework\Boot\Bootstrap::boot();
 
-$limit = 10000;
+$limit = 500;
 while( $i++ < $limit )
 {
     \LexSystems\Framework\Core\bin\DatabaseSeeder::run();

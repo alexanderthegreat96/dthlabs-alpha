@@ -7,6 +7,7 @@ require "Errors/ErrorHandler.php";
 require "Errors/ShutdownHandler.php";
 require "Errors/ExceptionHandler.php";
 require "PackageManager.php";
+require "Facade.php";
 require "Eloquent.php";
 
 class BootSystem
@@ -42,6 +43,12 @@ class BootSystem
         set_error_handler('\LexSystems\Framework\Kernel\ErrorHandler::errorHandler');
         set_exception_handler('\LexSystems\Framework\Kernel\ExceptionHandler::exceptionHandler');
 
+
+        /**
+         * Boot facade
+         */
+
+        Facade::boot();
 
         /**
          * Boot eloquent and facades
