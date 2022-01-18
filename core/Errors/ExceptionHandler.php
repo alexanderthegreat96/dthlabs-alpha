@@ -1,7 +1,7 @@
 <?php
 namespace LexSystems\Framework\Kernel;
-use LexSystems\Framework\Kernel\Helpers\Debugger\Debugger;
 use LexSystems\Framework\Kernel\Helpers\Requests;
+use LexSystems\Core\System\Helpers\Debugger\Debugger;
 
 class ExceptionHandler
 {

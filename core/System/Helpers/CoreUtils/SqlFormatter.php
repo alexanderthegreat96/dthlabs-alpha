@@ -1,5 +1,5 @@
 <?php
-namespace LexSystems\Framework\Kernel\Helpers\CoreUtils;
+namespace LexSystems\Core\System\Helpers\CoreUtils;
 /**
  * SQL Formatter is a collection of utilities for debugging SQL queries.
  * It includes methods for formatting, syntax highlighting, removing comments, etc.

@@ -1,5 +1,5 @@
 <?php
-namespace LexSystems\Framework\Kernel\Helpers\Database;
+namespace LexSystems\Core\System\Helpers\Database;
 class DB extends \Illuminate\Database\Capsule\Manager
 {
 

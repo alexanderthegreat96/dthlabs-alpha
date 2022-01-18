@@ -1,6 +1,6 @@
 <?php
 
-namespace LexSystems\Framework\Kernel\Helpers\ngfw;
+namespace LexSystems\Core\System\Helpers\ngfw;
 
 class Recipe
 {

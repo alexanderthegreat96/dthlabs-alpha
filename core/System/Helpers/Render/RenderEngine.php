@@ -1,5 +1,5 @@
 <?php
-namespace LexSystems\Framework\Kernel\Helpers\Render;
+namespace LexSystems\Core\System\Helpers\Render;
 use eftec\bladeone\BladeOne;
 
 class RenderEngine extends BladeOne

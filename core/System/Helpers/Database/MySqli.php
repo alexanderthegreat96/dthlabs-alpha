@@ -1,7 +1,6 @@
 <?php
-namespace LexSystems\Framework\Kernel\Helpers\Database;
+namespace LexSystems\Core\System\Helpers\Database;
 use LexSystems\Framework\Configs\Database\MysqlConfig;
-use ReverseRegex\Exception;
 
 /**
  * Database Connection Class

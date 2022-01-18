@@ -1,5 +1,5 @@
 <?php
-namespace LexSystems\Framework\Kernel\Helpers\Utils;
+namespace LexSystems\Core\System\Helpers\Utils;
 
 /*
 ##############################LICENSE################################

@@ -1,6 +1,6 @@
 <?php
 
-namespace LexSystems\Framework\Kernel\Helpers\Arrays;
+namespace LexSystems\Core\System\Helpers\Arrays;
 
 /**
  * Array -> XML Converter Class

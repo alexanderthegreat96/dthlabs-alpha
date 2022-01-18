@@ -1,6 +1,6 @@
 <?php
 namespace LexSystems\Framework\Kernel;
-use LexSystems\Framework\Kernel\Helpers\Database\MySqli;
+use  LexSystems\Core\System\Helpers\Database\MySqli;
 
 class PackageManager
 {

@@ -50,6 +50,7 @@ class Login extends Controller
 
     public function tryAction()
     {
+        $this->request->getArgument('','');
         Debugger::var_dump($this->request->getArguments());
         $this->system->validateInputs('');
     }

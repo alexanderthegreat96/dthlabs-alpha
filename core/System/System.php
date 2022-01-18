@@ -1,18 +1,18 @@
 <?php
 namespace LexSystems\Framework\Kernel;
 use jabarihunt\Password;
-use LexSystems\Framework\Kernel\Helpers\Arrays\ArrayUtility;
-use LexSystems\Framework\Kernel\Helpers\CoreUtils\Query;
-use LexSystems\Framework\Kernel\Helpers\CoreUtils\RandomStringGenerator;
-use LexSystems\Framework\Kernel\Helpers\CoreUtils\SqlFormatter;
-use LexSystems\Framework\Kernel\Helpers\CoreUtils\Utils;
-use LexSystems\Framework\Kernel\Helpers\Database\MySqli;
-use LexSystems\Framework\Kernel\Helpers\Debugger\Debugger;
-use LexSystems\Framework\Kernel\Helpers\Render\RenderEngine;
+use LexSystems\Core\System\Helpers\Arrays\ArrayUtility;
+use LexSystems\Core\System\Helpers\CoreUtils\Query;
+use LexSystems\Core\System\Helpers\CoreUtils\RandomStringGenerator;
+use LexSystems\Core\System\Helpers\CoreUtils\SqlFormatter;
+use LexSystems\Core\System\Helpers\CoreUtils\Utils;
+use LexSystems\Core\System\Helpers\Database\MySqli;
+use LexSystems\Core\System\Helpers\Debugger\Debugger;
+use LexSystems\Core\System\Helpers\Render\RenderEngine;
+use LexSystems\Core\System\Helpers\Sesssions\Session;
+use LexSystems\Core\System\Helpers\Utils\ArrayForm;
+use LexSystems\Core\System\Helpers\Utils\LoremIpsum;
 use LexSystems\Framework\Kernel\Helpers\Requests;
-use LexSystems\Framework\Kernel\Helpers\Sesssions\Session;
-use LexSystems\Framework\Kernel\Helpers\Utils\ArrayForm;
-use LexSystems\Framework\Kernel\Helpers\Utils\LoremIpsum;
 use MadeSimple\Validator\Validator;
 
 class System

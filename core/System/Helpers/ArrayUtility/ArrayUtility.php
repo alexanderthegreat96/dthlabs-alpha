@@ -1,8 +1,11 @@
 <?php
 /**
- * Code bellow was  taken from the Typo3 Project
+ * Array utilities
+ * @author Alexandru Lupaescu
+ * @package dthlabs-alpha
+ * @version 1.5
  */
-namespace LexSystems\Framework\Kernel\Helpers\Arrays;
+namespace LexSystems\Core\System\Helpers\Arrays;
 use Symfony\Component\String\Exception\ExceptionInterface;
 
 /**
@@ -73,6 +76,29 @@ class ArrayUtility
 
         }
         return $html;
+    }
+
+    /**
+     * Removes all elements that contains
+     * the specified values
+     * @param array $haystack
+     * @param array $values
+     * @return array
+     */
+
+    public static  function array_remove_by_values(array $haystack, array $values = ['', null,'undefined','null', []])
+    {
+        foreach ($haystack as $key => $value) {
+            if (is_array($value)) {
+                $haystack[$key] = self::array_remove_by_values($haystack[$key], $values);
+            }
+
+            if (in_array($haystack[$key], $values, true)) {
+                unset($haystack[$key]);
+            }
+        }
+
+        return $haystack;
     }
 
     /**
@@ -745,6 +771,24 @@ class ArrayUtility
             }
         }
         return $array;
+    }
+
+    /**
+     * @param $array
+     * @return array
+     * flattens array
+     */
+    public static function array_flatten($array) {
+        $return = array();
+        foreach ($array as $key => $value) {
+            if (is_array($value)){
+                $return = array_merge($return,self::array_flatten($value));
+            } else {
+                $return[$key] = $value;
+            }
+        }
+
+        return $return;
     }
 
     /**

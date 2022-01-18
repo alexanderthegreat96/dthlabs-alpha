@@ -4,7 +4,7 @@
  * Alexandru Lupaescu
  * Inspired by some github dude
  */
-namespace LexSystems\Framework\Kernel\Helpers\Debugger;
+namespace LexSystems\Core\System\Helpers\Debugger;
 class Debugger
 {
 

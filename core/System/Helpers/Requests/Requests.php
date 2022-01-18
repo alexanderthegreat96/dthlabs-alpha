@@ -1,7 +1,7 @@
 <?php
 namespace LexSystems\Framework\Kernel\Helpers;
-use LexSystems\Framework\Kernel\Helpers\Arrays\ArrayUtility;
-use LexSystems\Framework\Kernel\Helpers\Sesssions\Session;
+use LexSystems\Core\System\Helpers\Arrays\ArrayUtility;
+use LexSystems\Core\System\Helpers\Sesssions\Session;
 
 class Requests
 {

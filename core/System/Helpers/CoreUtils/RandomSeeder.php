@@ -1,5 +1,5 @@
 <?php
-namespace LexSystems\Framework\Kernel\Helpers\CoreUtils;
+namespace LexSystems\Core\System\Helpers\CoreUtils;
 /**
  * Random Helper
  *

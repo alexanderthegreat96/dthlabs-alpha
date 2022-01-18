@@ -1,6 +1,6 @@
 <?php
-namespace LexSystems\Framework\Kernel\Helpers\Sesssions;
-use LexSystems\Framework\Kernel\Helpers\CoreUtils\RandomStringGenerator;
+namespace LexSystems\Core\System\Helpers\Sesssions;
+use LexSystems\Core\System\Helpers\CoreUtils\RandomStringGenerator;
 
 class Session
 {
