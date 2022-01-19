@@ -1,6 +1,7 @@
 <?php
 namespace LexSystems\Framework\Controllers;
 use Doctrine\Common\Util\Debug;
+use LexSystems\Core\System\Extend\Validation;
 use LexSystems\Framework\Kernel\Controller;
 use LexSystems\Framework\Kernel\Helpers\Debugger\Debugger;
 
@@ -53,5 +54,7 @@ class Login extends Controller
         $this->request->getArgument('','');
         Debugger::var_dump($this->request->getArguments());
         $this->system->validateInputs('');
+
+
     }
 }
