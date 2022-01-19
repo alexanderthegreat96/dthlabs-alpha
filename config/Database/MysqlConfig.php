@@ -7,9 +7,9 @@ class MysqlConfig
      * for MYSQL
      */
 
-    const MYSQL_HOST = '192.168.1.69';
-    const MYSQL_USER = 'alexander';
-    const MYSQL_PASS = 'thelexus2356';
+    const MYSQL_HOST = 'xxx';
+    const MYSQL_USER = 'xxx';
+    const MYSQL_PASS = 'xxx';
     const MYSQL_DB = 'dth-labs-alpha';
 
     /**
