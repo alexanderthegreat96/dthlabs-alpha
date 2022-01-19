@@ -1,0 +1,5 @@
+{
+    "require": {
+        "illuminate/config": "^7.30"
+    }
+}

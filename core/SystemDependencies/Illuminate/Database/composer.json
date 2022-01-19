@@ -1,0 +1,6 @@
+{
+    "require": {
+        "illuminate/database": "^8.76",
+        "illuminate/hashing": "^7.30"
+    }
+}
