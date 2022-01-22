@@ -1,5 +1,5 @@
 <?php
-use LexSystems\Framework\Kernel\Router;
+use LexSystems\Framework\Core\Kernel\Router;
 /**
  * Routing done through php-router
  */

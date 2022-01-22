@@ -1,5 +1,5 @@
 <?php
-namespace LexSystems\Framework\Configs\Kernel;
+namespace LexSystems\Framework\Config\Kernel;
 class Error
 {
     /**

@@ -1,11 +1,11 @@
 <?php
-namespace LexSystems\Framework\Middlewares;
+namespace App\Middlewares;
 
 use LexSystems\Framework\Kernel\Helpers\CoreUtils\Utils;
 use LexSystems\Framework\Kernel\Helpers\Debugger\Debugger;
 use LexSystems\Framework\Kernel\Helpers\Requests;
 use LexSystems\Framework\Kernel\Helpers\Sesssions\Session;
-use LexSystems\Framework\Kernel\Middleware;
+use LexSystems\Framework\Core\Kernel\Middleware;
 
 class AfterAuth extends Middleware
 {

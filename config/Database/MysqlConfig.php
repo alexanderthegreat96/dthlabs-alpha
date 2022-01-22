@@ -1,5 +1,5 @@
 <?php
-namespace LexSystems\Framework\Configs\Database;
+namespace LexSystems\Framework\Config\Database;
 class MysqlConfig
 {
     /**
@@ -7,9 +7,9 @@ class MysqlConfig
      * for MYSQL
      */
 
-    const MYSQL_HOST = '192.168.1.69';
-    const MYSQL_USER = 'alexander';
-    const MYSQL_PASS = 'thelexus2356';
+    const MYSQL_HOST = 'xxxxxxxx';
+    const MYSQL_USER = 'xxxxxxxxxxxx';
+    const MYSQL_PASS = 'xxxxxxxxxxxx';
     const MYSQL_DB = 'dth-labs-alpha';
 
     /**

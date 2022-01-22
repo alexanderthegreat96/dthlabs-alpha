@@ -1,5 +1,5 @@
 <?php
-namespace LexSystems\Framework\Kernel;
+namespace LexSystems\Framework\Core\Errors;
 /**
  * Error and exception handler
  *

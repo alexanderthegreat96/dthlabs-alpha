@@ -1,7 +1,7 @@
 <?php
-namespace LexSystems\Framework\Kernel;
-use LexSystems\Framework\Kernel\View\RenderEngine;
-
+namespace LexSystems\Framework\Core\Kernel;
+use LexSystems\Core\System\Helpers\Render\RenderEngine;
+use LexSystems\Framework\Core\System\System;
 /**
  * View
  *

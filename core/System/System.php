@@ -1,5 +1,5 @@
 <?php
-namespace LexSystems\Framework\Kernel;
+namespace LexSystems\Framework\Core\System;
 use jabarihunt\Password;
 use LexSystems\Core\System\Helpers\Arrays\ArrayUtility;
 use LexSystems\Core\System\Helpers\CoreUtils\Query;
@@ -7,14 +7,14 @@ use LexSystems\Core\System\Helpers\CoreUtils\RandomStringGenerator;
 use LexSystems\Core\System\Helpers\CoreUtils\SqlFormatter;
 use LexSystems\Core\System\Helpers\CoreUtils\Utils;
 use LexSystems\Core\System\Helpers\Database\MySqli;
-use LexSystems\Core\System\Helpers\Debugger\Debugger;
+use LexSystems\Core\System\Helpers\Debugger;
 use LexSystems\Core\System\Helpers\Render\RenderEngine;
 use LexSystems\Core\System\Helpers\Sesssions\Session;
 use LexSystems\Core\System\Helpers\Utils\ArrayForm;
 use LexSystems\Core\System\Helpers\Utils\LoremIpsum;
-use LexSystems\Framework\Kernel\Helpers\Requests;
+use LexSystems\Framework\Core\Kernel\View;
+use LexSystems\Core\System\Helpers\Requests;
 use MadeSimple\Validator\Validator;
-
 class System
 {
     /**

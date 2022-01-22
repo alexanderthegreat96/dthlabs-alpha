@@ -2,8 +2,8 @@
 namespace LexSystems\Framework\Core\bin;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
-use LexSystems\Framework\Kernel\Helpers\Database\DB;
-use LexSystems\Framework\Kernel\Helpers\CoreUtils\RandomSeeder;
+use LexSystems\Core\System\Helpers\Database\DB;
+use LexSystems\Core\System\Helpers\CoreUtils\RandomSeeder;
 class DatabaseSeeder extends Seeder
 {
     public static function run()

@@ -1,8 +1,9 @@
 <?php
-namespace LexSystems\Framework\Kernel;
-use LexSystems\Framework\Kernel\Helpers\Requests;
-use LexSystems\Core\System\Helpers\Debugger\Debugger;
-
+namespace LexSystems\Framework\Core\Errors;
+use LexSystems\Core\System\Helpers\Requests;
+use LexSystems\Core\System\Helpers\Debugger;
+use LexSystems\Framework\Config\Kernel\Error;
+use LexSystems\Framework\Core\Kernel\View;
 class ExceptionHandler
 {
     /**
@@ -22,7 +23,7 @@ class ExceptionHandler
         }
         http_response_code($code);
 
-        if (\LexSystems\Framework\Configs\Kernel\Error::ERROR_REPORTING) {
+        if (Error::ERROR_REPORTING) {
             echo "<title>KERNEL ERROR</title>";
             echo "<style>body{background-color: #0073e6; color: #fff; font-family : arial; font-size: 15px;}.error-div{padding: 2%;background-color: #2b2c2e;color: #fff;border: 1px solid red;}.error-p{background-color: #3a3b3d;color: #cccc12;border: 1px solid #5d12cc;padding: 1%;}pre {	width: 100%;	padding: 0;	margin: 0;	overflow: auto;	overflow-y: hidden;	font-size: 12px;	line-height: 20px;	background-color:#1e211f;}</style>";
             echo '<div style="width: 70%;margin:auto;padding: 0.5%;">';

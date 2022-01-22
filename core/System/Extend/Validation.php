@@ -1,7 +1,7 @@
 <?php
 namespace LexSystems\Core\System\Extend;
 use Illuminate\Validation\Factory as ValidatorFactory;
-use LexSystems\Framework\Kernel\Helpers\Requests;
+use LexSystems\Core\System\Helpers\Requests;
 use Illuminate\Translation\Translator;
 use Illuminate\Translation\MessageSelector;
 

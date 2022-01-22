@@ -1,5 +1,5 @@
 <?php
-namespace LexSystems\Framework\Configs\App;
+namespace LexSystems\Framework\Config\App;
 class Config
 {
     const MyConst = 'myvalue';

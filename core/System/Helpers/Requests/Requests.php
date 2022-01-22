@@ -1,5 +1,5 @@
 <?php
-namespace LexSystems\Framework\Kernel\Helpers;
+namespace LexSystems\Core\System\Helpers;
 use LexSystems\Core\System\Helpers\Arrays\ArrayUtility;
 use LexSystems\Core\System\Helpers\Sesssions\Session;
 

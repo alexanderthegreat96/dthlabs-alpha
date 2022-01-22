@@ -1,5 +1,5 @@
 <?php
-namespace LexSystems\Framework\Boot;
+namespace LexSystems\Framework\Core;
 class Autoloader {
     /**
      * @param string $directory

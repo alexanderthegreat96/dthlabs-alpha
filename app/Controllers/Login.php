@@ -1,9 +1,7 @@
 <?php
-namespace LexSystems\Framework\Controllers;
-use Doctrine\Common\Util\Debug;
+namespace App\Controllers;
 use LexSystems\Core\System\Extend\Validation;
-use LexSystems\Framework\Kernel\Controller;
-use LexSystems\Framework\Kernel\Helpers\Debugger\Debugger;
+use LexSystems\Framework\Core\Kernel\Controller;
 
 class Login extends Controller
 {

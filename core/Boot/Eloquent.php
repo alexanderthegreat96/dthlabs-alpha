@@ -1,5 +1,5 @@
 <?php
-namespace LexSystems\Framework\Boot;
+namespace LexSystems\Framework\Core\Boot;
 use Illuminate\Database\Capsule\Manager as Capsule;
 class Eloquent
 {
@@ -10,10 +10,10 @@ class Eloquent
         (
             [
             'driver'    => 'mysql',
-            'host'      => \LexSystems\Framework\Configs\Database\MysqlConfig::getHost(),
-            'database'  => \LexSystems\Framework\Configs\Database\MysqlConfig::getDb(),
-            'username'  => \LexSystems\Framework\Configs\Database\MysqlConfig::getUser(),
-            'password'  => \LexSystems\Framework\Configs\Database\MysqlConfig::getPass(),
+            'host'      => \LexSystems\Framework\Config\Database\MysqlConfig::getHost(),
+            'database'  => \LexSystems\Framework\Config\Database\MysqlConfig::getDb(),
+            'username'  => \LexSystems\Framework\Config\Database\MysqlConfig::getUser(),
+            'password'  => \LexSystems\Framework\Config\Database\MysqlConfig::getPass(),
             'charset'   => 'utf8',
             'collation' => 'utf8_general_ci',
             'prefix'    => ''

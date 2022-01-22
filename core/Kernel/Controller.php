@@ -3,7 +3,8 @@
  * Route handler
  * Controller
  */
-namespace LexSystems\Framework\Kernel;
+namespace LexSystems\Framework\Core\Kernel;
+use LexSystems\Framework\Core\System\System;
 class Controller extends \Buki\Router\Http\Controller
 {
     /**
@@ -30,8 +31,6 @@ class Controller extends \Buki\Router\Http\Controller
 
     public function __construct()
     {
-
-
         $system  = new System();
         $this->utils = $system->utils();
         $this->request = $system->request();

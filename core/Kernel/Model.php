@@ -1,7 +1,7 @@
 <?php
-namespace LexSystems\Framework\Kernel;
+namespace LexSystems\Framework\Core\Kernel;
 use Illuminate\Database\Eloquent;
-
+use LexSystems\Framework\Core\System\System;
 abstract class Model extends Eloquent\Model
 {
     /**

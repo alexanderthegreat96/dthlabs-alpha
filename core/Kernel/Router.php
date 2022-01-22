@@ -1,8 +1,9 @@
 <?php
-namespace LexSystems\Framework\Kernel;
+namespace LexSystems\Framework\Core\Kernel;
+use LexSystems\Framework\Config\Kernel\Error;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-
+use LexSystems\Framework\Core\System\System;
 /**
  * Router
  *
@@ -21,14 +22,14 @@ class Router extends \Buki\Router\Router
         {
             $params = [
                 'paths' => [
-                    'controllers' => 'Controller',
-                    'middlewares' => 'Middleware'
+                    'controllers' => 'Controllers',
+                    'middlewares' => 'Middlewares'
                 ],
                 'namespaces' => [
-                    'controllers' => 'LexSystems\Framework\Controllers',
-                    'middlewares' => 'LexSystems\Framework\Middlewares'
+                    'controllers' => 'App\Controllers',
+                    'middlewares' => 'App\Middlewares'
                 ],
-                'debug' => \LexSystems\Framework\Configs\Kernel\Error::ERROR_REPORTING
+                'debug' => Error::ERROR_REPORTING
             ];
         }
 
@@ -40,7 +41,7 @@ class Router extends \Buki\Router\Router
 
         $this->error(function() {
 
-            if(\LexSystems\Framework\Configs\Kernel\Error::ERROR_REPORTING)
+            if(Error::ERROR_REPORTING)
             {
                 throw new \Exception('The requested route was not found!');
             }
