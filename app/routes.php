@@ -12,8 +12,10 @@ $router = new Router();
 
 //$router->get('/test','TestController@index');
 $router->get('/', 'MyController@index');
-$router->get('/login', 'Login@index',['after' => 'AfterAuth']);
-$router->post('/login/try', 'Login@try',['after' => 'AfterAuth']);
+$router->get('login', 'Login@index',['after' => 'AfterAuth']);
+$router->post('login/try', 'Login@try',['after' => 'AfterAuth']);
+$router->post('upload','Files@uploadFiles');
+
 //$router->post('/store', 'IndexController@store');
 //$router->get('/edit/:id', 'IndexController@edit');
 //$router->put('/update/:id', 'IndexController@update');

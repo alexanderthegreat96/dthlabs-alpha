@@ -141,6 +141,7 @@ class Requests
     {
         return isset($_FILES) ? true:false;
     }
+
     /**
      * @param array $return
      * @return array
@@ -152,7 +153,7 @@ class Requests
         {
             foreach ($_FILES as $key=>$value)
             {
-                array_push($return,$this->simplifyMultiFileArray($_FILES[$key]));
+                $return[$key] = $this->simplifyMultiFileArray($value);
             }
         }
 
