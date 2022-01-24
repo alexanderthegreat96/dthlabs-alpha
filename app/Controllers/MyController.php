@@ -14,5 +14,10 @@ class MyController extends Controller
 
         $test = DB::table('dth_auth_users')->paginate('15');
         Debugger::var_dump( Validation::validate([],[]));
+
+        if($this->request->hasFile('my_file'))
+        {
+
+        }
     }
 }

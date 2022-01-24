@@ -77,25 +77,13 @@ class Requests
         switch ($type)
         {
             case 'GET':
-                if(isset($this->get[$param]))
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
+                return isset($this->get[$param]) ? true:false;
                 break;
             case 'POST':
-                if(isset($this->post[$param]))
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
+                return isset($this->post[$param]) ? true:false;
                 break;
+            default:
+                return false;
         }
     }
 
@@ -137,8 +125,76 @@ class Requests
         $result=[];
         $result['post'] = $this->post;
         $result['get'] = $this->get;
+        $result['files'] = $this->hasFiles() ? $this->remapSFilesArray():null;
         $result['session'] = $this->session;
+        $result['server'] = $_SERVER;
+        $result['user_agent'] = $_SERVER['HTTP_USER_AGENT'];
+        $result['client_ip']  = $_SERVER['REMOTE_ADDR'];
+        $result['headers'] = getallheaders();
         return $result;
+    }
+
+    /**
+     * @return bool
+     */
+    public function hasFiles():bool
+    {
+        return isset($_FILES) ? true:false;
+    }
+    /**
+     * @param array $return
+     * @return array
+     */
+
+    protected function remapSFilesArray(array &$return = []):array
+    {
+        if($this->hasFiles())
+        {
+            foreach ($_FILES as $key=>$value)
+            {
+                array_push($return,$this->simplifyMultiFileArray($_FILES[$key]));
+            }
+        }
+
+        return $return;
+    }
+
+    /**
+     * @param array $files
+     * @return array
+     */
+    protected function simplifyMultiFileArray(array $files = [])
+    {
+        $sFiles = array();
+        if(is_array($files) && count($files) > 0)
+        {
+            foreach($files as $key => $file)
+            {
+                foreach($file as $index => $attr)
+                {
+                    $sFiles[$index][$key] = $attr;
+                }
+            }
+        }
+        return $sFiles;
+    }
+
+    /**
+     * @param string $key
+     * @return bool
+     */
+    public function hasFile(string $key)
+    {
+        return isset($_FILES[$key]) ? true:false;
+    }
+
+    /**
+     * @param string $key
+     * @return array|null
+     */
+    public function getFile(string $key)
+    {
+        return $this->hasFile($key) ? $this->simplifyMultiFileArray($_FILES[$key]):null;
     }
 
     /**
