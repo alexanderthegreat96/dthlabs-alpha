@@ -52,6 +52,70 @@ class FileSystem
 
     /**
      * @param string $fileName
+     * @param string $contents
+     * @param string $folder
+     * @param string $defaultPath
+     * @return array|bool
+     * @throws \Exception
+     */
+    public static function createFile(string $fileName = '', string $contents = '',string $folder= '/', string $defaultPath = '')
+    {
+
+        $fileName = Utils::normalizeString($fileName);
+        $fullPath = $defaultPath ? $defaultPath :self::getDiskPath();
+        $combinedFileLocation = self::fixPaths($fullPath.'/'.$folder.'/'.$fileName);
+        $combinedLocation = self::fixPaths($fullPath.'/'.$folder);
+
+        if(self::hasDirectory($combinedLocation))
+        {
+            if(!self::checkIfFileExists($fileName,$folder,$defaultPath))
+            {
+                $open = fopen($combinedFileLocation, 'w+');
+                fwrite($open, $contents);
+                if (fclose($open)) {
+                    return true;
+                } else {
+                     throw new \Exception(__METHOD__.' could not be executed. 
+                    There was an error related to the location or permission issues for: '.$combinedFileLocation);
+                }
+            }
+            else
+            {
+                throw new \Exception($fileName.' already exists in: '.$combinedLocation);
+            }
+        }
+        else
+        {
+            try{
+                self::makeDir($combinedLocation);
+                if(!self::checkIfFileExists($fileName,$folder,$defaultPath))
+                {
+                    $open = fopen($combinedFileLocation, 'w+');
+                    fwrite($open, $contents);
+                    if (fclose($open)) {
+                        return true;
+                    } else {
+                        throw new \Exception(__METHOD__.' could not be executed. 
+                    There was an error related to the location or permission issues for: '.$combinedFileLocation);
+                    }
+                }
+                else
+                {
+                    throw new \Exception($fileName.' already exists in: '.$combinedLocation);
+                }
+            }
+
+            catch (\Exception $e)
+            {
+                return ['status' => false,'error' => $e->getMessage()];
+            }
+
+        }
+
+    }
+
+    /**
+     * @param string $fileName
      * @param string $tmpFile
      * @return string[]
      * @throws \Exception

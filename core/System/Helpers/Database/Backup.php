@@ -6,6 +6,7 @@
  */
 
 use LexSystems\Core\System\Helpers\Database\MySqli;
+use LexSystems\Core\System\Helpers\FileSystem;
 class Backup
 {
     /**
@@ -75,12 +76,12 @@ class Backup
 
         //save file
         $fileName = 'db-backup-' . time() . '-' . (md5(implode(',', $tables))) . '.sql';
-        $handle = fopen($location . $fileName, 'w+');
-        fwrite($handle, $return);
-        if (fclose($handle)) {
-            return true;
-        } else {
-            throw new \Exception('Unable to write sql file: ' . $fileName . 'in ' . $location);
+        try{
+            FileSystem::createFile($fileName,$return,'backups');
+        }
+        catch (\Exception $e)
+        {
+            return $e->getMessage();
         }
     }
 }
