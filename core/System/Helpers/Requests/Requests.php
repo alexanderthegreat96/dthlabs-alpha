@@ -134,12 +134,23 @@ class Requests
         return $result;
     }
 
+
+
+
     /**
      * @return bool
      */
     public function hasFiles():bool
     {
         return isset($_FILES) ? true:false;
+    }
+
+    /**
+     * @return array
+     */
+    public function getFiles():array
+    {
+        return $this->hasFiles() ? $this->remapSFilesArray():[];
     }
 
     /**

@@ -1,6 +1,6 @@
 <?php
 namespace LexSystems\Core\System\Helpers\Database;
-use LexSystems\Framework\Configs\Database\MysqlConfig;
+use LexSystems\Framework\Config\Database\MysqlConfig as Config;
 
 /**
  * Database Connection Class
@@ -18,11 +18,11 @@ class MySqli
     {
         if($dbName)
         {
-            $connection = mysqli_connect(MysqlConfig::getHost(),MysqlConfig::getUser(),MysqlConfig::getPass(),$dbName);
+            $connection = mysqli_connect(Config::MYSQL_HOST,Config::MYSQL_USER,Config::MYSQL_PASS,$dbName);
         }
         else
         {
-            $connection = mysqli_connect(MysqlConfig::getHost(),MysqlConfig::getUser(),MysqlConfig::getPass(),MysqlConfig::getDb());
+            $connection = mysqli_connect(Config::MYSQL_HOST,Config::MYSQL_USER,Config::MYSQL_PASS,Config::MYSQL_DB);
         }
 
         if($connection)
@@ -42,7 +42,7 @@ class MySqli
         }
         else
         {
-            throw new Exception('Unable to connect to the MySQL Server');
+            throw new \Exception('Unable to connect to the MySQL Server');
         }
     }
 

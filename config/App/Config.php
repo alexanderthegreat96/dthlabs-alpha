@@ -2,13 +2,8 @@
 namespace LexSystems\Framework\Config\App;
 class Config
 {
-    const MyConst = 'myvalue';
     /**
-     * Put whatever constants you want in here
+     * Default storage location
      */
-
-    public static function getParam(string $param)
-    {
-        return $param;
-    }
+    const STORAGE_LOCATION = 'storage';
 }

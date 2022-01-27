@@ -1187,6 +1187,11 @@ class ArrayUtility
         return array_values(array_unique($allValues));
     }
 
+    /**
+     * @param array $arr
+     * @param $key
+     * @return array
+     */
     public static function array_group_by(array $arr, $key) : array
     {
         if (!is_string($key) && !is_int($key) && !is_float($key) && !is_callable($key)) {
@@ -1223,5 +1228,25 @@ class ArrayUtility
         }
 
         return $grouped;
+    }
+
+    /**
+     * @param array $array
+     * @return array
+     */
+
+    public static function super_unique(array $array)
+    {
+        $result = array_map("unserialize", array_unique(array_map("serialize", $array)));
+
+        foreach ($result as $key => $value)
+        {
+            if ( is_array($value) )
+            {
+                $result[$key] = self::super_unique($value);
+            }
+        }
+
+        return $result;
     }
 }

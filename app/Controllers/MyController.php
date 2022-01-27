@@ -1,8 +1,9 @@
 <?php
 namespace App\Controllers;
-use Illuminate\Support\Str;
-use LexSystems\Core\System\Extend\Validation;
+use App\Models\Customers;
+use Delight\Db\Throwable\Exception;
 use LexSystems\Core\System\Helpers\Debugger;
+use LexSystems\Core\System\Helpers\FileSystem;
 use LexSystems\Framework\Core\Kernel\Controller;
 use LexSystems\Framework\Kernel\Helpers\CoreUtils\Hash;
 use LexSystems\Core\System\Helpers\Database\DB;
@@ -10,24 +11,14 @@ class MyController extends Controller
 {
     public function indexAction()
     {
-//        Debugger::var_dump($this->request->getArguments());
-//
-//        $test = DB::table('dth_auth_users')->paginate('15');
-//        Debugger::var_dump( Validation::validate([],[]));
-//
-//        if($this->request->hasFile('my_file'))
-//        {
-//
-//        }
-
         $elements =
             [
                 [
                     'type' => 'file',
-                    'label' => 'Select your files',
-                    'id'  => 'files',
-                    'name' => 'data[]',
-                    'multiple' => 'true'
+                    'label' => 'Chose your files',
+                    'id'  => 'username',
+                    "multiple" => "multiple",
+                    'name' => 'files[]',
                 ],
                 [
                     'type' => 'submit',
@@ -40,13 +31,16 @@ class MyController extends Controller
         $form =
             [
                 'method' => 'POST',
-                'enctype' => 'multipart/form-data',
                 'action' => '/upload',
-                'display'  => 'grid'
+                'display'  => 'grid',
+                'enctype' => 'multipart/form-data'
             ];
 
-        $uploadForm = $this->system->arrayForm($elements,$form);
+        $upload = $this->system->arrayForm($elements,$form);
 
-        return $uploadForm->build();
+        echo $upload->build();
+
+       // Debugger::var_dump(FileSystem::removeFile('time-svgrepo-com (1).svg'));
+
     }
 }

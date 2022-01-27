@@ -3,8 +3,7 @@ namespace LexSystems\Core\System\Helpers\CoreUtils;
 use Doctrine\DBAL\DriverManager;
 use Doctrine\DBAL\Exception;
 use Doctrine\DBAL\Query\QueryBuilder;
-use LexSystems\Framework\Configs\Database\MysqlConfig;
-
+use LexSystems\Framework\Config\Database\MysqlConfig as Config;
 class Query
 {
     /**
@@ -14,10 +13,10 @@ class Query
     {
         $this->connectionParam =
             [
-                'dbname' =>  MysqlConfig::getDb(),
-                'user' => MysqlConfig::getUser(),
-                'password' => MysqlConfig::getPass(),
-                'host' => MysqlConfig::getHost(),
+                'dbname' =>  Config::MYSQL_DB,
+                'user' => Config::MYSQL_USER,
+                'password' => Config::MYSQL_PASS,
+                'host' => Config::MYSQL_HOST,
                 'driver' => 'mysqli',
             ];
     }
