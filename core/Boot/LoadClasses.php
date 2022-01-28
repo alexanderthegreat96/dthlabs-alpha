@@ -15,6 +15,7 @@ class LoadClasses
         Autoloader::load(__DIR__ . '/../../app/Models/');
         Autoloader::load(__DIR__ . '/../../app/Middleware/');
         Autoloader::load(__DIR__ . '/../../app/Controller/');
+        Autoloader::load(__DIR__ . '/../../database/');
         return;
     }
 }

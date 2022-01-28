@@ -21,4 +21,12 @@ $router->post('upload','Files@uploadFiles');
 //$router->put('/update/:id', 'IndexController@update');
 //$router->delete('/delete/:id', 'IndexController@delete');
 
-$router->run();
+try
+{
+    $router->run();
+}
+catch (\Exception $e)
+{
+    echo $e->getMessage();
+}
+

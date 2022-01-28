@@ -53,6 +53,4 @@ class Router extends \Buki\Router\Router
 
         });
     }
-
-
 }

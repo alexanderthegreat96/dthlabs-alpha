@@ -52,7 +52,5 @@ class Login extends Controller
         $this->request->getArgument('','');
         Debugger::var_dump($this->request->getArguments());
         $this->system->validateInputs('');
-
-
     }
 }

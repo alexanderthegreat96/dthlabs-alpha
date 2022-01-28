@@ -1,6 +1,7 @@
 <?php
 namespace LexSystems\Framework\Core\Boot;
 use Illuminate\Database\Capsule\Manager as Capsule;
+use Illuminate\Database\Schema\Builder;
 use LexSystems\Framework\Config\Database\MysqlConfig as Config;
 class Eloquent
 {
@@ -18,10 +19,11 @@ class Eloquent
             'charset'   => 'utf8',
             'collation' => 'utf8_general_ci',
             'prefix'    => ''
-             ]
+            ]
         );
 
         $capsule->setAsGlobal();
         $capsule->bootEloquent();
+        $capsule->schema();
     }
 }
