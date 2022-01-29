@@ -1,6 +1,5 @@
 <?php
 namespace App\Middlewares;
-
 use LexSystems\Framework\Kernel\Helpers\CoreUtils\Utils;
 use LexSystems\Framework\Kernel\Helpers\Debugger\Debugger;
 use LexSystems\Framework\Kernel\Helpers\Requests;
