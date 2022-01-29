@@ -1,7 +1,11 @@
 <?php
-namespace LexSystems\Framework\Middlewares;
-use LexSystems\Framework\Kernel\Middleware;
-
+namespace App\Middlewares;
+use LexSystems\Framework\Core\Kernel\Middleware;
+/**
+ * Example middleware
+ * Checks if the user is logged in by
+ * grabbing the session params
+ */
 class BeforeAuth extends Middleware
 {
     public function handle()

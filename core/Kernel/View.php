@@ -37,9 +37,9 @@ class View extends System
      *
      * @return void
      */
-    public function renderTemplate($template, $args = [])
+    public static function renderTemplate($template, $args = [])
     {
-        $bladeOne = $this->renderEngine();
+        $bladeOne = new RenderEngine();
         echo $bladeOne->setView($template)
         ->share($args)
         ->run();

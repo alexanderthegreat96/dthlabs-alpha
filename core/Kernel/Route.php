@@ -95,10 +95,9 @@ class Route
 
     /**
      * @param string $prefix
-     * @param Closure $callback
      * @param array $opts
      */
-    public static function group(string $prefix = '', Closure $callback , array $opts = [])
+    public static function group(string $prefix = '', $callback, array $opts = [])
     {
         self::getSingleton()->router->group($prefix, $callback, $opts);
     }

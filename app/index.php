@@ -5,7 +5,7 @@
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
-
+use LexSystems\Framework\Core\Kernel\View;
 /**
  * Bootstrap Application Components
  */
@@ -18,5 +18,13 @@ require __DIR__ . "/../core/App.php";
  */
 
 require 'Routes.php';
-\LexSystems\Framework\Core\Kernel\Route::dispatch();
+try{
+    \LexSystems\Framework\Core\Kernel\Route::dispatch();
+}
+catch (\Exception $e)
+{
+    View::renderTemplate('kernel',['error' => $e->getMessage()]);
+    echo $e->getMessage();
+}
+
 ?>

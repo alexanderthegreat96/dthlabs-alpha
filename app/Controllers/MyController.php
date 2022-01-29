@@ -1,10 +1,9 @@
 <?php
 namespace App\Controllers;
-use Delight\Db\Throwable\Exception;
-use LexSystems\Core\System\Helpers\Debugger;
-use LexSystems\Core\System\Helpers\FileSystem;
+use App\Models\DthAuthUsers;
+use App\Models\Users;
+use LexSystems\Core\System\Helpers\CoreUtils\Hash;
 use LexSystems\Framework\Core\Kernel\Controller;
-use LexSystems\Core\System\Helpers\Database\IlluminateDb;
 class MyController extends Controller
 {
     public function indexAction()
@@ -35,10 +34,6 @@ class MyController extends Controller
             ];
 
         $upload = $this->system->arrayForm($elements,$form);
-
         echo $upload->build();
-
-       // Debugger::var_dump(FileSystem::removeFile('time-svgrepo-com (1).svg'));
-
     }
 }
