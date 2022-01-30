@@ -8,7 +8,7 @@ use LexSystems\Core\System\Helpers\Debugger;
 use LexSystems\Framework\Core\Kernel\Controller;
 class MyController extends Controller
 {
-    public function indexAction()
+    public function indexdd()
     {
         $code = Captcha::makeCode();
         if($code['status'])

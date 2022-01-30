@@ -80,7 +80,7 @@ final class Mbstring
 
     public static function mb_convert_encoding($s, $toEncoding, $fromEncoding = null)
     {
-        if (\is_array($fromEncoding) || false !== strpos($fromEncoding, ',')) {
+        if (\is_array($fromEncoding) || ($fromEncoding !== null && false !== strpos($fromEncoding, ','))) {
             $fromEncoding = self::mb_detect_encoding($s, $fromEncoding);
         } else {
             $fromEncoding = self::getEncoding($fromEncoding);
@@ -602,6 +602,9 @@ final class Mbstring
         if (80000 > \PHP_VERSION_ID) {
             return false;
         }
+        if (\is_int($c) || 'long' === $c || 'entity' === $c) {
+            return false;
+        }
 
         throw new \ValueError('Argument #1 ($substitute_character) must be "none", "long", "entity" or a valid codepoint');
     }
@@ -838,7 +841,7 @@ final class Mbstring
 
     private static function getData($file)
     {
-        if (file_exists($file = __DIR__ . '/Resources/unidata/' .$file.'.php')) {
+        if (file_exists($file = __DIR__.'/Resources/unidata/'.$file.'.php')) {
             return require $file;
         }
 

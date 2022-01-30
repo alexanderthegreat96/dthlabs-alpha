@@ -23,8 +23,13 @@ try{
 }
 catch (\Exception $e)
 {
-    View::renderTemplate('kernel',['error' => $e->getMessage()]);
-    echo $e->getMessage();
+    View::renderTemplate('kernel',
+        [
+            'error' => $e->getMessage(),
+            'stack' => $e->getTraceAsString(),
+            'file' => $e->getFile(),
+            'line' => $e->getLine()
+        ]);
 }
 
 ?>

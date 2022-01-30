@@ -10,7 +10,11 @@
         <h1>Exception</h1>
         <small>DTH Labs ALPHA</small>
         <br/>
-        <small>{{$error}}</small>
+        <small>{{$error}}
+        <small><b>{{$file}}</b></small>
+        <br/>
+        {{$stack}}
+        </small>
     </div>
 </div>
 </body>
