@@ -12,24 +12,9 @@ use LexSystems\Framework\Core\Kernel\View;
 require __DIR__ . "/../core/App.php";
 \LexSystems\Framework\Core\App::boot();
 
-
 /**
  * Bootstrap Routes
  */
-
 require 'Routes.php';
-try{
-    \LexSystems\Framework\Core\Kernel\Route::dispatch();
-}
-catch (\Exception $e)
-{
-    View::renderTemplate('kernel',
-        [
-            'error' => $e->getMessage(),
-            'stack' => $e->getTraceAsString(),
-            'file' => $e->getFile(),
-            'line' => $e->getLine()
-        ]);
-}
-
+\LexSystems\Framework\Core\Kernel\Route::dispatch();
 ?>
