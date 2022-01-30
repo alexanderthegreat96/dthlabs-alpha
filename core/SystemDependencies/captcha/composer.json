@@ -1,0 +1,5 @@
+{
+    "require": {
+        "mobicms/captcha": "^2.0"
+    }
+}
