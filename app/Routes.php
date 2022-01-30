@@ -6,7 +6,6 @@ use LexSystems\Framework\Core\Kernel\Route;
  * Simple routes
  */
 Route::get('/','MyController@index');
-Route::get('about','MyController@index');
 Route::get('/login','Login@index', ['after' => 'AfterAuth']);
 Route::post('/login/try', 'Login@try', ['after' => 'AfterAuth']);
 

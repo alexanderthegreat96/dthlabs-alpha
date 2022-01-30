@@ -10,7 +10,7 @@ class BeforeAuth extends Middleware
 {
     public function handle()
     {
-        if($this->session->getParam('logged_in'))
+        if($this->session->hasParam('logged_in'))
         {
            return true;
         }

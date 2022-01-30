@@ -1,18 +1,27 @@
 <?php
 namespace App\Middlewares;
+use LexSystems\Framework\Config\App\Config;
 use LexSystems\Framework\Core\Kernel\Middleware;
-use LexSystems\Core\System\Helpers\Debugger;
+
 class AfterAuth extends Middleware
 {
     public function handle()
     {
-        if($this->session->getParam('rank') && $this->session->getParam('rank') == 'admin')
+        if($this->session->hasParam('rank'))
         {
-            return '';
+            $rank = $this->session->getParam('rank');
+            if(!in_array($rank,['admin','root']))
+            {
+                $this->request->redirect(Config::APP_URL.'/');
+            }
+            else
+            {
+                return true;
+            }
         }
         else
         {
-            $this->request->redirect('/');
+            return false;
         }
     }
 }

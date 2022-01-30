@@ -8,32 +8,6 @@ class MyController extends Controller
 {
     public function indexAction()
     {
-        $elements =
-            [
-                [
-                    'type' => 'file',
-                    'label' => 'Chose your files',
-                    'id'  => 'username',
-                    "multiple" => "multiple",
-                    'name' => 'files[]',
-                ],
-                [
-                    'type' => 'submit',
-                    'name' => 'submit',
-                    'value' => 'Upload',
-                    'class' => 'submit'
-                ]
-            ];
-
-        $form =
-            [
-                'method' => 'POST',
-                'action' => '/upload',
-                'display'  => 'grid',
-                'enctype' => 'multipart/form-data'
-            ];
-
-        $upload = $this->system->arrayForm($elements,$form);
-        echo $upload->build();
+        return 'This is the default controller!';
     }
 }
