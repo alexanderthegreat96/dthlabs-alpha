@@ -2,6 +2,8 @@
 namespace LexSystems\Framework\Core\Boot;
 use LexSystems\Framework\Config\Kernel\Maintenance;
 use LexSystems\Framework\Core\Autoloader;
+use function Siler\Http\redirect;
+
 require __DIR__.'/../Autoloader.php';
 require __DIR__."/LoadClasses.php";
 require  __DIR__."/../Errors/ErrorHandler.php";
@@ -10,6 +12,7 @@ require __DIR__."/../Errors/ExceptionHandler.php";
 require __DIR__."/PackageManager.php";
 require __DIR__."/Facade.php";
 require  __DIR__."/Eloquent.php";
+require  __DIR__."/Env.php";
 require __DIR__ . '/Maintenance.php';
 
 class BootSystem
@@ -64,6 +67,13 @@ class BootSystem
 
         $packages = new PackageManager();
         $packages->boot();
+
+        /**
+         * Env load
+         * $_ENV
+         */
+
+            Env::boot();
 
         /**
          * check if system is under heavy maintainance

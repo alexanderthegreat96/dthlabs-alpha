@@ -9,6 +9,7 @@ require __DIR__."/../Errors/ExceptionHandler.php";
 require __DIR__."/PackageManager.php";
 require __DIR__."/Facade.php";
 require  __DIR__."/Eloquent.php";
+require  __DIR__."/Env.php";
 
 class BootSystemCli
 {
@@ -41,6 +42,13 @@ class BootSystemCli
          */
 
         Eloquent::boot();
+
+        /**
+         * Env support
+         * $_ENV
+         */
+
+        Env::boot();
 
         /**
          * Boot framework packages
