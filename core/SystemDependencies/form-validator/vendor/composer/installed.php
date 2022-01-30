@@ -1,0 +1,41 @@
+<?php return array(
+    'root' => array(
+        'pretty_version' => 'dev-origin',
+        'version' => 'dev-origin',
+        'type' => 'library',
+        'install_path' => __DIR__ . '/../../',
+        'aliases' => array(),
+        'reference' => '21fa5a673eb5f5aa23745959c3f4b57a917d8af1',
+        'name' => '__root__',
+        'dev' => true,
+    ),
+    'versions' => array(
+        '__root__' => array(
+            'pretty_version' => 'dev-origin',
+            'version' => 'dev-origin',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'reference' => '21fa5a673eb5f5aa23745959c3f4b57a917d8af1',
+            'dev_requirement' => false,
+        ),
+        'madesimple/php-arrays' => array(
+            'pretty_version' => 'v2.0.1',
+            'version' => '2.0.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../madesimple/php-arrays',
+            'aliases' => array(),
+            'reference' => '4648ef6d34a63682f4cb367716ba7c205b60ae1f',
+            'dev_requirement' => false,
+        ),
+        'madesimple/php-form-validator' => array(
+            'pretty_version' => 'v2.2.6',
+            'version' => '2.2.6.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../madesimple/php-form-validator',
+            'aliases' => array(),
+            'reference' => '10b0ee6ea4082222fe6acfca4ecd6cb240ad9977',
+            'dev_requirement' => false,
+        ),
+    ),
+);

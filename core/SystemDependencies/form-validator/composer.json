@@ -1,0 +1,5 @@
+{
+    "require": {
+        "madesimple/php-form-validator": "^2.2"
+    }
+}

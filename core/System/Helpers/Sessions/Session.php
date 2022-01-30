@@ -76,20 +76,18 @@ class Session
      * @return mixed|string
      */
 
-    public function getParam(string $param)
+    public function getParam(string $param = '')
     {
-        if (session_status() === PHP_SESSION_NONE) {
-            session_start();
-        }
+        return isset($_SESSION[$param]) ? $_SESSION[$param]:null;
+    }
 
-        if(isset($_SESSION[$param]))
-        {
-            return $_SESSION[$param];
-        }
-        else
-        {
-            return null;
-        }
+    /**
+     * @param string $param
+     * @return bool
+     */
+    public function hasParam(string $param = '')
+    {
+        return isset($_SESSION[$param]) ? true:false;
     }
 
     /**
@@ -99,10 +97,6 @@ class Session
 
     public function setSession(string $param,$value)
     {
-        if (session_status() === PHP_SESSION_NONE) {
-            session_start();
-        }
-
         if(isset($_SESSION[$param]))
         {
             $this->unsetSession($param);

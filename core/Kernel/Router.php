@@ -5,9 +5,9 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use LexSystems\Framework\Core\System\System;
 /**
- * Router
+ * Router extension for
+ * \Buki\Router\Router
  *
- * PHP version 7.0
  */
 class Router extends \Buki\Router\Router
 {
@@ -47,10 +47,9 @@ class Router extends \Buki\Router\Router
             }
             else
             {
-                $system = new System();
-                $system->view()->render('404.html');
+                View::render('404.html');
             }
-
         });
+
     }
 }

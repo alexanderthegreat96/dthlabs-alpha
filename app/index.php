@@ -1,12 +1,30 @@
 <?php
+/**
+ * Init necesarry sessions
+ */
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
-require __DIR__ . "/../core/App.php";
+use LexSystems\Framework\Core\Kernel\View;
 /**
- * DO NOT Modify this file
- * Anything bellow this line is crucial for the app
+ * Bootstrap Application Components
  */
+require __DIR__ . "/../core/App.php";
 \LexSystems\Framework\Core\App::boot();
-require 'routes.php';
+
+
+/**
+ * Bootstrap Routes
+ */
+
+require 'Routes.php';
+try{
+    \LexSystems\Framework\Core\Kernel\Route::dispatch();
+}
+catch (\Exception $e)
+{
+    View::renderTemplate('kernel',['error' => $e->getMessage()]);
+    echo $e->getMessage();
+}
+
 ?>
