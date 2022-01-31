@@ -51,7 +51,7 @@ class ExceptionHandler
             $message .= "\nStack trace: " . $exception->getTraceAsString();
             $message .= "\nThrown in '" . $exception->getFile() . "' on line " . $exception->getLine();
             error_log($message);
-            View::render($code.'.html');
+            View::renderTemplate($code.'.html');
         }
     }
 }

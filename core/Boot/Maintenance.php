@@ -13,7 +13,7 @@ class Maintenance
             header('Access-Control-Allow-Methods: *');
             header('Access-Control-Allow-Headers: *');
             http_response_code(500);
-            View::render('maintenance.html');
+            View::renderTemplate('maintenance.html');
             die(1);
         }
     }

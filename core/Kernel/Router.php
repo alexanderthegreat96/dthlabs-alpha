@@ -1,10 +1,8 @@
 <?php
 namespace LexSystems\Framework\Core\Kernel;
-use Buki\Router\RouterException;
 use LexSystems\Framework\Config\Kernel\Error;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use LexSystems\Framework\Core\System\System;
 use Buki\Router\Router as BaseRouter;
 /**
  * Router extension for
@@ -50,7 +48,7 @@ class Router extends BaseRouter
             }
             else
             {
-                View::render('404.html');
+                View::renderTemplate('404.html');
             }
         });
 
@@ -61,7 +59,7 @@ class Router extends BaseRouter
             }
             else
             {
-                View::render('500.html');
+                View::renderTemplate('500.html');
             }
         });
 

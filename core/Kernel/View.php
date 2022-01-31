@@ -17,7 +17,7 @@ class View extends System
      *
      * @return void
      */
-    public static function render($view, $args = [])
+    public static function renderTemplate($view, $args = [])
     {
         extract($args, EXTR_SKIP);
         $file = dirname(__DIR__) . "/../resources/views/$view";  // relative to Core directory
@@ -37,7 +37,7 @@ class View extends System
      *
      * @return void
      */
-    public static function renderTemplate($template, $args = [])
+    public static function render($template, $args = [])
     {
         $bladeOne = new RenderEngine();
         echo $bladeOne->setView($template)
