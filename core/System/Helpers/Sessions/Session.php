@@ -108,6 +108,57 @@ class Session
         }
 
     }
+    /**
+     * @param string $key
+     * @param string $values
+     * lasts for 1 day
+     */
+    public function setCookie(string $key = ''):void
+    {
+        /**
+         * cookie name + ip  = hash
+         */
+        $hash = md5(sha1($_SERVER['REMOTE_ADD'].'_'.$key));
+        setcookie($key, $hash, time() + (86400 * 30), "/"); // 86400 = 1 day
+        return ;
+    }
+
+    /**
+     * @param string $key
+     */
+    public function unsetCookie(string $key = ''):void
+    {
+        if($this->hasCookie($key))
+        {
+            unset($_COOKIE[$key]);
+        }
+        return;
+    }
+
+    /**
+     * @return array|bool
+     */
+    public function getCookies():array
+    {
+        return isset($_COOKIE) ? $_COOKIE : [];
+    }
+    /**
+     * @param string $key
+     * @return bool
+     */
+    public function hasCookie(string $key = '')
+    {
+        return isset($_COOKIE[$key]) ? true:false;
+    }
+
+    /**
+     * @param string $key
+     * @return mixed|null
+     */
+    public function getCookie(string $key = '')
+    {
+        return $this->hasCookie($key) ? $_COOKIE[$key]:null;
+    }
 
     /**
      * @return bool

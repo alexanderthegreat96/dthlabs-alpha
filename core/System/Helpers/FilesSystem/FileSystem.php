@@ -368,4 +368,82 @@ class FileSystem
         rmdir($dirPath);
     }
 
+    /**
+     * @param string $fileUrl
+     * @param string $folder
+     * @param string $defaultPath
+     * @return array
+     * @throws \Exception
+     */
+    public static function downloadFile(string $fileUrl = '',string $folder = '/', string $defaultPath = '')
+    {
+        $fileName = basename($fileUrl);
+        $fullPath = $defaultPath ? $defaultPath :self::getDiskPath();
+        $combinedFileLocation = self::fixPaths($fullPath.'/'.$folder.'/'.$fileName);
+        $combinedLocation = self::fixPaths($fullPath.'/'.$folder);
+
+        if(self::hasDirectory($combinedLocation))
+        {
+            if(!self::checkIfFileExists($fileName,$folder,$defaultPath))
+            {
+                $put = file_put_contents($combinedFileLocation,file_get_contents($fileUrl));
+                if($put)
+                {
+                    return
+                        [
+                            'location' => $combinedLocation,
+                            'fileName' => $fileName,
+                            'size' => filesize($combinedFileLocation)
+                        ];
+                }
+                else
+                {
+                    throw new \Exception(__METHOD__.' could not be executed. 
+           There was an error related to the location or permission issues for: '.$combinedFileLocation);
+                }
+            }
+            else
+            {
+                throw new \Exception($fileName.' already exists in: '.$combinedLocation);
+            }
+        }
+        else
+        {
+            try{
+                self::makeDir($combinedLocation);
+
+                if(!self::checkIfFileExists($fileName,$folder,$defaultPath))
+                {
+                    $put = file_put_contents($combinedFileLocation,file_get_contents($fileUrl));
+                    if($put)
+                    {
+                        return
+                            [
+                                'location' => $combinedLocation,
+                                'fileName' => $fileName,
+                                'size' => filesize($combinedFileLocation)
+                            ];
+                    }
+                    else
+                    {
+                        throw new \Exception(__METHOD__.' could not be executed. 
+           There was an error related to the location or permission issues for: '.$combinedFileLocation);
+                    }
+                }
+                else
+                {
+                    throw new \Exception($fileName.' already exists in: '.$combinedLocation);
+                }
+            }
+
+            catch (\Exception $e)
+            {
+                return ['status' => false,'error' => $e->getMessage()];
+            }
+
+        }
+
+
+    }
+
 }
