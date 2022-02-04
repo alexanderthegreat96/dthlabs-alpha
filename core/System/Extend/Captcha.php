@@ -17,11 +17,10 @@ class Captcha
         try
         {
             $code = new MakeCaptcha\Code($length,$maxLength);
-            $session->sendTheseToSession(['captcha' => $code]);
             return
                 [
                 'status' => true,
-                'code' => $code
+                'code' => $code->generate()
                 ];
         }
         catch (\Exception $e)
@@ -47,23 +46,12 @@ class Captcha
             $options->setFontsFolder(__DIR__.'/../../../resources/fonts/');
             $options->setImageSize(275, 125);
             $image = new MakeCaptcha\Image($code,$options);
-            return ['status' => true, 'img_src' => $image];
+            return ['status' => true, 'img_src' => $image->generate()];
         }
         catch (\Exception $e)
         {
             return ['status' => false,'error' => $e->getMessage()];
         }
 
-    }
-
-    /**
-     * @param string $code
-     * @return bool|mixed|string|null
-     */
-    public static function validateCaptcha(string $code = '')
-    {
-        $session = new Session();
-        $sessionCaptcha = $session->hasParam('captcha') ? $session->getParam('captcha'):'';
-        return $code ? $sessionCaptcha : true;
     }
 }
