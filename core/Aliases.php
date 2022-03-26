@@ -50,11 +50,6 @@ class Aliases
         class_alias(ArrayForm::class,'Core\ArrayForm');
         class_alias(Validation::class,'Core\Validation');
         class_alias(Captcha::class,'Core\Captcha');
-        class_alias(Config::class,'Core\AppConfig');
-        class_alias(MysqlConfig::class,'Core\MySqlConfig');
-        class_alias(Error::class,'Core\ErrorConfig');
-        class_alias(Maintenance::class,'Core\MaintenanceConfig');
-        class_alias(Mail::class,'Core\MailConfig');
 
     }
 }
