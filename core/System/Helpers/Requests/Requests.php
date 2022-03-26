@@ -1,7 +1,5 @@
 <?php
 namespace LexSystems\Core\System\Helpers;
-use Delight\Auth\DatabaseError;
-use Illuminate\Support\Arr;
 use LexSystems\Core\System\Helpers\Arrays\ArrayUtility;
 use LexSystems\Core\System\Helpers\Sesssions\Session;
 
@@ -118,6 +116,7 @@ class Requests
         }
     }
 
+
     /**
      * @return array
      */
@@ -127,15 +126,16 @@ class Requests
         $result=[];
         $result['post'] = $this->post;
         $result['get'] = $this->get;
-        $result['files'] = $this->hasFiles() ? $this->remapSFilesArray() :null;
+        $result['files'] = $this->hasFiles() ? $this->remapSFilesArray():null;
         $result['session'] = $this->session;
+        $result['cookie'] = isset($_COOKIE) ? $_COOKIE : null;
         $result['server'] = $_SERVER;
         $result['user_agent'] = $_SERVER['HTTP_USER_AGENT'];
         $result['client_ip']  = $_SERVER['REMOTE_ADDR'];
         $result['headers'] = getallheaders();
         return $result;
-
     }
+
 
 
 
@@ -165,18 +165,12 @@ class Requests
     {
         if($this->hasFiles())
         {
-                foreach ($_FILES as $key=>$value)
-                {
-                    if(isset($_FILES[$key]['name'] ) && is_array($_FILES[$key]['name']))
-                    {
-                        $return[$key] = $this->simplifyMultiFileArray($value);
-                    }
-                    else
-                    {
-                        $return[$key] = $value;
-                    }
-                }
+            foreach ($_FILES as $key=>$value)
+            {
+                $return[$key] = $this->simplifyMultiFileArray($value);
+            }
         }
+
         return $return;
     }
 
@@ -187,7 +181,7 @@ class Requests
     protected function simplifyMultiFileArray(array $files = [])
     {
         $sFiles = array();
-        if(is_array($files) && count($files) > 1)
+        if(is_array($files) && count($files) > 0)
         {
             foreach($files as $key => $file)
             {
@@ -215,7 +209,7 @@ class Requests
      */
     public function getFile(string $key)
     {
-        return $this->hasFile($key) ? $_FILES[$key]:null;
+        return $this->hasFile($key) ? $this->simplifyMultiFileArray($_FILES[$key]):null;
     }
 
     /**
