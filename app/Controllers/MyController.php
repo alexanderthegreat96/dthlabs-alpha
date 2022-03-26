@@ -1,9 +1,9 @@
 <?php
 namespace App\Controllers;
-use LexSystems\Core\App\FileSystem;
-use LexSystems\Core\App\Request;
-use LexSystems\Core\System\Helpers\Debugger;
-use LexSystems\Framework\Core\Kernel\Controller;
+use Core\Controller;
+use Core\Debugger;
+use Core\Request;
+use Core\View;
 class MyController extends Controller
 {
     public function index()
@@ -17,6 +17,8 @@ class MyController extends Controller
             <button type="submit">Upload</button>
             </form>
         ';
+
+        Debugger::var_dump(Request::getArguments());
     }
 
     public function upload()
