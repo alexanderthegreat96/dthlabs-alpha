@@ -1,6 +1,8 @@
 <?php
 namespace LexSystems\Framework\Core\Boot;
 use Illuminate\Database\Capsule\Manager as Capsule;
+use Illuminate\Database\Schema\Builder;
+use LexSystems\Framework\Config\Database\MysqlConfig as Config;
 class Eloquent
 {
     public static function boot()
@@ -10,17 +12,18 @@ class Eloquent
         (
             [
             'driver'    => 'mysql',
-            'host'      => \LexSystems\Framework\Config\Database\MysqlConfig::getHost(),
-            'database'  => \LexSystems\Framework\Config\Database\MysqlConfig::getDb(),
-            'username'  => \LexSystems\Framework\Config\Database\MysqlConfig::getUser(),
-            'password'  => \LexSystems\Framework\Config\Database\MysqlConfig::getPass(),
+            'host'      => Config::MYSQL_HOST,
+            'database'  => Config::MYSQL_DB,
+            'username'  => Config::MYSQL_USER,
+            'password'  => Config::MYSQL_PASS,
             'charset'   => 'utf8',
             'collation' => 'utf8_general_ci',
             'prefix'    => ''
-             ]
+            ]
         );
 
         $capsule->setAsGlobal();
         $capsule->bootEloquent();
+        $capsule->schema();
     }
 }

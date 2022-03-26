@@ -37,5 +37,8 @@ class Controller extends \Buki\Router\Http\Controller
         $this->session = $system->session();
         $this->system = $system;
         $this->view = $system->view();
+
     }
+
+
 }

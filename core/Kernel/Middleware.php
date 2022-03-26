@@ -1,6 +1,8 @@
 <?php
 namespace LexSystems\Framework\Core\Kernel;
 
+use LexSystems\Framework\Core\System\System;
+
 /**
  * Use public function handle in all middlewares
  */

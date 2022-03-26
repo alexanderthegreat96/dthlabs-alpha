@@ -1,21 +1,23 @@
 <?php
 namespace LexSystems\Framework\Core\Kernel;
+use LexSystems\Framework\Config\App\Config;
 use LexSystems\Framework\Config\Kernel\Error;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use LexSystems\Framework\Core\System\System;
+use Buki\Router\Router as BaseRouter;
 /**
- * Router
+ * Router extension for
+ * \Buki\Router\Router
  *
- * PHP version 7.0
  */
-class Router extends \Buki\Router\Router
+class Router extends BaseRouter
 {
     /**
      * @param array $params
      * @param Request|null $request
      * @param Response|null $response
      */
+
     public function __construct(array $params = [], Request $request = null, Response $response = null)
     {
         if(!$params)
@@ -29,6 +31,7 @@ class Router extends \Buki\Router\Router
                     'controllers' => 'App\Controllers',
                     'middlewares' => 'App\Middlewares'
                 ],
+                'base_folder' => Config::APP_LOCATION,
                 'debug' => Error::ERROR_REPORTING
             ];
         }
@@ -39,20 +42,28 @@ class Router extends \Buki\Router\Router
          * Bind custom error templates to the system
          */
 
-        $this->error(function() {
-
+        $this->notFound(function()
+        {
             if(Error::ERROR_REPORTING)
             {
                 throw new \Exception('The requested route was not found!');
             }
             else
             {
-                $system = new System();
-                $system->view()->render('404.html');
+                View::renderTemplate('404.html');
             }
-
         });
+
+        $this->error(function() {
+            if(Error::ERROR_REPORTING)
+            {
+                throw new \Exception('Something went wrong!');
+            }
+            else
+            {
+                View::renderTemplate('500.html');
+            }
+        });
+
     }
-
-
 }

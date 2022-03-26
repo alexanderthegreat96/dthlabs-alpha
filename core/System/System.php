@@ -14,7 +14,6 @@ use LexSystems\Core\System\Helpers\Utils\ArrayForm;
 use LexSystems\Core\System\Helpers\Utils\LoremIpsum;
 use LexSystems\Framework\Core\Kernel\View;
 use LexSystems\Core\System\Helpers\Requests;
-use MadeSimple\Validator\Validator;
 class System
 {
     /**
@@ -58,18 +57,6 @@ class System
     public function request()
     {
         return new Requests();
-    }
-
-    /**
-     * @param $values
-     * @param array $ruleSet
-     * @param string|null $prefix
-     * @return bool
-     */
-    public function validateInputs($values, array $ruleSet, string $prefix = null)
-    {
-        $validator = new Validator();
-        return $validator->validate($values,$ruleSet,$prefix);
     }
 
     /**

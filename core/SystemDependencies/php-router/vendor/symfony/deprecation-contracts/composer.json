@@ -15,17 +15,17 @@
         }
     ],
     "require": {
-        "php": ">=7.1"
+        "php": ">=8.0.2"
     },
     "autoload": {
         "files": [
-          "function.php"
+            "function.php"
         ]
     },
     "minimum-stability": "dev",
     "extra": {
         "branch-alias": {
-            "dev-main": "2.4-dev"
+            "dev-main": "3.0-dev"
         },
         "thanks": {
             "name": "symfony/contracts",

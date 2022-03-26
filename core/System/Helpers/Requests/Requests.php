@@ -1,5 +1,7 @@
 <?php
 namespace LexSystems\Core\System\Helpers;
+use Delight\Auth\DatabaseError;
+use Illuminate\Support\Arr;
 use LexSystems\Core\System\Helpers\Arrays\ArrayUtility;
 use LexSystems\Core\System\Helpers\Sesssions\Session;
 
@@ -77,25 +79,13 @@ class Requests
         switch ($type)
         {
             case 'GET':
-                if(isset($this->get[$param]))
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
+                return isset($this->get[$param]) ? true:false;
                 break;
             case 'POST':
-                if(isset($this->post[$param]))
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
+                return isset($this->post[$param]) ? true:false;
                 break;
+            default:
+                return false;
         }
     }
 
@@ -137,8 +127,95 @@ class Requests
         $result=[];
         $result['post'] = $this->post;
         $result['get'] = $this->get;
+        $result['files'] = $this->hasFiles() ? $this->remapSFilesArray() :null;
         $result['session'] = $this->session;
+        $result['server'] = $_SERVER;
+        $result['user_agent'] = $_SERVER['HTTP_USER_AGENT'];
+        $result['client_ip']  = $_SERVER['REMOTE_ADDR'];
+        $result['headers'] = getallheaders();
         return $result;
+
+    }
+
+
+
+
+    /**
+     * @return bool
+     */
+    public function hasFiles():bool
+    {
+        return isset($_FILES) ? true:false;
+    }
+
+    /**
+     * @return array
+     */
+    public function getFiles():array
+    {
+        return $this->hasFiles() ? $this->remapSFilesArray():[];
+    }
+
+    /**
+     * @param array $return
+     * @return array
+     */
+
+    protected function remapSFilesArray(array &$return = []):array
+    {
+        if($this->hasFiles())
+        {
+                foreach ($_FILES as $key=>$value)
+                {
+                    if(isset($_FILES[$key]['name'] ) && is_array($_FILES[$key]['name']))
+                    {
+                        $return[$key] = $this->simplifyMultiFileArray($value);
+                    }
+                    else
+                    {
+                        $return[$key] = $value;
+                    }
+                }
+        }
+        return $return;
+    }
+
+    /**
+     * @param array $files
+     * @return array
+     */
+    protected function simplifyMultiFileArray(array $files = [])
+    {
+        $sFiles = array();
+        if(is_array($files) && count($files) > 1)
+        {
+            foreach($files as $key => $file)
+            {
+                foreach($file as $index => $attr)
+                {
+                    $sFiles[$index][$key] = $attr;
+                }
+            }
+        }
+        return $sFiles;
+    }
+
+    /**
+     * @param string $key
+     * @return bool
+     */
+    public function hasFile(string $key)
+    {
+        return isset($_FILES[$key]) ? true:false;
+    }
+
+    /**
+     * @param string $key
+     * @return array|null
+     */
+    public function getFile(string $key)
+    {
+        return $this->hasFile($key) ? $_FILES[$key]:null;
     }
 
     /**

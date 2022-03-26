@@ -1,10 +1,32 @@
 <?php
 namespace LexSystems\Core\System\Helpers\Sesssions;
+use Core\Debugger;
 use LexSystems\Core\System\Helpers\CoreUtils\RandomStringGenerator;
-
+use LexSystems\Framework\Config\App\Config;
 class Session
 {
-    public function __construct()
+    /**
+     * @var
+     */
+    protected $prefix;
+
+    /**
+     * @var
+     */
+
+    protected $session;
+
+    /**
+     * @var
+     */
+
+    protected $cookie;
+
+
+    /**
+     * @param string $prefix
+     */
+    public function __construct(string $prefix = '')
     {
         /**
          * Init session
@@ -14,13 +36,26 @@ class Session
         }
 
         /**
+         * Predefined session key
+         * Predefined cookie key
+         * supporting multi-domain instances
+         * on the same host
+         */
+
+        $this->prefix = $prefix ? $prefix : Config::APP_KEY;
+
+        /**
          * Generate a session id
          */
-        if(!isset($_SESSION['session_id']))
+
+        if(!isset($_SESSION[$this->prefix]['session_id']))
         {
             $rand = new RandomStringGenerator();
-            $_SESSION['session_id'] = $rand->generate(15);
+            $_SESSION[$this->prefix]['session_id'] = $rand->generate(15);
         }
+
+        $this->cookie = $_COOKIE;
+        $this->session = $_SESSION[$this->prefix];
     }
 
     /**
@@ -30,6 +65,60 @@ class Session
     public function initSession()
     {
         return $this->getSession();
+    }
+
+    /**
+     * @param string $key
+     * @param string $values
+     * lasts for 1 day
+     */
+    public function setCookie(string $key = '', string $hash = ''):string
+    {
+        setcookie($this->prefix.'/'.$key, $hash, time() + (86400 * 30), "/"); // 86400 = 1 day
+        return $hash;
+    }
+
+    /**
+     * @param string $key
+     */
+    public function unsetCookie(string $key = ''):void
+    {
+        if($this->hasCookie($key))
+        {
+            unset($_COOKIE[$key]);
+        }
+        return;
+    }
+
+    /**
+     * @return array|bool
+     */
+    public function getCookies():array
+    {
+        return isset($_COOKIE) ? $_COOKIE : [];
+    }
+    /**
+     * @param string $key
+     * @return bool
+     */
+    public function hasCookie(string $key = '')
+    {
+        return isset($_COOKIE[$key]) ? true:false;
+    }
+
+
+    public function hasCookies()
+    {
+        return isset($_COOKIE) ? true:false;
+    }
+
+    /**
+     * @param string $key
+     * @return mixed|null
+     */
+    public function getCookie(string $key = '')
+    {
+        return $this->hasCookie($key) ? $_COOKIE[$key]:null;
     }
 
     /**
@@ -57,70 +146,89 @@ class Session
      */
     public function getSession()
     {
-        return $_SESSION;
+        return $this->session;
     }
 
     /**
-     * @param string $param
+     * @param string|array $param
      */
-    public function unsetSession(string $param)
+    public function unsetSession($param)
     {
-        if(isset($_SESSION[$param]))
+        if(isset($this->session[$param]))
         {
-            unset($_SESSION[$param]);
+            unset($_SESSION[$this->prefix][$param]);
         }
     }
 
     /**
-     * @param string $param
-     * @return mixed|string
+     * @param string|array $param
+     * @return mixed|null
      */
 
-    public function getParam(string $param)
+    public function getParam($param = '')
     {
-        if (session_status() === PHP_SESSION_NONE) {
-            session_start();
-        }
-
-        if(isset($_SESSION[$param]))
-        {
-            return $_SESSION[$param];
-        }
-        else
-        {
-            return null;
-        }
+        return isset($this->session[$param]) ? $this->session[$param]:null;
     }
 
     /**
-     * @param string $param
+     * @param string|array $param
+     * @return bool
+     */
+    public function hasParam($param = '')
+    {
+        return isset($this->session[$param]) ? true:false;
+    }
+
+    /**
+     * @param string|array $param
+     * @param $value
      * @return mixed
      */
 
-    public function setSession(string $param,$value)
+    public function setSession($param,$value)
     {
-        if (session_status() === PHP_SESSION_NONE) {
-            session_start();
-        }
-
-        if(isset($_SESSION[$param]))
+        if(isset($this->session[$param]))
         {
             $this->unsetSession($param);
-            return $_SESSION[$param] = $value;
+            return $_SESSION[$this->prefix][$param] = $value;
         }
         else
         {
-            return $_SESSION[$param] = $value;
+            return $_SESSION[$this->prefix][$param] = $value;
         }
 
     }
 
     /**
+     * @param string $key
+     * @return string
+     */
+    protected function cookieParam(string $key = '')
+    {
+        return basename($key);
+    }
+    /**
      * @return bool
      */
-    public function session_destroy()
+    public function destroy()
     {
-        return session_destroy();
+        if(isset($this->session))
+        {
+            foreach($this->session as $key=>$value)
+            {
+                $this->unsetSession($key);
+            }
+        }
+
+        if(isset($this->cookie))
+        {
+            foreach ($this->cookie as $key=>$value)
+            {
+                $this->unsetCookie($key);
+            }
+        }
+
+        return true;
     }
 
 }

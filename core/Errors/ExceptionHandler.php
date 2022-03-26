@@ -30,7 +30,7 @@ class ExceptionHandler
             echo "<h1>Kernel Crash</h1>";
             echo "<h2>Exception</h2>";
             echo "<div class='error-div>'>";
-            echo "<p class='error-p'><b>Uncaught exception</b>: '" . get_class($exception) . "'</p>";
+            echo "<p class='error-p'><b>Exception</b>: '" . get_class($exception) . "'</p>";
             echo "<p class='error-p'><b>Message</b>: '" . $exception->getMessage() . "'</p>";
             echo "<p class='error-p'><b>Stack trace</b>:";
             echo '<pre>'.$exception->getTraceAsString().'</pre>';
@@ -46,7 +46,7 @@ class ExceptionHandler
             $log = dirname(__DIR__) . '/../logs/' . date('Y-m-d') . '.txt';
             ini_set('error_log', $log);
 
-            $message = "Uncaught exception: '" . get_class($exception) . "'";
+            $message = "Exception: '" . get_class($exception) . "'";
             $message .= " with message '" . $exception->getMessage() . "'";
             $message .= "\nStack trace: " . $exception->getTraceAsString();
             $message .= "\nThrown in '" . $exception->getFile() . "' on line " . $exception->getLine();

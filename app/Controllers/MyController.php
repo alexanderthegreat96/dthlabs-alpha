@@ -1,18 +1,30 @@
 <?php
 namespace App\Controllers;
-use Illuminate\Support\Str;
-use LexSystems\Core\System\Extend\Validation;
+use LexSystems\Core\App\FileSystem;
+use LexSystems\Core\App\Request;
 use LexSystems\Core\System\Helpers\Debugger;
 use LexSystems\Framework\Core\Kernel\Controller;
-use LexSystems\Framework\Kernel\Helpers\CoreUtils\Hash;
-use LexSystems\Core\System\Helpers\Database\DB;
 class MyController extends Controller
 {
-    public function indexAction()
+    public function index()
     {
-        Debugger::var_dump($this->request->getArguments());
+        $filename = 'myfile.txt';
+        $contents = 'THis is my file';
 
-        $test = DB::table('dth_auth_users')->paginate('15');
-        Debugger::var_dump( Validation::validate([],[]));
+        echo '
+            <form action="try" method="POST" enctype="multipart/form-data">
+            <input type="file" name="file[]" multiple=""/>
+            <button type="submit">Upload</button>
+            </form>
+        ';
+    }
+
+    public function upload()
+    {
+        if(Request::hasFile('file'))
+        {
+            Debugger::var_dump(FileSystem::getStoragePath());
+            Debugger::var_dump(Request::bulkUpload('file'));
+        }
     }
 }
